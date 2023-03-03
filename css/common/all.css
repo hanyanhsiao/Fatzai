@@ -1,0 +1,21 @@
+@import url(./reset.css);
+
+*{
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+
+html {
+  font-size: 12px;
+  max-width: 1920px;
+  --bg-color: white;
+
+
+}
+body {
+  margin: 0 auto;
+}
+
+.wrapper {
+  --page-width: 1200px;
+}

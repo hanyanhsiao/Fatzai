@@ -1,0 +1,111 @@
+.wrapper{
+  margin: 0 auto;    
+}
+section.banner_bg {
+    background-image: url("../image/banner.png");
+    height: 640px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    min-width: var(--page-width);
+    margin: 0 auto;
+  }
+
+  section.main{
+    font-size: 2rem;
+    margin: 0 auto;
+    /* max-width: var(--page-width); */
+    border: 2px solid rgb(0, 0, 0);
+    
+  }
+  .news, .hot_items h1, .faq, .map ,.hr{
+    max-width: var(--page-width);
+    margin: 0 auto;
+  }
+
+ /*--------------最新消息----------------*/
+  .news{
+    display: block;
+    /* border: 2px solid rgb(255, 0, 0); */
+    padding: 24px 0;
+  }
+  
+  .news > ul{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .title{
+    font-size: 4rem;
+    /* border: 2px solid rgb(0, 21, 255); */
+    background-image: url(../image/title\ \(2\).png);
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+    line-height: 70px;
+  }
+  
+  .img_block > img{
+    width: 510px;
+  }
+  
+  .img_block{
+    position: relative;
+  }
+  
+  .text_block{
+
+  }
+  .text_block > p{
+    text-align: center;
+    line-height: 72px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.772);
+    color: black;
+    position: absolute;
+    bottom: 0;
+    display: none;  
+
+  }
+
+
+    li:hover p{
+        /* transition: 2s ease; */
+        display: block;
+    }
+
+ /*--------------分隔線----------------*/
+ .hr {
+    padding-top: 2px;
+    background: linear-gradient(to right, transparent, #DC9F58, transparent);
+
+  }
+  
+
+ /*--------------熱門商品----------------*/
+
+ .hot_items ul{
+  display:flex;
+  margin: 0 auto;
+  /* outline: 2px solid red; */
+  justify-content: space-between;
+ }
+
+ .hot_items h1{
+  max-width: var(--page-width);
+  margin: 0 auto;
+
+ }
+ .hot_items ul li{
+  margin: 10px;
+ }
+ .hot_items .img_block{
+  border: 2px solid black;
+  width:270px;
+  
+ }
+ .hot_items .img_block img{
+  width: 100%;
+ }
+
+ 
