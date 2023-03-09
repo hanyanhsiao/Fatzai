@@ -2,20 +2,24 @@
 
 *{
   box-sizing: border-box;
+}
+body{
   font-family: "Noto Serif TC", serif;
 }
-
 html {
   font-size: 12px;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   --bg-color: white;
+  --page-width: 1200px;
+  /* 設定內容寬度 */
 
 
+}
+
+.wrapper{
+  border: 2px solid salmon;
 }
 body {
   margin: 0 auto;
 }
 
-.wrapper {
-  --page-width: 1200px;
-}

@@ -1,111 +1,212 @@
 .wrapper{
-  margin: 0 auto;    
 }
-section.banner_bg {
+section .banner_bg {
     background-image: url("../image/banner.png");
     height: 640px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    /* background-position: center center; */
-    min-width: var(--page-width);
+    background-position: top center;
     margin: 0 auto;
   }
 
   section.main{
     font-size: 2rem;
-    margin: 0 auto;
-    /* max-width: var(--page-width); */
-    border: 2px solid rgb(0, 0, 0);
+    /* border: 2px solid rgb(0, 0, 0); */
     
   }
-  .news, .hot_items h1, .faq, .map ,.hr{
+  .news, .hot_items , .faq, .information {
+    display: block;
     max-width: var(--page-width);
     margin: 0 auto;
+    padding: 20px 0 50px ;
+    /* outline: 2px solid rgb(255, 0, 0); */
   }
-
+  .hr{
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding-top: 2px;
+    border: #DC9F58;
+    background: linear-gradient(to right, transparent, #DC9F58, transparent);
+  }
  /*--------------最新消息----------------*/
-  .news{
-    display: block;
-    /* border: 2px solid rgb(255, 0, 0); */
-    padding: 24px 0;
-  }
   
-  .news > ul{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
-  }
-
+  
   .title{
     font-size: 4rem;
     /* border: 2px solid rgb(0, 21, 255); */
     background-image: url(../image/title\ \(2\).png);
     background-repeat: no-repeat;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     line-height: 70px;
+  }
+
+  .news > ul{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .news > ul >li{
+    /* border: 5px solid rgb(255, 0, 0); */
+    /* 寬度不知道要怎麼設???????????????????????????????? */
+    width: 510px; 
   }
   
   .img_block > img{
-    width: 510px;
+    width: 100%;
   }
   
   .img_block{
     position: relative;
   }
   
-  .text_block{
+  .text_block{}
 
-  }
   .text_block > p{
     text-align: center;
     line-height: 72px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.772);
+    border-radius: 0 0 5px 5px;
     color: black;
     position: absolute;
     bottom: 0;
     display: none;  
+     /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
+    /* transition: 10s ease; */
 
   }
-
-
     li:hover p{
-        /* transition: 2s ease; */
-        display: block;
+      display: block;
     }
-
- /*--------------分隔線----------------*/
- .hr {
-    padding-top: 2px;
-    background: linear-gradient(to right, transparent, #DC9F58, transparent);
-
-  }
-  
 
  /*--------------熱門商品----------------*/
 
+   /* outline: 2px solid red; */
+
  .hot_items ul{
   display:flex;
-  margin: 0 auto;
-  /* outline: 2px solid red; */
   justify-content: space-between;
  }
 
- .hot_items h1{
-  max-width: var(--page-width);
-  margin: 0 auto;
+ .hot_items ul li{}
 
- }
- .hot_items ul li{
-  margin: 10px;
- }
+ .hot_items ul li a{}
+
  .hot_items .img_block{
-  border: 2px solid black;
-  width:270px;
-  
+  border-radius: 5px;
+  width:380px;
+  outline: 2px solid #CCC;
+  margin: 10px;
+
  }
  .hot_items .img_block img{
   width: 100%;
+  display: block;
  }
 
- 
+ /* 滑鼠移入圖片微放大效果???????????????? */
+ /*--------------中間背景圖----------------*/
+.center_bg{
+  /* outline: 2px solid #000000; */
+
+  background-image: url(/image/bgi/bg_choux.png);
+  width: var(--page-width);
+  height: 420px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.center_text{
+  background-color: #ffffff90;
+  padding: 50px 100px;
+  border-radius: 10px;
+  text-align: center;
+
+}
+.center_text span{
+  display: block;
+  width: 100%;
+  border: 1px solid #DC9F58;
+  margin: 10px 0;
+}
+
+.center_bg .p1{
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 2rem;
+}
+
+.center_bg .p2{
+  padding-top: 20px;
+
+}
+
+
+ /*--------------常見問題----------------*/
+ .faq{}
+ .faq a{
+  color: #DC9F58; 
+  /* border: 3px solid #DC9F58; */
+  padding: 10px;
+  float: right;
+  font-weight: bold;
+}
+
+ .faq ul{
+  
+ }
+
+ .faq ul li{
+     outline: 2px solid #CCC;;
+     background-color: #FFEAD2;
+     border-radius: 5px;
+     line-height: 2.5;
+     margin-bottom: 24px;
+     padding: 0 10px;
+     display: flex;
+    justify-content: space-between;
+
+ }
+ .faq ul li .fa{
+  margin-right: 10px;
+ }
+
+  /*--------------地圖&營業時間----------------*/
+
+    /* outline: 1px solid black; */
+
+    .information .title{
+
+    }
+
+    .information .map{
+      /* outline: 4px solid black; */
+      display: flex;
+      justify-content: space-between;
+      /* outline: 1px solid black; */
+
+    }
+    iframe{
+      height: 270px;
+    }
+    .information .detail{
+      /* outline: 4px solid rgb(255, 0, 0); */
+      margin: 0 auto;
+      line-height: 1.6;
+      padding-left: 20px;
+      
+      }
+
+      .information .detail h1{
+        font-size: 4rem;
+        font-weight:600;
+        color: #DC9F58;
+        margin-bottom: 10px;
+      }
+
+      .information .detail p{}
+

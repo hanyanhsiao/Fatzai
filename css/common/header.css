@@ -1,72 +1,77 @@
+ /* ------------上方導覽列------------ */
+  /* border: 3px solid red; */
 
  header.header {
-  /* border: 1px solid red; */
-  width: 100%;
+  /* width: var(--page-width); */
   height: 80px;
-  min-width: var(--page-width);
   background-color: #ffead2b8;
   overflow: hidden;
   position: sticky;
   top: 0px;
   z-index: 1;
   /* font-family: "Noto Serif TC"; */
+  /* border: 3px solid red; */
 }
-header.header div.block {
-  /* border: 1px solid blue; */
-  width: var(--page-width);
+
+header.header nav.nav {
   margin: 0 auto;
-}
-header.header div.block nav.nav {
+  width:var(--page-width);
+  height: 80px;
   font-size: 0;
   display: flex;  
   justify-content: space-between;
+  /* border: 3px solid red; */
 
 }
-header.header div.block nav.nav ::after {
+
+/* header.header nav.nav ::after {
   content: "";
   display: block;
   clear: both;
-}
-header.header div.block nav.nav > a.logo {
+} */
+
+/* header.header nav.nav > a.logo {
   float: left;
   vertical-align: top;
-}
-header.header div.block nav.nav > a.logo img {
+} */
+
+header.header nav.nav > a.logo img {
+  display: inline; 
   height: 80px;
 }
-header.header div.block nav.nav ul.nav_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 
+header.header nav.nav ul.nav_list {
   height: 80px;
   vertical-align: top;
-  /* border: 1px solid red; */
-
 }
-header.header div.block nav.nav ul.nav_list > li {
-  border-radius: 10px;
+
+header.header nav.nav ul.nav_list > li {
   display: inline-flex;
   vertical-align: top;
-}
-header.header div.block nav.nav ul.nav_list > li > a {
-  font-size: 24px;
-  text-decoration: none;
-  display: inline-block;
-  color: black;
   height: 80px;
+}
+
+header.header nav.nav ul.nav_list > li > a {
+  font-size: 2rem;
+  text-decoration: none;
+  display: block;
+  color: black;
   text-align: center;
   line-height: 80px;
-  padding: 0 20px;
-  /* border: 1px solid red; */
+  padding: 0 25px;
+
 }
-header.header div.block nav.nav ul.nav_list > li > a.on,
-header.header div.block nav.nav ul.nav_list > li > a:hover {
-  color: black;
-  background-color: #dc9f58;
+header.header nav.nav ul.nav_list > li > a.on,
+header.header nav.nav ul.nav_list > li > a:hover {
+  color: #dc9f58;
+  border-bottom: 3px solid dc9f58;
+  border-bottom: 3px solid #dc9f58;
+
+  /* background-color: #dc9f58; */
 }
-/*----------------------------------------/*
-/*導覽列右側*/
+
+/*-----------------下拉選單-----------------------*/
+
 header.header div.block nav.nav div.share_block {
   font-size: 1.8rem;
   float: right;

@@ -1,173 +1,64 @@
 
-div.main_block {
-  min-height: calc(100vh - 61.47px - 200px - 62.25px);
+.main_block {
   font-size: 1.6rem;
-  min-width: var(--page-width);
-  background-image: url("../image/83.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-div.main_block div.inner_block {
-  border: 1px solid red;
-  min-width: var(--page-width);
-  margin: 0 10px;
-  font-size: 0;
-}
-div.main_block div.inner_block aside.aside,
-div.main_block div.inner_block main.main {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 1.6rem;
-  /* border: 1px solid blue; */
-  padding: 20px;
-  background-color: hsla(0, 0%, 100%, 0.5);
-  border-radius: 5px;
-  box-shadow: 0 0 5px lightgray inset;
-}
-div.main_block div.inner_block aside.aside {
-  width: 200px;
-  margin-right: 20px;
-}
-div.main_block div.inner_block aside.aside button.btn_submit {
-  width: 100%;
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 5px 0;
-  font-size: 1.6rem;
-}
-div.main_block div.inner_block aside.aside h1.title1 {
-  font-size: 2rem;
-  margin: 0 0 5px 0;
-  padding: 0 0 0 5px;
-}
-div.main_block div.inner_block aside.aside ul.type_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-div.main_block div.inner_block aside.aside ul.type_list > li {
-  margin-bottom: 10px;
-}
-div.main_block div.inner_block aside.aside ul.type_list > li:last-child {
-  margin-bottom: 0;
-}
-div.main_block div.inner_block aside.aside ul.type_list > li input.type {
-  cursor: pointer;
-}
-div.main_block div.inner_block aside.aside ul.type_list > li label {
-  cursor: pointer;
-}
-
-div.main_block div.inner_block main.main {
-  width: calc(100% - 200px - 20px);
-}
-
-/*商品區域*/
-
-div.main_block div.inner_block main.main ul.product_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  max-width: var(--page-width);
+  
+  margin: 0 auto;
+  border: 1px solid rgb(0, 0, 0);
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
-div.main_block div.inner_block main.main ul.product_list > li {
-  /* border: 1px solid black; */
-  margin-right: 20px;
-  margin-bottom: 20px;
-  width: calc((100% - 60px) / 4);
-}
-div.main_block div.inner_block main.main ul.product_list > li:nth-child(4n) {
-  margin-right: 0;
-}
-div.main_block div.inner_block main.main ul.product_list > li > a {
-  display: block;
+
+/* -------------------側邊欄---------------------- */
+.main_block .aside{
+  background-color: #FFEAD2;
+  width: 20%;
+  padding: 10px;
   text-decoration: none;
-  width: 100%;
-  box-shadow: 0 0 5px gray;
-  padding: 5px 0;
-  border-radius: 5px;
-  background-color: white;
-}
-div.main_block div.inner_block main.main ul.product_list > li > a > h1.title1 {
-  padding: 0;
-  margin: 0;
-  color: black;
-  font-size: 1.8rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 5px;
-}
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.img_block {
-  /* border: 1px solid green; */
-  font-size: 0;
-  margin: 5px 0;
 }
 
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.img_block
-  > img {
-  width: 100%;
-}
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.price_block {
-  display: flex;
-  flex-direction: column;
-}
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.price_block
-  div.left_block {
-  font-size: 1.4rem;
-  color: gray;
-  padding-left: 5px;
-}
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.price_block
-  div.left_block
-  span.org_price {
-  text-decoration: line-through;
+.main_block .aside ul li a{
+  line-height: 2;
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+
 }
 
-div.main_block
-  div.inner_block
-  main.main
-  ul.product_list
-  > li
-  > a
-  > div.price_block
-  div.right_block {
-  font-size: 1.8rem;
-  color: #ffead2;
-  align-self: flex-end;
-  padding-right: 5px;
+/* -------------------商品區塊---------------------- */
+
+
+.main_block .inner_block {
+  padding-top: 40px;
+  padding-bottom: 65px;
+  width: 80%;
+  padding: 20px;
+
 }
+.inner_block .title {
+  /* border: 1px solid red; */
+ background-image: url(../image/素材/title_bg.jfif);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 200px;
+ border-radius: 5px;
+ position: relative;
+}
+
+.inner_block .title h1{
+    border:  1px solid red;
+    align-items: center;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+
+
+
