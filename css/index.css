@@ -109,7 +109,7 @@ section .banner_bg {
 .center_bg{
   /* outline: 2px solid #000000; */
 
-  background-image: url(/image/bgi/bg_choux.png);
+  background-image: url(../image/bgi/bg_choux.png);
   width: var(--page-width);
   height: 420px;
   background-size: contain;
