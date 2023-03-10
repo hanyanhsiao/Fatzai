@@ -1,47 +1,111 @@
-
 footer{
-  /* border: 1px solid black; */
   background-color: #FFEAD2;
-  /* width: var(--page-width); */
-  margin: 0 auto;
 
 }
-
-footer .footer_top{
-  display: flex;
-  justify-content: space-between;
+.footer{
+  /* border: 1px solid black; */
   width: var(--page-width);
+  height: 240px;
   margin: 0 auto;
+  display: flex;
+  justify-content:center;
+  padding: 30px;
 }
 
-footer img{
-  width: 30%;
-  /* outline: 2px solid black; */
-  align-self: center;
-  flex-grow: 1;
-}
+/* ------------------footer_left-------------------- */
 
-footer .footer_top .footer_nav ,.footer_inf{
-  /* outline: 2px solid rgb(255, 0, 0); */
-  padding: 30px 0 30px 30px;
-
-  line-height: 30px;
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-footer .center{
+.footer_left{
   /* outline: 1px solid black; */
-  flex-grow: 3;
+  display: flex;
+  padding-top: 30px;
+
 }
 
-footer .right{
-  /* outline: 2px solid black; */
-  flex-grow: 3;
+.footer_left p{
+  /* border: 1px solid rgb(255, 0, 0); */
+  writing-mode: vertical-lr;
+  margin-right: 50px;
+  font-size: 1.3rem;
+  letter-spacing: 20px;
+  height: 100%;
 }
 
+.footer_left p>a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer_icons{
+  /* border: 1px solid rgb(0, 217, 255); */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer_icons>a{
+  /* border: 1px solid rgb(255, 0, 0); */
+  margin-bottom: 26px;
+  writing-mode: vertical-lr;
+  font-size: 2rem;
+  color:black;
+  /* text-shadow:0.1rem 0.1rem #acacac7d; */
+}
+
+.fa-line{
+  font-size: 1.8rem;
+}
+
+/* ------------------footer_logo-------------------- */
+
+footer .footer_center{
+  /* outline: 1px solid black; */
+  margin: 0 auto;
+  position: relative;
+
+}
+
+footer .footer_center a img{
+  height: 100%;
+}
+
+.footer_center a img{
+  opacity: 1;
+}
+.footer_center img.color{
+  
+    transition: all 300ms;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.footer_center img.color:hover{
+  opacity: 1;
+
+}
+
+/* ------------------footer_right-------------------- */
+
+.footer_right{
+  /* outline: 1px solid black; */
+  align-self: center;
+  font-size: 1.3rem;
+  padding-top: 8px;
+
+}
+
+.footer_right p{
+  line-height: 40px;
+  
+}
+
+
+
+
+
+
+/* ------------------footer_bottom-------------------- */
 footer .footer_bottom{
-  /* outline: 2px solid black; */
+    /* border: 1px solid rgb(255, 0, 0); */
   text-align: center;
-  padding: 10px;
+  padding: 10px 0;
 }

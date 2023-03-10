@@ -12,24 +12,35 @@
 
 /* -------------------側邊欄---------------------- */
 .main_block .aside{
+  /* border: 1px solid rgb(255, 0, 0); */
   background-color: #FFEAD2;
   width: 20%;
-  padding: 10px;
+  padding-top: 20px;
   text-decoration: none;
 }
 
 .main_block .aside ul li a{
-  line-height: 2;
+  /* border: 1px solid rgb(0, 98, 255); */
+
+  display: block;
   font-size: 2rem;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
+  color: black;
+  padding: 20px;
 
 }
 
-/* -------------------商品區塊---------------------- */
+.main_block .aside ul li a:hover{
+  background-color: #DC9F58;
+  color: white;
+}
+/* -------------------分類標題---------------------- */
 
 
 .main_block .inner_block {
+  /* border: 1px solid rgb(9, 171, 28); */
+
   padding-top: 40px;
   padding-bottom: 65px;
   width: 80%;
@@ -37,27 +48,105 @@
 
 }
 .inner_block .title {
+  display: flex;
   /* border: 1px solid red; */
- background-image: url(../image/素材/title_bg.jfif);
- background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
- height: 200px;
- border-radius: 5px;
- position: relative;
+  background-image: url(../image/material/title_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  margin:15px 15px 35px;
+  border-radius: 5px;
+  position: relative;
 }
 
 .inner_block .title h1{
-    border:  1px solid red;
+    /* border:  1px solid red; */
     align-items: center;
     line-height: 1.5;
+    font-size: 2rem;
     position: absolute;
-    left: 50%;
+    left: 30%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+/* -------------------商品區塊---------------------- */
+
+.items_block {
+  /* border: 1px solid rgb(255, 5, 5); */
+  /* padding: 20px; */
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items_block ul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.items_block ul li{
+  height: 365px;
+  width: 277px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 14px;
+  margin-bottom: 30px;
+  overflow: hidden;
 
 
 }
+
+.img_block{
+  position: relative;
+
+}
+
+.items_block a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+}
+
+.items_block img{
+  width: 100%;
+  /* border-radius: 5px; */
+
+}
+ 
+.items_block .add{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.495);
+  height: 50px;
+  width: 100%;
+  padding: 15px 0;
+  display: none;
+
+}
+
+.items_block h3{
+  padding: 10px 0;
+
+}
+
+.items_block p{
+  padding: 10px 0;
+  font-weight: bold;
+  color: #DC9F58;
+
+}
+
+.items_block ul li:hover .add{
+  display: block;
+
+}
+
 
 
 

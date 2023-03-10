@@ -5,21 +5,15 @@
 }
 body{
   font-family: "Noto Serif TC", serif;
+  margin: 0 auto;
 }
 html {
   font-size: 12px;
-  /* max-width: 1920px; */
   --bg-color: white;
   --page-width: 1200px;
   /* 設定內容寬度 */
-
-
+  /* background-image: url(/html_bg.png); */
 }
 
-.wrapper{
-  border: 2px solid salmon;
-}
-body {
-  margin: 0 auto;
-}
+
 
