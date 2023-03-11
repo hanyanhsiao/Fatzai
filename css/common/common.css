@@ -1,0 +1,46 @@
+/*--------------熱門商品----------------*/
+
+
+.hot_items ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hot_items .img_block {
+    border-radius: 5px;
+    width: 300px;
+    outline: 2px solid #CCC;
+    margin: 10px;
+    position: relative;
+}
+
+.hot_items .img_block img {
+    width: 100%;
+    display: block;
+}
+
+.text_block>p {
+    text-align: center;
+    line-height: 70px;
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.772);
+    border-radius: 0 0 5px 5px;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
+    transition: all 100ms;
+
+}
+
+li:hover p {
+    display: block;
+}
+
+
+
+.hot_items ul li {}
+
+.hot_items ul li a {}

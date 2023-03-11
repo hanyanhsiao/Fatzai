@@ -1,16 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/common/all.css" />
-    <link rel="stylesheet" href="./css/common/header.css" />
-    <link rel="stylesheet" href="./css/common/footer.css" />
-    <link rel="stylesheet" href="./css/shop_detail.css" />
-  </head>
-  <body>
-    test2
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News</title>
+  <link rel="stylesheet" href="./css/common/all.css" />
+  <link rel="stylesheet" href="./css/common/header.css" />
+  <link rel="stylesheet" href="./css/common/footer.css" />
+  <link rel="stylesheet" href="./css/news.css" />
+  <link rel="stylesheet" href="./css/common/common.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- 導覽列 -->
+    <nav class="nav">
+      <!-- 左側LOGO -->
+      <a href="./index.html" class="logo">
+        <img src="./image/logo2.svg" alt="logo" />
+      </a>
+      <!-- 右側選單 -->
+      <ul class="nav_list">
+        <li>
+          <a href="#">關於Fatzai </a>
+        </li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="./shop_list.html">產品列表</a></li>
+        <li><a href="#">會員專區</a></li>
+        <li><a href="#">購物車</a></li>
+      </ul>
+      <!-- 下拉選單 -->
+      <!-- <div class="share_block">
+          <span class="share_text">社群連結</span>
+          <ul class="share_list">
+          <li><a href="https://www.facbbook.com">FB粉絲頁</a></li>
+          <li><a href="https://www.instagram.com">IG粉絲頁</a></li>
+          </ul>
+          </div> -->
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- 最新消息 -->
+    <div class="news1">
+      <h1>STRAWBERRY</h1>
+      <a href=""> <img src="./image/material/Strawberry.png" alt="">
+      </a>
+    </div>
+    <div class="news2">
+      <h1>MATCHA</h1>
+      <a href=""> <img src="./image/material/News_Matcha.png" alt="">
+      </a>
+    </div>
+
+    <!-- 分隔線 -->
+    <hr class="hr">
+
+    <!-- 日曆 -->
+    <div class="calendar">日曆日曆</div>
+
+    <!-- 分隔線 -->
+    <hr class="hr">
+
+    <!-- 熱門商品 -->
+    <div class="hot_items">
+      <h1 class="title">熱門商品</h1>
+      <ul>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="./image/items/choux (1).jpg" alt="">
+              <div class="text_block">
+                <p>加入購物車</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="./image/items/tart (1).jpg" alt="">
+              <div class="text_block">
+                <p>加入購物車</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="./image/items/mousse (1).jpg" alt="">
+              <div class="text_block">
+                <p>加入購物車</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="./image/items/mousse (7).jpg" alt="">
+              <div class="text_block">
+                <p>加入購物車</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="./image/items/tart (18).png" alt="">
+              <div class="text_block">
+                <p>加入購物車</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+
+
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer_left">
+        <p><a href="">關於我們</a></p>
+        <p><a href="">最新消息</a></p>
+        <p><a href="">產品列表</a></p>
+        <p><a href="">常見問題</a></p>
+
+        <div class="footer_icons">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="#"> <i class="fa-brands fa-instagram"></i>
+
+          </a>
+          <a href="#"> <i class="fa-brands fa-line"></i>
+
+        </div>
+      </div>
+
+      <div class="footer_center">
+        <a href="./index.html">
+          <img src="./image/logo1.svg" alt="">
+          <img class="color" src="./image/logo2.svg" alt="">
+        </a>
+      </div>
+
+      <div class="footer_right">
+        <p>營業時間 : 週一至週五 11:30-19:30</p>
+        <p>最後取貨時間 : 週一至週日 19:00</p>
+        <p>聯絡電話 : 02-9999-9999</p>
+        <p>門市地址 : 108台北市萬華區西寧南路123號</p>
+
+      </div>
+    </div>
+    <div class="footer_bottom">
+      &copy; 2023 網頁切版練習
+      <span class="test">本練習圖部分出自肥宅</span>
+    </div>
+  </footer>
+  </div>
+</body>
+
 </html>

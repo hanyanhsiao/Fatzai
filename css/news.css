@@ -1,0 +1,151 @@
+main {
+    border: 1px solid black;
+    position: relative;
+    width: var(--page-width);
+    /* height: 2000px; */
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+/* ----------------new1--------------------- */
+.news1 {
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+    height: 300px;
+    background-color: #ffb3b3ba;
+    display: flex;
+    /* /* 透明度 0.6 的黑色半透明遮罩
+     /* background-color: rgba(0, 0, 0, .6); 
+    /* 設置背景混和模式為相乘模式  
+     background-blend-mode: multiply; */
+
+}
+
+.news1 img {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    width: 30%;
+    border-radius: 10px;
+    animation: img1 2s forwards;
+}
+
+@keyframes img1 {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+
+
+.news1 h1 {
+    /* display: inline-block; */
+    /* outline: 2px solid rgb(0, 0, 0); */
+    font-size: 14rem;
+    text-align: start;
+    font-weight: 900;
+    align-self: end;
+    font-family: "Orelega", serif;
+    color: #fa8585;
+
+    position: absolute;
+    left: 0;
+
+    animation: title1 6s linear infinite backwards;
+    /* animation-play-state: paused; */
+
+}
+
+@keyframes title1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+
+
+/* ----------------new2--------------------- */
+
+.news2 {
+    /* outline: 2px solid red; */
+    height: 300px;
+    background-color: #D1FFCA;
+    display: flex;
+}
+
+
+.news2 img {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 30%;
+    border-radius: 10px;
+    animation: img2 2s forwards;
+}
+
+@keyframes img2 {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+.news2 h1 {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    font-size: 14rem;
+    text-align: start;
+    font-weight: 900;
+    align-self: end;
+    font-family: "Orelega", serif;
+    color: #439f579f;
+
+    position: absolute;
+    right: 0;
+
+    animation: title2 4s linear infinite forwards;
+    /* animation-play-state: paused; */
+
+}
+
+@keyframes title2 {
+    0% {
+        transform: translateX(100%);
+        ;
+    }
+
+    100% {
+        transform: translateX(-180%);
+    }
+}
+
+/* ----------------日曆日曆--------------------- */
+
+.calendar {
+    height: 500px;
+}
+
+
+/* ----------------日曆日曆--------------------- */
+.hot_items {
+    margin-bottom: 50px;
+}
