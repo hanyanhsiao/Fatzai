@@ -1,5 +1,14 @@
-/*--------------熱門商品----------------*/
+/*--------------分隔線----------------*/
 
+.hr {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding-top: 2px;
+    border: #DC9F58;
+    background: linear-gradient(to right, transparent, #DC9F58, transparent);
+}
+
+/*--------------熱門商品----------------*/
 
 .hot_items ul {
     display: flex;
@@ -8,9 +17,9 @@
 
 .hot_items .img_block {
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
     outline: 2px solid #CCC;
-    margin: 10px;
+    margin: 20px;
     position: relative;
 }
 
@@ -31,14 +40,12 @@
     bottom: 0;
     display: none;
     /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
-    transition: all 100ms;
 
 }
 
 li:hover p {
     display: block;
 }
-
 
 
 .hot_items ul li {}

@@ -1,170 +1,188 @@
-.wrapper{
+.wrapper {
+  /* background-image: url(../image/bgi/bgi\ \(3\).png); */
 }
+
 section .banner_bg {
-    /* border: 2px solid rgb(0, 0, 0); */
+  /* border: 2px solid rgb(0, 0, 0); */
 
-    background-image: url("../image/banner.png");
-    width: var(--page-width);
-    height: 410px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-  }
+  background-image: url("../image/banner.png");
+  width: var(--page-width);
+  height: 410px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
 
-  section.main{
-    font-size: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
-    
-  }
-  .news, .hot_items , .faq, .information {
-    display: block;
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: 20px 0 50px ;
-    /* outline: 2px solid rgb(255, 0, 0); */
-  }
-  .hr{
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding-top: 2px;
-    border: #DC9F58;
-    background: linear-gradient(to right, transparent, #DC9F58, transparent);
-  }
- /*--------------最新消息----------------*/
-  
-  
-  .title{
-    font-size: 4rem;
-    /* border: 2px solid rgb(0, 21, 255); */
-    background-image: url(../image/title\ \(2\).png);
-    background-repeat: no-repeat;
-    padding-bottom: 20px;
-    line-height: 70px;
-  }
+section.main {
+  font-size: 1.5rem;
+  /* border: 2px solid rgb(0, 0, 0); */
 
-  .news > ul{
-    display: flex;
-    justify-content: space-between;
-  }
+}
 
-  .news > ul >li{
-    /* border: 5px solid rgb(255, 0, 0); */
-    /* 寬度不知道要怎麼設???????????????????????????????? */
-    width: 510px; 
-  }
-  
-  .img_block > img{
-    width: 100%;
-  }
-  
-  .img_block{
-    position: relative;
-  }
-  
-  .text_block{}
+.news,
+.hot_items,
+.faq,
+.information {
 
-  .text_block > p{
-    text-align: center;
-    line-height: 72px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.772);
-    border-radius: 0 0 5px 5px;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    display: none;  
-     /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
-    transition: all 100ms ;
+  display: block;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 20px 0 50px;
+  /* outline: 2px solid rgb(255, 0, 0); */
+}
 
-  }
-    li:hover p{
-      display: block;
-    }
+/* 註解後吃不到common.css的hr??????????????????*/
+.hr {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding-top: 2px;
+  border: #DC9F58;
+  background: linear-gradient(to right, transparent, #DC9F58, transparent);
+}
 
- /*--------------熱門商品----------------*/
+/*--------------最新消息----------------*/
 
-   /* outline: 2px solid red; */
 
- .hot_items ul{
-  display:flex;
+.title {
+  font-size: 4rem;
+  /* border: 2px solid rgb(0, 21, 255); */
+  background-image: url(../image/title\ \(2\).png);
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  line-height: 70px;
+}
+
+.news>ul {
+  display: flex;
   justify-content: space-between;
- }
+}
 
- .hot_items ul li{}
+.news>ul>li {
+  /* border: 5px solid rgb(255, 0, 0); */
+  /* 寬度不知道要怎麼設???????????????????????????????? */
+  width: 510px;
+}
 
- .hot_items ul li a{}
+.img_block>img {
+  width: 100%;
+}
 
- .hot_items .img_block{
+.img_block {
+  position: relative;
+}
+
+.text_block {}
+
+.text_block>p {
+  text-align: center;
+  line-height: 72px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.772);
+  border-radius: 0 0 5px 5px;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  display: none;
+  /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
+  transition: all 100ms;
+
+}
+
+li:hover p {
+  display: block;
+}
+
+/*--------------熱門商品----------------*/
+
+/* outline: 2px solid red; */
+
+.hot_items ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot_items ul li {}
+
+.hot_items ul li a {}
+
+.hot_items .img_block {
   border-radius: 5px;
-  width:380px;
+  width: 380px;
   outline: 2px solid #CCC;
   margin: 10px;
 
- }
- .hot_items .img_block img{
+}
+
+.hot_items .img_block img {
   width: 100%;
   display: block;
- }
+}
 
- /* 滑鼠移入圖片微放大效果???????????????? */
+/* 滑鼠移入圖片微放大效果???????????????? */
 
- /*--------------中間背景圖----------------*/
-.center_bg{
+/*--------------中間背景圖----------------*/
+.center_bg {
   /* outline: 2px solid #000000; */
 
-  background-image: url(../image/bgi/bg_choux.png);
-  width: var(--page-width);
-  height: 420px;
-  background-size: contain;
+  background-image: url(../image/bgi/Choux-1.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  /* width: var(--page-width); */
+  height: 420px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-attachment: fixed;
+
 }
-.center_text{
+
+.center_text {
   background-color: #ffffff90;
   padding: 50px 100px;
   border-radius: 10px;
   text-align: center;
 
 }
-.center_text span{
+
+.center_text span {
   display: block;
   width: 300px;
   border: 1px solid #DC9F58;
   margin: 20px 0;
 }
 
-.center_bg .p1{
+.center_bg .p1 {
   font-weight: 500;
   font-size: 3rem;
-  white-space:pre;
+  white-space: pre;
 
 }
 
-.center_bg .p2{
+.center_bg .p2 {
   padding-top: 20px;
 
 }
 
 
- /*--------------常見問題----------------*/
- 
- .faq{}
- .faq .title{
+/*--------------常見問題----------------*/
+
+.faq {}
+
+.faq .title {
   display: block;
   position: relative;
 
- }
+}
 
- /* ----------more------------- */
- .faq .title>a{
+
+/* ----------more------------- */
+.faq .title>a {
   font-size: 50%;
   line-height: 30px;
   text-decoration: none;
-  color: #DC9F58; 
+  color: #DC9F58;
   font-weight: bold;
   position: absolute;
   bottom: 0;
@@ -172,89 +190,89 @@ section .banner_bg {
   margin-bottom: 20px;
 
 }
+
 /* -------------question------------- */
- .faq ul{
-  
- }
+.faq ul {}
 
- .faq ul li{
-     outline: 2px solid #CCC;;
-     background-color: #FFEAD2;
-     border-radius: 5px;
-     margin-bottom: 24px;
- }
+.faq ul li {
+  outline: 2px solid #CCC;
+  ;
+  background-color: #FFEAD2;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
 
- 
- .faq ul li a{
-    /* outline: 1px solid #000000; */
-    width: 100%;
-    color: #000000;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
- }
 
- .faq ul li a p{
+.faq ul li a {
   /* outline: 1px solid #000000; */
- }
+  width: 100%;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.faq ul li a p {
+  /* outline: 1px solid #000000; */
+}
 
 
 
- .faq .fa-solid{ 
+.faq .fa-solid {
   display: block;
   /* outline: 2px solid #ff0000; */
   margin: 10px 0;
- }
- .faq .faq_answer{
+}
+
+.faq .faq_answer {
   /* outline: 2px solid #ff0000; */
   width: var(--page-width);
   background-color: #ffffff;
-  padding:10px;
+  padding: 10px;
   display: none;
-  }
+}
 
-  .faq ul li:hover .faq_answer{
-    display: block;
+.faq ul li:hover .faq_answer {
+  display: block;
 
-  }
-
-
+}
 
 
-  /*--------------地圖&營業時間----------------*/
 
-    /* outline: 1px solid black; */
 
-    .information .title{
+/*--------------地圖&營業時間----------------*/
 
-    }
+/* outline: 1px solid black; */
 
-    .information .map{
-      /* outline: 4px solid black; */
-      display: flex;
-      justify-content: space-between;
-      /* outline: 1px solid black; */
+.information .title {}
 
-    }
-    iframe{
-      height: 270px;
-    }
-    .information .detail{
-      /* outline: 4px solid rgb(255, 0, 0); */
-      margin: 0 auto;
-      line-height: 1.6;
-      padding-left: 20px;
-      
-      }
+.information .map {
+  /* outline: 4px solid black; */
+  display: flex;
+  justify-content: space-between;
+  /* outline: 1px solid black; */
 
-      .information .detail h1{
-        font-size: 4rem;
-        font-weight:600;
-        color: #DC9F58;
-        margin-bottom: 10px;
-      }
+}
 
-      .information .detail p{}
+iframe {
+  height: 270px;
+}
 
+.information .detail {
+  /* outline: 4px solid rgb(255, 0, 0); */
+  margin: 0 auto;
+  line-height: 1.6;
+  padding-left: 20px;
+
+}
+
+.information .detail h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #DC9F58;
+  margin-bottom: 10px;
+}
+
+.information .detail p {}

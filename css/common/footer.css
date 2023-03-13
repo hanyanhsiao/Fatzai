@@ -1,27 +1,28 @@
-footer{
+footer {
   background-color: #FFEAD2;
 
 }
-.footer{
+
+.footer {
   /* border: 1px solid black; */
   width: var(--page-width);
   height: 240px;
   margin: 0 auto;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   padding: 30px;
 }
 
 /* ------------------footer_left-------------------- */
 
-.footer_left{
+.footer_left {
   /* outline: 1px solid black; */
   display: flex;
   padding-top: 30px;
 
 }
 
-.footer_left p{
+.footer_left p {
   /* border: 1px solid rgb(255, 0, 0); */
   writing-mode: vertical-lr;
   margin-right: 50px;
@@ -30,62 +31,66 @@ footer{
   height: 100%;
 }
 
-.footer_left p>a{
+.footer_left p>a {
   text-decoration: none;
   color: black;
 }
 
-.footer_icons{
+.footer_icons {
   /* border: 1px solid rgb(0, 217, 255); */
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.footer_icons>a{
+
+.footer_icons>a {
   /* border: 1px solid rgb(255, 0, 0); */
   margin-bottom: 26px;
   writing-mode: vertical-lr;
   font-size: 2rem;
-  color:black;
+  color: black;
   /* text-shadow:0.1rem 0.1rem #acacac7d; */
 }
 
-.fa-line{
+.fa-line {
   font-size: 1.8rem;
 }
 
 /* ------------------footer_logo-------------------- */
 
-footer .footer_center{
+footer .footer_center {
   /* outline: 1px solid black; */
   margin: 0 auto;
   position: relative;
 
 }
 
-footer .footer_center a img{
+footer .footer_center a img {
   height: 100%;
 }
 
-.footer_center a img{
-  opacity: 1;
+.footer_center a img {
+  /* opacity: 1; */
 }
-.footer_center img.color{
-  
-    transition: all 300ms;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
+
+.footer_center img.color {
+  height: 100%;
+
+  transition: all 300ms;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
-.footer_center img.color:hover{
+
+.footer_center img.color:hover {
   opacity: 1;
 
 }
 
 /* ------------------footer_right-------------------- */
 
-.footer_right{
+.footer_right {
   /* outline: 1px solid black; */
   align-self: center;
   font-size: 1.3rem;
@@ -93,9 +98,9 @@ footer .footer_center a img{
 
 }
 
-.footer_right p{
+.footer_right p {
   line-height: 40px;
-  
+
 }
 
 
@@ -104,8 +109,8 @@ footer .footer_center a img{
 
 
 /* ------------------footer_bottom-------------------- */
-footer .footer_bottom{
-    /* border: 1px solid rgb(255, 0, 0); */
+footer .footer_bottom {
+  /* border: 1px solid rgb(255, 0, 0); */
   text-align: center;
   padding: 10px 0;
 }

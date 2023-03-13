@@ -1,0 +1,258 @@
+main {}
+
+.item_block {
+    width: var(--page-width);
+    height: 690px;
+    /* outline: 2px solid black; */
+    margin: 0 auto;
+    display: flex;
+    margin-top: 100px;
+
+}
+
+
+/* ---------------------left_block---------------------- */
+.left_block {
+    width: 50%;
+    /* outline: 2px solid rgb(255, 0, 0); */
+}
+
+.left_block>img {
+    display: block;
+    width: 450px;
+    /* margin: 100px 0 0 100px; */
+    /* outline: 2px solid rgb(255, 0, 0); */
+    margin: 0 0 0 50px;
+}
+
+.little_img {
+    display: flex;
+    /* outline: 2px solid rgb(68, 0, 255); */
+    margin-left: 50px;
+}
+
+.little_img a {
+    /* outline: 2px solid rgb(255, 0, 0); */
+    width: 160px;
+    margin: 20px 20px 0 0;
+
+}
+
+.little_img a img {
+    width: 100%;
+}
+
+
+/* ---------------------right_block---------------------- */
+
+.right_block {
+    display: block;
+    /* outline: 2px solid rgb(0, 109, 163); */
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 0;
+}
+
+/* -----------產品名稱------------ */
+
+.right_block .item_name {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: .8rem;
+    text-align: center;
+}
+
+/* -----------產品介紹與運費------------ */
+
+.item_introduce,
+.item_delivery_fee {
+    width: auto;
+    outline: 1px solid #DC9F58;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    /* background-color: #FFEAD2; */
+}
+
+.item_introduce h3,
+.item_delivery_fee h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    /* outline: 2px solid rgb(0, 0, 0); */
+    color: #DC9F58;
+
+}
+
+.item_introduce ul,
+.item_delivery_fee ul {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    margin-left: 20px;
+
+}
+
+.item_introduce ul li,
+.item_delivery_fee ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+    font-size: 1.2rem;
+}
+
+/* -----------價錢------------ */
+.dollars {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #ccc;
+}
+
+/* -----------尺寸選擇------------ */
+
+.item_size a {
+    display: inline-block;
+    border: 2px solid #DC9F58;
+    font-size: 2rem;
+    color: #DC9F58;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* -----------數量------------ */
+
+.item_quantity {}
+
+.item_quantity ul {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.item_quantity li {
+    display: inline-block;
+    /* float: left; */
+    /* outline: 2px solid rgb(0, 0, 0); */
+    margin-top: 20px;
+    height: 100%;
+
+
+}
+
+
+.item_quantity .count .num-jian,
+.input-num,
+.num-jia {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    /* color: #000000; */
+    cursor: pointer;
+    border: 2px solid #DC9F58;
+}
+
+.num-jian {
+    border-radius: 5px 0 0 5px;
+    background-color: #DC9F58;
+}
+
+.num-jia {
+    border-radius: 0 5px 5px 0;
+    background-color: #DC9F58;
+
+}
+
+.item_quantity .count .input-num {
+    width: 100%;
+    /* height: 30px; */
+    color: #DC9F58;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* -----------購買/加入購物車------------ */
+.item_buy {
+    /* outline: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn1,
+.btn2 {
+    display: inline-block;
+    width: 45%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #DC9F58;
+    font-size: 2rem;
+    font-family: "Noto Serif TC", serif;
+}
+
+.btn1 {
+    background-color: #DC9F58;
+
+}
+
+.btn2 {
+    background-color: #ffffff;
+
+}
+
+/*--------------分隔線----------------*/
+
+.hr {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding-top: 2px;
+    border: #DC9F58;
+    background: linear-gradient(to right, transparent, #DC9F58, transparent);
+}
+
+/* -------------------item_description-------------------- */
+.item_description {
+    width: var(--page-width);
+    height: 690px;
+    outline: 1px solid #DC9F58;
+    margin: 50px auto;
+
+}
+
+.item_description ul {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_description li {
+    /* border: 2px solid #ccc; */
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.item_description li a {
+    text-decoration: none;
+    color: black;
+}
+
+.item_description .delivery {
+    background-color: #DC9F58;
+}
+
+.item_description .faq {
+    background-color: #FFEAD2;
+}
+
+.item_description .review {
+    background-color: #FFEAD2;
+
+}

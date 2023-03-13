@@ -8,15 +8,18 @@
   <title>News</title>
   <link rel="stylesheet" href="./css/common/all.css" />
   <link rel="stylesheet" href="./css/common/header.css" />
-  <link rel="stylesheet" href="./css/common/footer.css" />
-  <link rel="stylesheet" href="./css/news.css" />
+
   <link rel="stylesheet" href="./css/common/common.css">
+  <link rel="stylesheet" href="./css/news.css" />
+  <link rel="stylesheet" href="./css/common/footer.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -54,20 +57,36 @@
     <!-- 最新消息 -->
     <div class="news1">
       <h1>STRAWBERRY</h1>
-      <a href=""> <img src="./image/material/Strawberry.png" alt="">
+      <a href=""><img src="./image/material/Strawberry.png" alt="">
       </a>
+      <div class="new1_title">
+        <a href="">
+          <p>草莓季開跑啦</p>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+
+        </a>
+      </div>
+
     </div>
     <div class="news2">
       <h1>MATCHA</h1>
       <a href=""> <img src="./image/material/News_Matcha.png" alt="">
       </a>
+      <div class="new2_title">
+        <a href="">
+          <p>抹茶季開跑啦</p>
+          <i class="fa-solid fa-circle-arrow-left"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- 分隔線 -->
-    <hr class="hr">
+
 
     <!-- 日曆 -->
-    <div class="calendar">日曆日曆</div>
+    <div class="calendar">
+      <h1>本月行事曆</h1>
+
+    </div>
 
     <!-- 分隔線 -->
     <hr class="hr">
@@ -131,9 +150,13 @@
 
 
       </ul>
-    </div>
-  </main>
+      <div class="swiper-pagination"></div>
 
+    </div>
+
+
+  </main>
+  <!-- ==================footer================= -->
   <footer>
     <div class="footer">
       <div class="footer_left">
@@ -173,7 +196,6 @@
       <span class="test">本練習圖部分出自肥宅</span>
     </div>
   </footer>
-  </div>
 </body>
 
 </html>

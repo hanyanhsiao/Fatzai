@@ -5,7 +5,6 @@ main {
     /* height: 2000px; */
     margin: 0 auto;
     overflow: hidden;
-
 }
 
 /* ----------------new1--------------------- */
@@ -15,6 +14,7 @@ main {
     height: 300px;
     background-color: #ffb3b3ba;
     display: flex;
+
     /* /* 透明度 0.6 的黑色半透明遮罩
      /* background-color: rgba(0, 0, 0, .6); 
     /* 設置背景混和模式為相乘模式  
@@ -60,7 +60,7 @@ main {
     position: absolute;
     left: 0;
 
-    animation: title1 6s linear infinite backwards;
+    animation: title1 6s 1s linear infinite backwards;
     /* animation-play-state: paused; */
 
 }
@@ -75,6 +75,53 @@ main {
     }
 }
 
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* 區塊陰影沒顯示????????????????? */
+.new1_title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: white;
+    width: 150px;
+    height: 60px;
+    box-shadow: 3px 3px 2px #c3c3c3b6;
+    position: absolute;
+    top: 12%;
+    left: 28%;
+    animation: new1_title 2s forwards;
+
+}
+
+
+.new1_title p,
+i {
+    display: inline-block;
+    color: black;
+    margin: 0 5px;
+
+}
+
+
+@keyframes new1_title {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
 
 
 /* ----------------new2--------------------- */
@@ -84,13 +131,15 @@ main {
     height: 300px;
     background-color: #D1FFCA;
     display: flex;
+    margin-bottom: 20px;
+
 }
 
 
 .news2 img {
     display: flex;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 10%;
     width: 30%;
     border-radius: 10px;
@@ -122,7 +171,7 @@ main {
     position: absolute;
     right: 0;
 
-    animation: title2 4s linear infinite forwards;
+    animation: title2 5s 1s linear infinite backwards;
     /* animation-play-state: paused; */
 
 }
@@ -138,14 +187,85 @@ main {
     }
 }
 
+.new2_title a {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: white;
+    width: 150px;
+    height: 60px;
+    box-shadow: 3px 3px 2px #c3c3c3b6;
+    position: absolute;
+    top: 30%;
+    right: 26%;
+    animation: new2_title 2s forwards;
+
+}
+
+.new2_title p,
+i {
+    display: inline-block;
+    color: black;
+    margin: 0 5px;
+}
+
+
+@keyframes new2_title {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+
 /* ----------------日曆日曆--------------------- */
 
 .calendar {
     height: 500px;
+    /* outline: 2px solid saddlebrown; */
 }
 
 
-/* ----------------日曆日曆--------------------- */
+
+.calendar>h1 {
+    /* outline: 2px solid saddlebrown; */
+
+    font-size: 4rem;
+    background-color: #FFEAD2;
+    line-height: 70px;
+    writing-mode: vertical-lr;
+    height: 400px;
+    text-align: center;
+    letter-spacing: 2rem;
+    margin-top: 150px;
+    margin-left: 20%;
+}
+
+/* ----------------熱門商品--------------------- */
+
+.title {
+    font-size: 4rem;
+    /* border: 2px solid rgb(0, 21, 255); */
+    padding-bottom: 20px;
+    line-height: 70px;
+}
+
+
+
 .hot_items {
-    margin-bottom: 50px;
+    /* border: 2px solid rgb(255, 0, 0); */
+    margin: 20px;
 }
+
+
+/* footer走鐘???????????????????????????????????? */
