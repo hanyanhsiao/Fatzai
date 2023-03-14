@@ -4,6 +4,7 @@
     max-width: var(--page-width);
     margin: 0 auto;
     padding-top: 2px;
+    margin-bottom: 50px;
     border: #DC9F58;
     background: linear-gradient(to right, transparent, #DC9F58, transparent);
 }
@@ -19,7 +20,7 @@
     border-radius: 5px;
     width: 250px;
     outline: 2px solid #CCC;
-    margin: 20px;
+    margin: 10px;
     position: relative;
 }
 
@@ -30,7 +31,7 @@
 
 .text_block>p {
     text-align: center;
-    line-height: 70px;
+    line-height: 2.5;
     width: 100%;
     font-size: 1.6rem;
     background-color: rgba(255, 255, 255, 0.772);

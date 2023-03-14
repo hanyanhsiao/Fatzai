@@ -2,7 +2,6 @@ main {
     /* border: 1px solid black; */
     position: relative;
     width: var(--page-width);
-    /* height: 2000px; */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -11,7 +10,6 @@ main {
 /* ----------------new1--------------------- */
 .news1 {
     box-sizing: border-box;
-    /* outline: 2px solid red; */
     height: 300px;
     background-color: #ffb3b3ba;
     display: flex;
@@ -60,6 +58,7 @@ main {
 
 }
 
+
 @keyframes title1 {
     0% {
         transform: translateX(-100%);
@@ -70,12 +69,13 @@ main {
     }
 }
 
-a {
+
+.news1 a,
+.news2 a {
     text-decoration: none;
     display: block;
 }
 
-/* 區塊陰影沒顯示????????????????? */
 .new1_title a {
     display: flex;
     justify-content: center;
@@ -250,14 +250,13 @@ i {
 .title {
     font-size: 4rem;
     /* border: 2px solid rgb(0, 21, 255); */
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     line-height: 70px;
 }
 
 
 
 .hot_items {
-    /* border: 2px solid rgb(255, 0, 0); */
     margin: 20px;
 }
 

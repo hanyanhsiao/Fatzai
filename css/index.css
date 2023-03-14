@@ -19,72 +19,77 @@ section.main {
 
 }
 
+/* -------------標題們---------------- */
 .news,
 .hot_items,
 .faq,
 .information {
-
+  /* outline: 2px solid rgb(255, 0, 0); */
   display: block;
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 20px 0 50px;
-  /* outline: 2px solid rgb(255, 0, 0); */
+  padding: 0 20px;
+  margin-bottom: 50px;
+  overflow: hidden;
 }
 
-/* 註解後吃不到common.css的hr??????????????????*/
-.hr {
-  max-width: var(--page-width);
-  margin: 0 auto;
-  padding-top: 2px;
-  border: #DC9F58;
-  background: linear-gradient(to right, transparent, #DC9F58, transparent);
+.title {
+  /* border: 2px solid rgb(0, 21, 255); */
+  font-size: 3rem;
+  /* background-image: url(../image/title\ \(2\).png); */
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  text-align: center;
 }
+
+
 
 /*--------------最新消息----------------*/
 
-
-.title {
-  font-size: 4rem;
-  /* border: 2px solid rgb(0, 21, 255); */
-  background-image: url(../image/title\ \(2\).png);
-  background-repeat: no-repeat;
-  padding-bottom: 20px;
-  line-height: 70px;
+.news {
+  margin-top: 50px;
 }
 
-.news>ul {
+
+.news ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.news>ul>li {
-  /* border: 5px solid rgb(255, 0, 0); */
-  /* 寬度不知道要怎麼設???????????????????????????????? */
-  width: 510px;
+.news ul li {
+  /* border: 4px solid rgb(247, 0, 255); */
+  width: 40%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.img_block>img {
+
+.news>ul>li>a img {
   width: 100%;
+
 }
 
-.img_block {
+.news_text_block {
+  /* border: 1px solid rgb(255, 0, 0); */
+
+  width: 100%;
   position: relative;
+
 }
 
-.text_block {}
-
-.text_block>p {
-  text-align: center;
-  line-height: 72px;
-  width: 100%;
+.news_text_block>p {
+  display: block;
   background-color: rgba(255, 255, 255, 0.772);
-  border-radius: 0 0 5px 5px;
+  width: 100%;
+  text-align: center;
+  line-height: 70px;
   color: black;
   position: absolute;
+  left: 0;
   bottom: 0;
   display: none;
   /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
-  transition: all 100ms;
+  transition: all ms;
 
 }
 
@@ -92,38 +97,17 @@ li:hover p {
   display: block;
 }
 
+
 /*--------------熱門商品----------------*/
 
-/* outline: 2px solid red; */
 
-.hot_items ul {
-  display: flex;
-  justify-content: space-between;
-}
 
-.hot_items ul li {}
-
-.hot_items ul li a {}
-
-.hot_items .img_block {
-  border-radius: 5px;
-  width: 380px;
-  outline: 2px solid #CCC;
-  margin: 10px;
-
-}
-
-.hot_items .img_block img {
-  width: 100%;
-  display: block;
-}
-
-/* 滑鼠移入圖片微放大效果???????????????? */
 
 /*--------------中間背景圖----------------*/
 .center_bg {
   /* outline: 2px solid #000000; */
 
+  /* margin: 50px; */
   background-image: url(../image/bgi/Choux-1.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -168,19 +152,26 @@ li:hover p {
 
 /*--------------常見問題----------------*/
 
-.faq {}
+.faq {
+  margin-top: 50px;
+  /* outline: 2px solid #f30000; */
+
+}
 
 .faq .title {
-  display: block;
   position: relative;
+  /* outline: 2px solid #f30000; */
+
 
 }
 
 
-/* ----------more------------- */
+/* ----more---- */
 .faq .title>a {
-  font-size: 50%;
-  line-height: 30px;
+  padding: 10px 0 10px 10px;
+
+  font-size: 2.5rem;
+  text-align: center;
   text-decoration: none;
   color: #DC9F58;
   font-weight: bold;
@@ -196,15 +187,11 @@ li:hover p {
 
 .faq ul li {
   outline: 2px solid #CCC;
-  ;
   background-color: #FFEAD2;
   border-radius: 5px;
   margin-bottom: 30px;
 }
 
-.faq ul li:last-child {
-  margin-bottom: 0;
-}
 
 
 
@@ -216,7 +203,7 @@ li:hover p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .faq ul li a p {
@@ -228,7 +215,7 @@ li:hover p {
 .faq .fa-solid {
   display: block;
   /* outline: 2px solid #ff0000; */
-  margin: 10px 0;
+  color: #DC9F58;
 }
 
 .faq .faq_answer {
