@@ -129,7 +129,7 @@ li:hover p {
   background-repeat: no-repeat;
   background-position: center;
   /* width: var(--page-width); */
-  height: 420px;
+  height: 450px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -202,6 +202,11 @@ li:hover p {
   margin-bottom: 30px;
 }
 
+.faq ul li:last-child {
+  margin-bottom: 0;
+}
+
+
 
 .faq ul li a {
   /* outline: 1px solid #000000; */
@@ -249,7 +254,7 @@ li:hover p {
 .information .title {}
 
 .information .map {
-  /* outline: 4px solid black; */
+  /* outline: 2px solid black; */
   display: flex;
   justify-content: space-between;
   /* outline: 1px solid black; */
@@ -261,10 +266,8 @@ iframe {
 }
 
 .information .detail {
-  /* outline: 4px solid rgb(255, 0, 0); */
   margin: 0 auto;
-  line-height: 1.6;
-  padding-left: 20px;
+  /* outline: 2px solid rgb(255, 157, 157); */
 
 }
 
@@ -272,7 +275,14 @@ iframe {
   font-size: 4rem;
   font-weight: 600;
   color: #DC9F58;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  /* outline: 2px solid rgb(255, 157, 157); */
+
+
 }
 
-.information .detail p {}
+.information .detail p {
+  line-height: 2.5;
+
+
+}

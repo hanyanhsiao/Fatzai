@@ -69,13 +69,8 @@ footer .footer_center a img {
   height: 100%;
 }
 
-.footer_center a img {
-  /* opacity: 1; */
-}
-
 .footer_center img.color {
   height: 100%;
-
   transition: all 300ms;
   position: absolute;
   left: 0;
