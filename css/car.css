@@ -1,16 +1,19 @@
 main {
     /* outline: 2px solid black; */
-    width: var(--page-width);
+    max-width: var(--page-width);
     margin: 0 auto;
+    padding: 50px;
 }
 
 
 /* ------------------------訂購須知------------------------------ */
 .notice {
-    outline: 2px solid rgb(255, 0, 0);
+    background-color: #FFEAD2;
     height: 200px;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 50px 0;
+    outline: 2px solid black;
+
 }
 
 
@@ -18,9 +21,8 @@ main {
 
 .process {
     /* outline: 2px solid rgb(153, 0, 255); */
-    height: 100px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
 }
 
@@ -31,15 +33,14 @@ main {
     vertical-align: top;
     width: 240px;
     max-width: 33%;
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: -3px;
+    margin-right: -3px;
     color: black;
 }
 
 
 .process .step span {
     display: block;
-    font-size: 1.2rem;
     padding: 10 0;
     /* outline: 2px solid rgb(0, 0, 0); */
 
@@ -90,7 +91,6 @@ main {
     position: absolute;
     width: 100%;
     z-index: 1;
-    font-size: 1.2rem;
 }
 
 /* ----------圈圈---------- */
@@ -109,20 +109,31 @@ main {
 }
 
 
-/* ---------------------購物車-------------------- */
-.car {
-    height: 200px;
-    font-size: 1.6rem;
-    outline: 1px solid rgb(0, 0, 0);
+/* --------------------共用標題---------------------- */
+.car,
+.more,
+.delivery,
+.check {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid #ccc;
+    margin-bottom: 50px;
 
 }
 
-.car p {
+.car>p,
+.more>p,
+.delivery>p,
+.check>p {
     background-color: #FFEAD2;
     padding: 15px;
 }
 
-.car ul {
+/* ---------------------購物車-------------------- */
+
+/* ----------購物車標題---------- */
+
+.car_title {
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -130,22 +141,179 @@ main {
 
 }
 
-.car ul li {}
+.car_title li {
+    /* outline: 2px solid rgb(205, 0, 0); */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
-.car_block {
-    outline: 2px solid rgb(0, 0, 0);
+/* ----------購物車內容---------- */
+
+
+
+.car_item {
+    display: flex;
+    justify-content: space-between;
     padding: 15px;
+    border-bottom: 1px solid #ccc;
+    /* outline: 2px solid rgb(0, 0, 0); */
+}
+
+.car_item li {
+    /* outline: 2px solid rgb(205, 0, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.car_item li img {
+    width: 100%;
+}
+
+
+/* ---------------------加購---------------------- */
+
+.more_items {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    /* outline: 2px solid rgb(0, 0, 0); */
+}
+
+.more_items li {
+    /* outline: 2px solid rgb(205, 0, 0); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.more_items li img {
+    display: flex;
+    width: 100%;
+    /* outline: 2px solid rgb(47, 0, 255); */
 
 }
 
-/* ---------------------加購---------------------- */
-.more {}
+.more_items li a {
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
 
 /* ---------------------訂單資訊---------------------- */
-.order_inf {}
+.order_inf {
+    display: flex;
+    justify-content: space-between;
+    /* outline: 2px solid blue; */
 
-/* ---------------------左側運送資訊---------------------- */
-.order_inf .delivery {}
+}
 
-/* ---------------------右側訂單資訊---------------------- */
-.order_inf .check {}
+/* ----------左側運送資訊----------- */
+.order_inf .delivery {
+    display: flex;
+    width: 47%;
+
+}
+
+.pickup,
+.pay,
+.attention {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    /* outline: 2px solid rgb(255, 92, 92); */
+
+}
+
+.pickup select,
+.pay select {
+    margin: 15px 0;
+    height: 40px;
+    font-family: "Noto Serif TC", serif;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+
+.attention .content {
+    background-color: #FFEAD2;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+    line-height: 2;
+}
+
+/* ----------右側訂單資訊----------- */
+.order_inf .check {
+    display: flex;
+    width: 47%;
+
+}
+
+.money {
+    /* border: 3px solid rgb(145, 48, 255); */
+    padding: 15px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.money>div {
+    line-height: 3;
+    /* outline: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.money>button {
+    background-color: #FFEAD2;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    width: 30%;
+
+}
+
+.total {
+    border-bottom: 1px solid #ccc;
+}
+
+
+.buy>button {
+    background-color: #DC9F58;
+    padding: 15px;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 0;
+    box-shadow: 0 0 5px #CCC;
+    letter-spacing: 12px;
+    margin-bottom: 0;
+    width: 100%;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+
+
+
+
+
+}

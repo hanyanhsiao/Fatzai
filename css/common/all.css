@@ -7,12 +7,21 @@
 body {
   font-family: "Noto Serif TC", serif;
   margin: 0 auto;
+
 }
 
 html {
-  font-size: 12px;
+  font-size: 18px;
   background-color: #ffffff;
-  --page-width: 1200px;
+  --page-width: 1280px;
   /* 設定內容寬度 */
+
+}
+
+button,
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: black;
 
 }

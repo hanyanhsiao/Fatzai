@@ -1,7 +1,7 @@
 main {
     /* border: 1px solid black; */
     position: relative;
-    width: var(--page-width);
+    max-width: var(--page-width);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -11,7 +11,7 @@ main {
 .news1 {
     box-sizing: border-box;
     height: 300px;
-    background-color: #ffb3b3ba;
+    background-color: #ffeaf1;
     display: flex;
 }
 
@@ -41,14 +41,13 @@ main {
 
 
 .news1 h1 {
-    /* display: inline-block; */
     /* outline: 2px solid rgb(0, 0, 0); */
-    font-size: 14rem;
+    font-size: 10rem;
     text-align: start;
     font-weight: 900;
     align-self: end;
     font-family: "Orelega", serif;
-    color: #fa8585;
+    color: #f4a9a9;
 
     position: absolute;
     left: 0;
@@ -70,33 +69,37 @@ main {
 }
 
 
-.news1 a,
-.news2 a {
-    text-decoration: none;
-    display: block;
-}
+/*  */
 
 .new1_title a {
+    /* outline: 2px solid red; */
+
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
-    font-size: 1.2rem;
     border-radius: 50px;
     background-color: white;
-    width: 150px;
+    width: 180px;
     height: 60px;
     box-shadow: 3px 3px 2px #c3c3c3b6;
     position: absolute;
     top: 12%;
     left: 28%;
     animation: new1_title 2s forwards;
+    transition: transform 0.2s ease;
+
+}
+
+.new1_title a:hover {
+    transform: scale(5);
+
 
 }
 
 
 .new1_title p,
-i {
+.new1_title i {
     display: inline-block;
     color: black;
     margin: 0 5px;
@@ -124,7 +127,7 @@ i {
 .news2 {
     /* outline: 2px solid red; */
     height: 300px;
-    background-color: #D1FFCA;
+    background-color: #e2f4d9;
     display: flex;
 
 
@@ -156,7 +159,7 @@ i {
 
 .news2 h1 {
     /* outline: 2px solid rgb(0, 0, 0); */
-    font-size: 14rem;
+    font-size: 10rem;
     text-align: start;
     font-weight: 900;
     align-self: end;
@@ -188,10 +191,9 @@ i {
     justify-content: center;
     align-items: center;
     /* border: 1px solid #ccc; */
-    font-size: 1.2rem;
     border-radius: 50px;
     background-color: white;
-    width: 150px;
+    width: 180px;
     height: 60px;
     box-shadow: 3px 3px 2px #c3c3c3b6;
     position: absolute;
@@ -202,11 +204,12 @@ i {
 }
 
 .new2_title p,
-i {
+.new2_title i {
     display: inline-block;
     color: black;
     margin: 0 5px;
 }
+
 
 
 @keyframes new2_title {
@@ -234,7 +237,7 @@ i {
 
 .calendar>h1 {
     /* outline: 2px solid saddlebrown; */
-    font-size: 4rem;
+    /* font-size: 4rem; */
     background-color: #FFEAD2;
     line-height: 70px;
     writing-mode: vertical-lr;
@@ -248,9 +251,10 @@ i {
 /* ----------------熱門商品--------------------- */
 
 .title {
-    font-size: 4rem;
     /* border: 2px solid rgb(0, 21, 255); */
-    /* padding-bottom: 20px; */
+
+    font-size: 1.5rem;
+    text-align: center;
     line-height: 70px;
 }
 

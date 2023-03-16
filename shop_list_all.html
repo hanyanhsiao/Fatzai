@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./css/common/all.css" />
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/footer.css" />
-    <link rel="stylesheet" href="./css/shop_list_choux.css" />
+    <link rel="stylesheet" href="./css/shop_list_all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -43,22 +44,20 @@
             </div>
         </header>
         <!-- ----------------main_blook start--------------------- -->
-        <div class="main_block">
+        <div class="main_block ">
             <!-- 側邊欄 -->
             <aside class="aside">
                 <ul>
-                    <li><a href="#" class="on">全部商品 </a></li>
-                    <li><a href="./shop_list_season.html">季節限定商品</a></li>
-                    <li><a href="./shop_list_choux.html">泡芙系列</a></li>
-                    <li><a href="./shop_list_tart.html">小塔系列</a></li>
-                    <li><a href="">慕斯蛋糕</a></li>
-                    <li><a href="">常溫系列</a></li>
-
+                    <li class="tablinks" onclick="openCity(event, 'all')" id="defaultOpen">全部商品</li>
+                    <li class="tablinks" onclick="openCity(event, 'season')">季節限定商品</li>
+                    <li class="tablinks" onclick="openCity(event, 'choux')">泡芙系列</li>
+                    <li class="tablinks" onclick="openCity(event, 'tart')">小塔系列</li>
+                    <li class="tablinks" onclick="openCity(event, 'mousse')">慕斯蛋糕</li>
                 </ul>
             </aside>
 
-            <!-- 商品欄 -->
-            <div class="inner_block">
+            <!--商品欄/全部商品 -->
+            <div class="inner_block tabcontent" id="all">
 
                 <!-- 分類標題 -->
                 <div class="title">
@@ -68,11 +67,113 @@
                 <!-- 商品區塊 -->
                 <div class="items_block">
                     <ul>
-
                         <li>
                             <a href="./item.html">
                                 <div class="img_block">
                                     <img src="./image/items/tart (1).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Tiramisu Tart</h3>
+                                <p>$199</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (1).jpg" alt="">
+                                    <div class=" add">加入購物車
+                                    </div>
+                                </div>
+                                <h3>Pistache Yogurt Mousse</h3>
+                                <p>$180</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (9).JPG" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Vanilla Cake Role</h3>
+                                <p>$160</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (5).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Chocolate Yo-Yo Cake</h3>
+                                <p>$199</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (11).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Straberry Cake</h3>
+                                <p>$250</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/tart (4).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3> MatchaCreamcheese Tart</h3>
+                                <p>$180</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (7).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Cassis Mousse</h3>
+                                <p>$180</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (1).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Seseame Choux</h3>
+                                <p>$199</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+
+                </div>
+
+            </div>
+
+            <!--商品欄/草莓季限定-->
+            <div class="inner_block tabcontent" id="season">
+
+                <!-- 分類標題 -->
+                <div class="title">
+                    <h1> － 季節限定商品 －</h1>
+                </div>
+
+                <!-- 商品區塊 -->
+                <div class="items_block">
+                    <ul>
+
+                        <li>
+                            <a href="./item.html">
+                                <div class="img_block">
+                                    <img src="./image/items/tart (22).jpg" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
                                 <h3>Strawberry Tart</h3>
@@ -82,7 +183,7 @@
                         <li>
                             <a href="">
                                 <div class="img_block">
-                                    <img src="./image/items/mousse (1).jpg" alt="">
+                                    <img src="./image/items/cup cake (5).jpg" alt="">
                                     <div class=" add">加入購物車
                                     </div>
                                 </div>
@@ -93,57 +194,88 @@
                         <li>
                             <a href="">
                                 <div class="img_block">
-                                    <img src="./image/items/mousse (9).JPG" alt="">
+                                    <img src="./image/items/macaron (6).jpg" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
                                 <h3>Heart Macaron</h3>
                                 <p>$190</p>
                             </a>
                         </li>
+
+
+                    </ul>
+
+
+
+                </div>
+
+            </div>
+
+            <!--商品欄/泡芙系列-->
+            <div class="inner_block tabcontent " id="choux">
+
+                <!-- 分類標題 -->
+                <div class="title">
+                    <h1> － 泡芙系列 －</h1>
+                </div>
+
+                <!-- 商品區塊 -->
+                <div class="items_block">
+                    <ul>
                         <li>
-                            <a href="">
+                            <a href="./item.html">
                                 <div class="img_block">
-                                    <img src="./image/items/mousse (5).jpg" alt="">
+                                    <img src="./image/items/choux (1).jpg" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
-                                <h3>Grapefruit Choux</h3>
+                                <h3>Seasame Choux</h3>
                                 <p>$190</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <div class="img_block">
-                                    <img src="./image/items/mousse (11).jpg" alt="">
+                                    <img src="./image/items/choux (3).png" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
-                                <h3>Grapefruit Choux</h3>
+                                <h3>Pistache Choux</h3>
+                                <p>$220</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (8).png" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Rose Choux</h3>
+                                <p>$200</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (5).png" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Double Pistache Choux</h3>
+                                <p>$250</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (11).png" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Crème brûlée Choux</h3>
                                 <p>$190</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <div class="img_block">
-                                    <img src="./image/items/tart (4).jpg" alt="">
-                                    <div class="add">加入購物車</div>
-                                </div>
-                                <h3>Grapefruit Choux</h3>
-                                <p>$190</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="img_block">
-                                    <img src="./image/items/macaron (4).jpg" alt="">
-                                    <div class="add">加入購物車</div>
-                                </div>
-                                <h3>Grapefruit Choux</h3>
-                                <p>$190</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="img_block">
-                                    <img src="./image/items/mousse (7).jpg" alt="">
+                                    <img src="./image/items/choux (13).png" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
                                 <h3>Grapefruit Choux</h3>
@@ -156,11 +288,30 @@
                                     <img src="./image/items/choux (1).jpg" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
-                                <h3>Grapefruit Choux</h3>
+                                <h3>Seasame Choux</h3>
                                 <p>$190</p>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (1).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Seasame Choux</h3>
+                                <p>$190</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_block">
+                                    <img src="./image/items/choux (1).jpg" alt="">
+                                    <div class="add">加入購物車</div>
+                                </div>
+                                <h3>Seasame Choux</h3>
+                                <p>$190</p>
+                            </a>
+                        </li>
                     </ul>
 
 
@@ -168,8 +319,12 @@
                 </div>
 
             </div>
+
+
         </div>
-        <!-- ----------------main_blook end--------------------- -->
+
+
+        <!------------------main_blook end----------------------->
 
         <footer>
             <div class="footer">
@@ -212,6 +367,24 @@
         </footer>
 
     </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>

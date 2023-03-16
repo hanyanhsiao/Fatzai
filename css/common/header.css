@@ -1,141 +1,51 @@
  /* ------------上方導覽列------------ */
- /* border: 3px solid red; */
 
  header.header {
-   /* width: var(--page-width); */
    height: 80px;
    background-color: #ffead2b8;
-   overflow: hidden;
    position: sticky;
    top: 0px;
    z-index: 1;
-   /* font-family: "Noto Serif TC"; */
+   padding: 0 20px;
    /* border: 3px solid red; */
  }
 
  header.header nav.nav {
    margin: 0 auto;
-   width: var(--page-width);
+   max-width: var(--page-width);
    height: 80px;
-   font-size: 0;
    display: flex;
    justify-content: space-between;
    /* border: 3px solid red; */
 
  }
 
- /* header.header nav.nav ::after {
-  content: "";
-  display: block;
-  clear: both;
-} */
-
- /* header.header nav.nav > a.logo {
-  float: left;
-  vertical-align: top;
-} */
 
  header.header nav.nav>a.logo img {
-   display: inline;
    height: 80px;
  }
 
- header.header nav.nav ul.nav_list {
-   height: 80px;
-   vertical-align: top;
- }
+
 
  header.header nav.nav ul.nav_list>li {
    display: inline-flex;
-   vertical-align: top;
    height: 80px;
+
  }
 
  header.header nav.nav ul.nav_list>li>a {
-   font-size: 2rem;
-   text-decoration: none;
-   display: block;
-   color: black;
    text-align: center;
    line-height: 80px;
-   padding: 0 25px;
+   padding: 0 20px;
+   font-size: 1.2rem;
+   /* border: 3px solid red; */
 
  }
 
  header.header nav.nav ul.nav_list>li>a.on,
  header.header nav.nav ul.nav_list>li>a:hover {
    color: #dc9f58;
-   border-bottom: 3px solid dc9f58;
    border-bottom: 3px solid #dc9f58;
-
-   /* background-color: #dc9f58; */
  }
 
  /*-----------------下拉選單-----------------------*/
-
- header.header div.block nav.nav div.share_block {
-   font-size: 1.8rem;
-   float: right;
-   position: relative;
- }
-
- header.header div.block nav.nav div.share_block:hover ul.share_list {
-   display: block;
- }
-
- header.header div.block nav.nav div.share_block span.share_text {
-   color: black;
-   padding: 16px 20px;
-   display: inline-block;
-   cursor: default;
- }
-
- header.header div.block nav.nav div.share_block span.share_text::after {
-   content: "";
-   display: inline-block;
-   border-top: 5px solid gray;
-   border-right: 5px solid transparent;
-   border-bottom: 0px solid green;
-   border-left: 5px solid transparent;
-   position: relative;
-   top: -4px;
-   margin-left: 5px;
- }
-
- header.header div.block nav.nav div.share_block span.share_text:hover {
-   color: black;
-   background-color: #f69a2a;
- }
-
- /*次選單*/
- header.header div.block nav.nav div.share_block ul.share_list {
-   position: absolute;
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   right: 0;
-   top: 100%;
-   /*一定要100%不然次選單上面會有縫隙點不到*/
-   width: 100%;
-   background-color: #ffe066;
-   display: none;
- }
-
- header.header div.block nav.nav div.share_block ul.share_list>li {}
-
- header.header div.block nav.nav div.share_block ul.share_list>li::after {
-   border-top: 1px solid white;
- }
-
- header.header div.block nav.nav div.share_block ul.share_list>li>a {
-   text-decoration: none;
-   display: block;
-   text-align: center;
-   padding: 8px 10px;
-   color: sienna;
- }
-
- header.header div.block nav.nav div.share_block ul.share_list>li>a:hover {
-   color: black;
-   background-color: #f69a2a;
- }

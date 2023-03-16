@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Car</title>
     <link rel="stylesheet" href="./css/common/all.css" />
+    <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/footer.css" />
     <link rel="stylesheet" href="./css/car.css" />
@@ -28,9 +29,7 @@
             </a>
             <!-- 右側選單 -->
             <ul class="nav_list">
-                <li>
-                    <a href="#">關於Fatzai </a>
-                </li>
+                <li> <a href="#">關於Fatzai </a></li>
                 <li><a href="./news.html">最新消息</a></li>
                 <li><a href="./shop_list_all.html">產品列表</a></li>
                 <li><a href="#">會員專區</a></li>
@@ -49,7 +48,7 @@
     </header>
 
     <main>
-        <div class="notice">訂購須知</div>
+        <!-- <div class="notice"> 訂購須知</div> -->
         <div class="process">
             <div class="step">
                 <span class="badge">
@@ -86,33 +85,138 @@
 
 
         </div>
+        <!-- --------購物車----------->
         <div class="car">
             <p>購物車</p>
-            <ul>
-                <li>商品名稱</li>
+
+            <!-- ---標題-- -->
+            <ul class="car_title">
+                <li>商品</li>
+                <li>名稱</li>
                 <li>規格</li>
                 <li>單件價格</li>
                 <li>數量</li>
                 <li>小計</li>
                 <li>刪除</li>
             </ul>
-            <div class="car_block">
-                <div class="item_information">
-                    <a href=""></a>
-                    <div class="description"></div>
-                </div>
+            <div class="ar_item_block">
+                <ul class="car_item">
+                    <li> <a href="./item.html"><img src="./image/items/tart (1).jpg" alt=""></a></li>
+                    <li>提拉米蘇塔</li>
+                    <li>圓塔</li>
+                    <li>$199</li>
+                    <li>2</li>
+                    <li>$398</li>
+                    <li><i class="fa-regular fa-circle-xmark"></i></li>
+                </ul>
+                <ul class="car_item">
+                    <li> <a href="./item.html"><img src="./image/items/tart (6).jpg" alt=""></a></li>
+                    <li>提拉米蘇塔</li>
+                    <li>方塔</li>
+                    <li>$199</li>
+                    <li>2</li>
+                    <li>$398</li>
+                    <li><i class="fa-regular fa-circle-xmark"></i></li>
+                </ul>
             </div>
+
         </div>
         <div class="more">
+            <p>限量加購</p>
+            <ul class="more_items">
+                <li>
+                    <img src="./image/material/Candles.png">
+                    <a href="">加入購物車</a>
+                </li>
+                <li>
+                    <img src="./image/items/tart (5).jpg">
+                    <a href="">加入購物車</a>
+                </li>
+                <li>
+                    <img src="./image/items/mousse (5).jpg">
+                    <a href="">加入購物車</a>
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>
+            </ul>
 
         </div>
+
+        <!-- --------運送及付款方式/訂單資訊總結----------->
         <div class="order_inf">
-            <div class="delivery"></div>
-            <div class="check"></div>
+
+            <!------左側運送資訊-------->
+            <div class="delivery">
+                <p> 運送及付款方式</p>
+                <label for=""></label>
+                <div class="pickup">
+                    <label for="pickup">取貨方式</label>
+                    <select name="pickup" id="">
+                        <option>店面自取</option>
+                        <option>宅配</option>
+                    </select>
+
+                </div>
+
+                <div class="pay">
+                    <label for="pay">付款方式</label>
+                    <select name="pay" id="">
+                        <option>信用卡</option>
+                        <option>LINE PAY</option>
+                        <option>門市現金付款</option>
+                    </select>
+
+                </div>
+
+                <!------※注意事項※----->
+                <div class="attention">
+                    <h3>※注意事項※</h3>
+                    <div class="content">
+                        <p>※ 冷凍宅配運費一律$170，消費滿$1000免運費。</p>
+                        <p>※ 我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
+                        <p>※ 店面自取時間: 週一至週五11:30-19:00</p>
+                        <p>※ </p>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!------右側訂單資訊-------->
+            <div class="check">
+                <p>訂單資訊</p>
+                <div class="money">
+                    <div>
+                        <p>小計:</p>
+                        <p>$796</p>
+                    </div>
+                    <button>使用折扣碼</button>
+                    <div>
+                        <p>折扣:</p>
+                        <p>$50</p>
+                    </div>
+                    <div>
+                        <p>運費:</p>
+                        <p>$170</p>
+                    </div>
+
+                    <div class="total">
+                        <p>合計:</p>
+                        <p>$916</p>
+                    </div>
+                    <div class="buy">
+                        <button>確認結帳</button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-
-
 
     </main>
 

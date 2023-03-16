@@ -1,20 +1,42 @@
-.wrapper {
-  /* background-image: url(../image/bgi/bgi\ \(3\).png); */
+/* .wrapper {
+  width: var(--page-width);
+  padding: 0 40px;
+  outline: 2px solid rgb(0, 0, 0);
+
+} */
+
+/* -------------banner---------------- */
+.banner {
+  margin: 0 auto;
+  padding: 0 40px;
+
+  position: relative;
+  /* outline: 2px solid rgb(0, 0, 0); */
+
 }
 
-section .banner_bg {
-  /* border: 2px solid rgb(0, 0, 0); */
-
-  background-image: url("../image/banner.png");
-  width: var(--page-width);
-  height: 410px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.banner_img {
   margin: 0 auto;
+
+  /* outline: 2px solid rgb(255, 36, 36); */
+
+
+}
+
+
+.banner>img {
+  /* outline: 2px solid rgb(213, 26, 26); */
+  display: block;
+  padding: 0 40px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
 }
 
 section.main {
-  font-size: 1.5rem;
   /* border: 2px solid rgb(0, 0, 0); */
 
 }
@@ -35,7 +57,7 @@ section.main {
 
 .title {
   /* border: 2px solid rgb(0, 21, 255); */
-  font-size: 3rem;
+  font-size: 1.5rem;
   /* background-image: url(../image/title\ \(2\).png); */
   background-repeat: no-repeat;
   padding-bottom: 50px;
@@ -123,23 +145,35 @@ li:hover p {
 }
 
 .center_text {
+  /* outline: 2px solid #000000; */
   background-color: #ffffff90;
-  padding: 50px 100px;
+  width: 30vw;
+  padding: 50px;
   border-radius: 10px;
   text-align: center;
+
 
 }
 
 .center_text span {
   display: block;
-  width: 300px;
-  border: 1px solid #DC9F58;
-  margin: 20px 0;
+  width: 0%;
+  border: 0 solid #DC9F58;
+  margin: 20px auto;
+  transition: 1s;
+
 }
+
+.center_bg:hover .center_text span {
+  width: 100%;
+  border: 1px solid #DC9F58;
+
+}
+
 
 .center_bg .p1 {
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2rem;
   white-space: pre;
 
 }
@@ -169,8 +203,6 @@ li:hover p {
 /* ----more---- */
 .faq .title>a {
   padding: 10px 0 10px 10px;
-
-  font-size: 2.5rem;
   text-align: center;
   text-decoration: none;
   color: #DC9F58;
@@ -259,7 +291,7 @@ iframe {
 }
 
 .information .detail h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #DC9F58;
   margin-bottom: 25px;
@@ -270,6 +302,4 @@ iframe {
 
 .information .detail p {
   line-height: 2.5;
-
-
 }

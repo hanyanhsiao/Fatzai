@@ -33,7 +33,7 @@
             <ul class="nav_list">
                 <li><a href="#">關於Fatzai </a></li>
                 <li><a href="./news.html">最新消息</a></li>
-                <li><a href="./shop_list.html">產品列表</a></li>
+                <li><a href="./shop_list_all.html">產品列表</a></li>
                 <li><a href="#">會員專區</a></li>
                 <li><a href="./car.html">購物車</a></li>
             </ul>
@@ -43,91 +43,93 @@
     </header>
 
     <main>
-        <div class="bread">
-            全部商品 / 法式小塔 / 提拉米蘇塔
-        </div>
-        <div class="item_block">
-            <div class="left_block">
-                <img src="./image/items/tart (1).jpg" alt="">
-                <div class="little_img">
-                    <a href=""><img src="./image/items/tart (7).JPG" alt=""></a>
-                    <a href=""><img src="./image/items/tart (6).JPG" alt=""></a>
+        <div class="wrapper">
+            <div class="bread">
+                全部商品 / 法式小塔 / 提拉米蘇塔
+            </div>
+            <div class="item_block">
+                <div class="left_block">
+                    <img src="./image/items/tart (1).jpg" alt="">
+                    <div class="little_img">
+                        <a href=""><img src="./image/items/tart (7).JPG" alt=""></a>
+                        <a href=""><img src="./image/items/tart (6).JPG" alt=""></a>
+                    </div>
+                </div>
+                <div class="right_block">
+                    <h1 class="item_name">提拉米蘇塔</h1>
+                    <div class="item_introduce">
+                        <h3>產品介紹</h3>
+                        <ul>
+                            <li>可可塔皮</li>
+                            <li>咖啡杏仁奶油餡</li>
+                            <li>核桃</li>
+                            <li>馬斯卡邦起司餡</li>
+                            <li>苦甜巧克力餡</li>
+                        </ul>
+                    </div>
+                    <div class="item_delivery_fee">
+                        <h3>運費與優惠</h3>
+                        <ul>
+                            <li>宅配冷藏運費一律$170</li>
+                            <li>消費滿$1000免運</li>
+
+                        </ul>
+                    </div>
+                    <h1 class="dollars">$199</h1>
+                    <div class="item_size">
+                        <a href="">圓塔</a>
+                        <a href="">方塔</a>
+                    </div>
+                    <div class="item_quantity">
+                        <ul class="count">
+                            <li><span id="num-add" class="num-jian">－</span></li>
+                            <li><input type="text" class="input-num" id="input-num" value="0" /></li>
+                            <li><span id="num-jia" class="num-jia">＋</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="item_buy">
+                        <button class="btn1"><a href="./car.html">立即購買</a></button>
+                        <button class="btn2"><a href="">加入購物車</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="right_block">
-                <h1 class="item_name">提拉米蘇塔</h1>
-                <div class="item_introduce">
-                    <h3>產品介紹</h3>
-                    <ul>
-                        <li>可可塔皮</li>
-                        <li>咖啡杏仁奶油餡</li>
-                        <li>核桃</li>
-                        <li>馬斯卡邦起司餡</li>
-                        <li>苦甜巧克力餡</li>
-                    </ul>
-                </div>
-                <div class="item_delivery_fee">
-                    <h3>運費與優惠</h3>
-                    <ul>
-                        <li>宅配冷藏運費一律$170</li>
-                        <li>消費滿$1000免運</li>
 
-                    </ul>
-                </div>
-                <h1 class="dollars">$199</h1>
-                <div class="item_size">
-                    <a href="">圓塔</a>
-                    <a href="">方塔</a>
-                </div>
-                <div class="item_quantity">
-                    <ul class="count">
-                        <li><span id="num-add" class="num-jian">－</span></li>
-                        <li><input type="text" class="input-num" id="input-num" value="0" /></li>
-                        <li><span id="num-jia" class="num-jia">＋</span></li>
-                    </ul>
+            <!-- 分隔線 -->
+            <hr class="hr">
+
+            <div class="item_description">
+
+                <ul class="item_des_tittle">
+                    <li class="delivery">
+                        <a href="">
+                            <h3>運送說明</h3>
+                        </a>
+                    </li>
+                    <li class="faq">
+                        <a href="">
+                            <h3>常見問題</h3>
+                        </a>
+                    </li>
+                    <li class="review">
+                        <a href="">
+                            <h3>顧客評價</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div class="item_des_text">
+                    <p>※為什麼有些蛋糕無法宅配？</p>
+                    <p>我們的宅配透過黑貓宅急便寄出，蛋糕屬於脆弱商品，運送過程中容易毀損，故無法寄送。</p>
+                    <p>※可以指定到貨日期嗎？</p>
+                    <p>我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
+                    <p>※為什麼宅配無法指定到貨日期與時間？</p>
+                    <p>黑貓宅急便送貨量過多時，無法指定到貨日，有可能延遲二到三日到貨。</p>
+                    <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。</p>
+                    <p>※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。</p>
+                    <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
                 </div>
 
-                <div class="item_buy">
-                    <button class="btn1"><a href="./car.html">立即購買</a></button>
-                    <button class="btn2"><a href="">加入購物車</a></button>
-                </div>
             </div>
-        </div>
-
-        <!-- 分隔線 -->
-        <hr class="hr">
-
-        <div class="item_description">
-
-            <ul class="item_des_tittle">
-                <li class="delivery">
-                    <a href="">
-                        <h3>運送說明</h3>
-                    </a>
-                </li>
-                <li class="faq">
-                    <a href="">
-                        <h3>常見問題</h3>
-                    </a>
-                </li>
-                <li class="review">
-                    <a href="">
-                        <h3>顧客評價</h3>
-                    </a>
-                </li>
-            </ul>
-            <div class="item_des_text">
-                <p>※為什麼有些蛋糕無法宅配？</p>
-                <p>我們的宅配透過黑貓宅急便寄出，蛋糕屬於脆弱商品，運送過程中容易毀損，故無法寄送。</p>
-                <p>※可以指定到貨日期嗎？</p>
-                <p>我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
-                <p>※為什麼宅配無法指定到貨日期與時間？</p>
-                <p>黑貓宅急便送貨量過多時，無法指定到貨日，有可能延遲二到三日到貨。</p>
-                <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。</p>
-                <p>※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。</p>
-                <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
-            </div>
-
         </div>
     </main>
 

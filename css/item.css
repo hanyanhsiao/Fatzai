@@ -1,5 +1,6 @@
-main {
-    /* background-color: #c9c9c969; */
+.wrapper {
+    padding: 0 20px;
+
 }
 
 /* ---------------------bread---------------------- */
@@ -13,14 +14,13 @@ main {
 /* -----------------------item_block--------------- */
 
 .item_block {
-    width: var(--page-width);
+    max-width: var(--page-width);
     height: 690px;
-    /* outline: 2px solid black; */
     margin: 0 auto;
     display: flex;
-    /* margin-top: 100px; */
     display: flex;
     justify-content: space-between;
+
 
 }
 
@@ -73,7 +73,7 @@ main {
 .right_block .item_name {
     /* outline: 2px solid rgb(0, 0, 0); */
     /* 36px */
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     letter-spacing: .8rem;
     text-align: center;
@@ -89,12 +89,13 @@ main {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #cccccc3c;
+
 }
 
 .item_introduce h3,
 .item_delivery_fee h3 {
     /* 24px */
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     /* outline: 2px solid rgb(0, 0, 0); */
     color: #DC9F58;
@@ -112,15 +113,13 @@ main {
 .item_delivery_fee ul li {
     margin-bottom: 10px;
     list-style: disc;
-    /* 14.4px */
-    font-size: 1.2rem;
 }
 
 /* -----------價錢------------ */
 .dollars {
     /* outline: 2px solid rgb(0, 0, 0); */
     /* 48px */
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 2px #ccc;
 }
@@ -129,9 +128,8 @@ main {
 
 .item_size a {
     display: inline-block;
-    border: 2px solid #DC9F58;
+    border: 1px solid #DC9F58;
     /* 16.8px */
-    font-size: 1.4rem;
     border-radius: 5px;
     padding: 10px;
     width: 80px;
@@ -175,11 +173,9 @@ main {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    font-size: 1.4rem;
     font-weight: bold;
-    /* color: #000000; */
     cursor: pointer;
-    border: 2px solid #DC9F58;
+    border: 1px solid #DC9F58;
 }
 
 .num-jian {
@@ -211,7 +207,7 @@ main {
 
 .btn1,
 .btn2 {
-    border: 2px solid #DC9F58;
+    border: 1px solid #DC9F58;
     width: 45%;
     border-radius: 5px;
     padding: 0;
@@ -225,7 +221,7 @@ main {
     text-decoration: none;
     color: black;
     line-height: 2;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Noto Serif TC", serif;
 }
 
@@ -256,14 +252,14 @@ main {
 
 /* --------------上方選單---------------*/
 .item_description {
-    width: var(--page-width);
-    outline: 1px solid #DC9F58;
+    max-width: var(--page-width);
+    border: 1px solid #DC9F58;
     margin: 50px auto;
+    /* padding: 0 20px; */
 
 }
 
 .item_description ul {
-
     display: flex;
     justify-content: space-between;
 }
@@ -273,7 +269,6 @@ main {
     width: 100%;
     line-height: 60px;
     text-align: center;
-    font-size: 1.6rem;
 }
 
 .item_description li a {
@@ -301,7 +296,6 @@ main {
 
 .item_des_text p {
     padding: 10px;
-    font-size: 1.4rem;
 }
 
 .item_des_text p:nth-child(2),

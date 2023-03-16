@@ -33,14 +33,12 @@
     text-align: center;
     line-height: 2.5;
     width: 100%;
-    font-size: 1.6rem;
     background-color: rgba(255, 255, 255, 0.772);
     border-radius: 0 0 5px 5px;
     color: black;
     position: absolute;
     bottom: 0;
     display: none;
-    /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
 
 }
 
