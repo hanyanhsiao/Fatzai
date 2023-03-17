@@ -1,15 +1,7 @@
-/* .wrapper {
-  width: var(--page-width);
-  padding: 0 40px;
-  outline: 2px solid rgb(0, 0, 0);
-
-} */
-
 /* -------------banner---------------- */
 .banner {
   margin: 0 auto;
   padding: 0 40px;
-
   position: relative;
   /* outline: 2px solid rgb(0, 0, 0); */
 
@@ -17,12 +9,17 @@
 
 .banner_img {
   margin: 0 auto;
+  display: flex;
 
   /* outline: 2px solid rgb(255, 36, 36); */
 
 
 }
 
+.banner_img>img {
+  width: 100%;
+
+}
 
 .banner>img {
   /* outline: 2px solid rgb(213, 26, 26); */
@@ -50,7 +47,7 @@ section.main {
   display: block;
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   margin-bottom: 50px;
   overflow: hidden;
 }
@@ -58,11 +55,14 @@ section.main {
 .title {
   /* border: 2px solid rgb(0, 21, 255); */
   font-size: 1.5rem;
-  /* background-image: url(../image/title\ \(2\).png); */
+  background-image: url(../image/bgi/title\ \(3\)\ .png);
   background-repeat: no-repeat;
+  background-position: top center;
   padding-bottom: 50px;
   text-align: center;
 }
+
+
 
 
 
@@ -268,24 +268,25 @@ li:hover p {
 
 /*--------------地圖&營業時間----------------*/
 
-/* outline: 1px solid black; */
 
 .information .title {}
 
 .information .map {
   /* outline: 2px solid black; */
   display: flex;
-  justify-content: space-between;
-  /* outline: 1px solid black; */
+  justify-content: space-around;
 
 }
 
 iframe {
-  height: 270px;
+  /* outline: 2px solid rgb(192, 20, 20); */
+  height: 250px;
+  width: 45%;
+
+
 }
 
 .information .detail {
-  margin: 0 auto;
   /* outline: 2px solid rgb(255, 157, 157); */
 
 }

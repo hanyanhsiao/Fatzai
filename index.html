@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fatzai Pâtisserie</title>
+    <!-- 引入slick的淡入淡出套件 -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+
     <link rel="stylesheet" href="./css/common/all.css" />
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/footer.css" />
@@ -21,9 +25,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- 引入slick的淡入淡出套件 -->
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
 
 
 </head>
@@ -58,12 +59,10 @@
 
     </header>
     <div class="wrapper">
-
-
         <main>
             <!-- banner -->
             <section class="banner">
-                <div class="banner_img fade">
+                <div class="banner_img fade ">
                     <img src="./image/banner/banner1.png" alt="">
                     <img src="./image/banner/banner2.png" alt="">
                     <img src="./image/banner/banner3.png" alt="">
@@ -76,15 +75,12 @@
             <!-- 主要區域 -->
             <section class="main">
                 <!-- 最新消息 -->
-
                 <div class="news ">
-
-
                     <h1 class="title">最新消息</h1>
                     <ul>
                         <!-- 最新消息1 -->
                         <li>
-                            <a href="./shop_list_season.html">
+                            <a href="./shop_list_all.html">
                                 <img src="./image/material/Strawberry.png" alt="" data-aos="fade-up"
                                     data-aos-duration="1500">
                                 <div class="news_text_block">
@@ -94,7 +90,7 @@
                         </li>
                         <!-- 最新消息2 -->
                         <li>
-                            <a href="#">
+                            <a href="./shop_list_all.html">
                                 <div class="news_img_block">
                                     <img src="./image/material/News_Matcha.png" alt="" data-aos="fade-up"
                                         data-aos-duration="1500">
@@ -113,63 +109,80 @@
                 <!-- 熱門商品 -->
                 <div class="hot_items">
                     <h1 class="title">熱門商品</h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="img_block">
-                                    <img src="./image/items/choux (1).jpg" alt="">
-                                    <div class="text_block">
-                                        <p>加入購物車</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img_block">
-                                    <img src="./image/items/tart (1).jpg" alt="">
-                                    <div class="text_block">
-                                        <p>加入購物車</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img_block">
-                                    <img src="./image/items/mousse (1).jpg" alt="">
-                                    <div class="text_block">
-                                        <p>加入購物車</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                    <div class="items carousel">
+                        <div class="it">
+                            <a href="./item.html">
                                 <div class="img_block">
                                     <img src="./image/items/mousse (7).jpg" alt="">
-                                    <div class="text_block">
-                                        <p>加入購物車</p>
-                                    </div>
+                                    <p>加入購物車</p>
                                 </div>
+                                <div class="text_block">
+                                    <h3>Cassis Mousse</h3>
+                                    <p>$180</p>
+
+                                </div>
+
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                        <div class="it">
+                            <a href="./item.html">
                                 <div class="img_block">
-                                    <img src="./image/items/tart (18).png" alt="">
-                                    <div class="text_block">
-                                        <p>加入購物車</p>
-                                    </div>
+                                    <img src="./image/items/tart (1).jpg" alt="">
+                                    <p>加入購物車</p>
                                 </div>
+                                <div class="text_block">
+                                    <h3>Tiramisu Tart</h3>
+                                    <p>$199</p>
+
+                                </div>
+
                             </a>
-                        </li>
+                        </div>
+                        <div class="it">
+                            <a href="./item.html">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (8).png" alt="">
+                                    <p>加入購物車</p>
+                                </div>
+                                <div class="text_block">
+                                    <h3>Pistache Mousse</h3>
+                                    <p>$250</p>
+
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="it">
+                            <a href="./item.html">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (5).jpg" alt="">
+                                    <p>加入購物車</p>
+                                </div>
+                                <div class="text_block">
+                                    <h3>Chocolate Yo-Yo Cake</h3>
+                                    <p>$199</p>
+
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="it">
+                            <a href="./item.html">
+                                <div class="img_block">
+                                    <img src="./image/items/mousse (9).JPG" alt="">
+                                    <p>加入購物車</p>
+                                </div>
+                                <div class="text_block">
+                                    <h3>Vanilla Cake Role</h3>
+                                    <p>$160</p>
+
+                                </div>
+
+                            </a>
+                        </div>
 
 
-
-
-                    </ul>
-                    <div class="swiper-pagination"></div>
+                    </div>
 
                 </div>
 
@@ -291,8 +304,7 @@
                 </div>
             </div>
             <div class="footer_bottom">
-                &copy; 2023 網頁切版練習
-                <span class="test">本練習圖部分出自肥宅</span>
+                <span class="test">本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示之用</span>
             </div>
         </footer>
     </div>

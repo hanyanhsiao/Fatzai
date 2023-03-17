@@ -4,7 +4,11 @@ $(document).ready(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next">Previous</button>',
+
+
         responsive: [
             {
                 breakpoint: 1024,
@@ -38,6 +42,7 @@ $(document).ready(function () {
     $('.fade').slick({
         // dots: true,
         // infinite: true,
+        arrows: false,
         speed: 1000,
         fade: true,
         autoplay: true,
