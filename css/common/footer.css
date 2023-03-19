@@ -9,7 +9,7 @@ footer {
   height: 240px;
   margin: 0 auto;
   display: flex;
-  padding: 30px;
+  padding: 20px 0;
 }
 
 /* ------------------footer_left-------------------- */
@@ -57,20 +57,19 @@ footer .footer_center {
   /* outline: 1px solid rgb(255, 13, 13); */
   position: relative;
   flex-basis: 0;
-  flex-grow: 1;
+  flex-grow: 1.2;
 
 }
 
 
 footer .footer_center a img {
   height: 100%;
-
-}
-
-
-footer .footer_center a img {
   width: 100%;
+  padding-top: 20px;
+
 }
+
+
 
 .footer_center img.color {
   height: 100%;
@@ -90,9 +89,11 @@ footer .footer_center a img {
 
 .footer_right {
   /* outline: 1px solid black; */
-  padding-top: 8px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
+  align-items: start;
+
   flex-basis: 0;
   flex-grow: 1;
 

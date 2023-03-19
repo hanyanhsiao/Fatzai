@@ -179,8 +179,6 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    border-bottom: 1px solid #ccc;
-    /* outline: 2px solid rgb(0, 0, 0); */
 }
 
 .more_items li {
@@ -200,13 +198,27 @@ main {
 
 }
 
-.more_items li a {
-    text-decoration: none;
-    border: 1px solid #ccc;
-    color: black;
-    padding: 10px 20px;
-    margin-top: 20px;
+.more_items li p {
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    color: #DC9F58;
 }
+
+.more_items li button {
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: inherit;
+    color: black;
+    padding: 5px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.more_items li button:active {
+    background-color: #CCC;
+}
+
 
 
 /* ---------------------訂單資訊---------------------- */
@@ -309,10 +321,5 @@ main {
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
-
-
-
-
-
 
 }

@@ -14,8 +14,6 @@
 .hot_items .items {
     /* outline: 2px solid black; */
     display: flex;
-
-    width: 1100px;
     /* max-width: var(--page-width); */
     margin: 20px auto;
 
@@ -23,9 +21,9 @@
 
 .it {
     border-radius: 5px;
-    width: 250px;
-    outline: 2px solid #CCC;
-    margin: 15px;
+    /* width: 100px; */
+    outline: 2px solid #FFEAD2;
+    margin: 10px;
     overflow: hidden;
 
 }
@@ -59,17 +57,19 @@
     line-height: 2.5;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.772);
-    border-radius: 0 0 5px 5px;
     color: black;
     position: absolute;
     left: 0;
     bottom: 0;
-    display: none;
+    opacity: 0;
+    transition: 0.5s ease;
 }
 
 .it:hover p {
-    display: block;
+    opacity: 1;
 }
+
+
 
 /* 輪播箭頭 */
 .slick-prev:before {
