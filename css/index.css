@@ -109,14 +109,13 @@ section.main {
   position: absolute;
   left: 0;
   bottom: 0;
-  display: none;
-  /* 滑鼠移入慢慢出現加入購物車效果????????????????? */
-  transition: all ms;
+  opacity: 0;
+  transition: all 0.5s ease;
 
 }
 
 li:hover p {
-  display: block;
+  opacity: 1;
 }
 
 

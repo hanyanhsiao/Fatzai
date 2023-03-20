@@ -56,16 +56,18 @@ footer {
 footer .footer_center {
   /* outline: 1px solid rgb(255, 13, 13); */
   position: relative;
-  flex-basis: 0;
-  flex-grow: 1.2;
+
+  margin: 0 100px;
 
 }
 
 
 footer .footer_center a img {
+  /* outline: 1px solid rgb(255, 13, 13); */
+
   height: 100%;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 5px;
 
 }
 

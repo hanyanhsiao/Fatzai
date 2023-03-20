@@ -1,0 +1,143 @@
+main {
+    /* border: 2px solid saddlebrown; */
+
+}
+
+
+/* --------------上方圖片----------------- */
+section {
+    /* border: 2px solid saddlebrown; */
+    max-width: var(--page-width);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+
+
+}
+
+section .left {
+    /* border: 2px solid rgb(255, 189, 142); */
+
+    width: 600px;
+    height: 600px;
+    background-image: url(../image/material/Choux.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    clip-path: circle(71.1% at 28% 17%);
+}
+
+section .center {
+    position: absolute;
+    left: 36%;
+    top: 200px;
+    width: 450px;
+}
+
+
+section .center img {
+    width: 100%;
+}
+
+
+section .right {
+    /* border: 2px solid rgb(0, 0, 0); */
+    position: absolute;
+    right: 2%;
+    top: 8%;
+    width: 400px;
+    height: 400px;
+    background: #ffead2b8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .right p {
+    /* border: 2px solid rgb(255, 89, 89); */
+    width: 300px;
+    line-height: 3;
+    padding: 10px;
+    text-align: center;
+    animation: text 2.5s 1 forwards;
+
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --------------下方嚴選食材----------------- */
+
+/* 標題 */
+.title {
+    /* border: 2px solid rgb(0, 21, 255); */
+    font-size: 1.5rem;
+    background-image: url(../image/bgi/title\ \(3\)\ .png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* 食材列表 */
+.ingredients {
+    /* outline: 5px solid rgb(0, 0, 0); */
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0px 80px;
+
+}
+
+.ingredients li {
+    border-radius: 5px;
+    /* border: 2px solid #CCC; */
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.ingredients li img {}
+
+
+.ingredients .text {
+    /* outline: 5px solid rgb(0, 0, 0); */
+
+    line-height: 3;
+    display: block;
+}
+
+li .text h1 {
+    /* outline: 5px solid rgb(0, 0, 0); */
+
+    background: #FFEAD2;
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+
+
+li:nth-child(odd) h1 {
+    /* border: 2px solid rgb(0, 21, 255); */
+    background: linear-gradient(to right, #FFEAD2, #FFFFFF);
+}
+
+li:nth-child(even) h1 {
+    /* border: 2px solid rgb(0, 21, 255); */
+    text-align: end;
+    background: linear-gradient(to left, #FFEAD2, #FFFFFF);
+}
+
+.text h1 p {}
