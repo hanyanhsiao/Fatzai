@@ -1,4 +1,19 @@
 $(document).ready(function () {
+
+    $('.fade').slick({
+        // dots: true,
+        // infinite: true,
+        arrows: false,
+        speed: 1000,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        cssEase: 'linear',
+        pauseOnFocus: false,
+        pauseOnHover: false
+
+    });
+
     $('.carousel').slick({
         dots: true,
         infinite: true,
@@ -39,17 +54,5 @@ $(document).ready(function () {
         ]
     });
 
-    $('.fade').slick({
-        // dots: true,
-        // infinite: true,
-        arrows: false,
-        speed: 1000,
-        fade: true,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        cssEase: 'linear',
-        pauseOnFocus: false,
-        pauseOnHover: false
 
-    });
 });

@@ -135,6 +135,7 @@
 }
 
 .items_block .add {
+  /* border: 1px solid rgb(255, 5, 5); */
   position: absolute;
   left: 0;
   bottom: 0;
@@ -143,6 +144,7 @@
   width: 100%;
   padding: 13px 0;
   opacity: 0;
+  transition: 0.2s ease;
 }
 
 .items_block h3 {
@@ -159,8 +161,6 @@
   background-color: #ffead285;
 
   /* border: 1px solid rgb(255, 5, 5); */
-
-
 }
 
 .items_block ul li:hover img {
@@ -169,4 +169,39 @@
 
 .items_block ul li:hover .add {
   opacity: 1;
+}
+
+
+/* -------------------切換分頁區塊-------------------- */
+ul.pagination {
+  /* border: 1px solid rgb(255, 5, 5); */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 12px;
+  /* border: 1px solid rgb(255, 5, 5); */
+
+
+}
+
+ul.pagination li a.active {
+  background-color: #DC9F58;
+  color: white;
+  border-radius: 50%;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #FFEAD2;
+  border-radius: 50%;
+
 }
