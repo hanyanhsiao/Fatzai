@@ -11,9 +11,10 @@ body {
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   background-color: #ffffff;
-  --page-width: 1280px;
+  /* background-image: url(/24864579_m.jpg); */
+  --page-width: 1000px;
   /* 設定內容寬度 */
 
 }

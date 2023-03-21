@@ -12,7 +12,7 @@ section {
     justify-content: space-between;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
 
 }
@@ -20,8 +20,8 @@ section {
 section .left {
     /* border: 2px solid rgb(255, 189, 142); */
 
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     background-image: url(../image/material/Choux.png);
     background-position: center top;
     background-repeat: no-repeat;
@@ -32,9 +32,9 @@ section .left {
 
 section .center {
     position: absolute;
-    left: 36%;
+    left: 38%;
     top: 200px;
-    width: 450px;
+    width: 300px;
 }
 
 
@@ -46,10 +46,10 @@ section .center img {
 section .right {
     /* border: 2px solid rgb(0, 0, 0); */
     position: absolute;
-    right: 2%;
+    right: 8%;
     top: 8%;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: #ffead2b8;
     border-radius: 50%;
     display: flex;
@@ -60,84 +60,85 @@ section .right {
 
 section .right p {
     /* border: 2px solid rgb(255, 89, 89); */
-    width: 300px;
-    line-height: 3;
+    width: 250px;
+    line-height: 2;
     padding: 10px;
     text-align: center;
-    animation: text 2.5s 1 forwards;
+    /* animation: text 2.5s 1 forwards; */
 
 }
 
-@keyframes text {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 /* --------------下方嚴選食材----------------- */
 
 /* 標題 */
 .title {
     /* border: 2px solid rgb(0, 21, 255); */
+    width: var(--page-width);
+    margin: 0 auto;
     font-size: 1.5rem;
     background-image: url(../image/bgi/title\ \(3\)\ .png);
     background-repeat: no-repeat;
     background-position: top center;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
 /* 食材列表 */
 .ingredients {
-    /* outline: 5px solid rgb(0, 0, 0); */
+    /* outline: 2px solid rgb(0, 0, 0); */
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 0px 80px;
 
 }
 
 .ingredients li {
     border-radius: 5px;
     /* border: 2px solid #CCC; */
-    height: 300px;
+    height: 200px;
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
     overflow: hidden;
+
 }
 
-.ingredients li img {}
+.ingredients li img {
+    /* border: 2px solid #CCC; */
+    border-radius: 50% 30% 50% 40%;
+}
 
 
 .ingredients .text {
     /* outline: 5px solid rgb(0, 0, 0); */
 
     line-height: 3;
-    display: block;
+    /* display: block; */
 }
 
 li .text h1 {
-    /* outline: 5px solid rgb(0, 0, 0); */
-
+    /* outline: 2px solid rgb(0, 0, 0); */
     background: #FFEAD2;
-    font-size: 1.5rem;
-    padding: 0 15px;
+    font-size: 1.3rem;
+    padding: 0 20px;
+    /* text-align: center; */
+    margin-bottom: 10px;
 }
 
 
 li:nth-child(odd) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to right, #FFEAD2, #FFFFFF);
+    border-radius: 40% 90% 70% 70% / 50% 90% 70% 70%;
+
 }
 
 li:nth-child(even) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
-    text-align: end;
     background: linear-gradient(to left, #FFEAD2, #FFFFFF);
+    border-radius: 90% 40% 70% 70%/ 90% 50% 80% 80%;
+    text-align: end;
 }
 
 .text h1 p {}

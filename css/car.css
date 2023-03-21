@@ -2,7 +2,7 @@ main {
     /* outline: 2px solid black; */
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 
@@ -206,7 +206,7 @@ main {
 }
 
 .more_items li button {
-    border: 1px solid #ccc;
+    border: 1px solid #DC9F58;
     background-color: white;
     font-size: inherit;
     color: black;
@@ -215,8 +215,8 @@ main {
     cursor: pointer;
 }
 
-.more_items li button:active {
-    background-color: #CCC;
+.more_items li button:hover {
+    background-color: #FFEAD2;
 }
 
 

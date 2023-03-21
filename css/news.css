@@ -80,17 +80,13 @@ main {
     padding: 20px 10px;
     box-shadow: 3px 3px 2px #c3c3c3b6;
     position: absolute;
-    top: 12%;
-    left: 28%;
+    top: 220px;
+    left: 300px;
     animation: new1_title 2s forwards;
     /* transition: transform 0.1s ease; */
 }
 
 
-/* -----------scale(2)沒反應???????????????????????????? */
-.new1_title a:hover {
-    transform: scale(2);
-}
 
 .new1_title p,
 .new1_title i {
@@ -129,8 +125,8 @@ main {
 .news2 img {
     display: flex;
     position: absolute;
-    top: 22%;
-    left: 10%;
+    top: 380px;
+    left: 100px;
     width: 30%;
     border-radius: 10px;
     animation: img2 2s forwards;
@@ -190,8 +186,8 @@ main {
 
     box-shadow: 3px 3px 2px #c3c3c3b6;
     position: absolute;
-    top: 28.5%;
-    right: 26%;
+    top: 520px;
+    right: 300px;
     animation: new2_title 2s forwards;
 }
 
@@ -250,6 +246,5 @@ main {
 .hot_items {
     /* border: 2px solid rgb(0, 21, 255); */
     margin-bottom: 50px;
-    padding: 0 40px;
 
 }

@@ -1,98 +1,269 @@
-/*--------------分隔線----------------*/
+ /* ============================header============================*/
 
-.hr {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding-top: 2px;
-    margin-bottom: 50px;
-    border: #DC9F58;
-    background: linear-gradient(to right, transparent, #DC9F58, transparent);
-}
+ header.header {
+     height: 60px;
+     background-color: #ffead2b8;
+     position: sticky;
+     top: 0px;
+     z-index: 10;
+     padding: 0 40px;
+     /* border: 3px solid red; */
+ }
 
-/*--------------熱門商品----------------*/
+ header.header nav.nav {
+     margin: 0 auto;
+     max-width: var(--page-width);
+     height: 60px;
+     padding: 0 40px;
+     display: flex;
+     justify-content: space-between;
+     /* border: 3px solid red; */
 
-.hot_items .items {
-    /* outline: 2px solid black; */
-    display: flex;
-    /* max-width: var(--page-width); */
-    margin: 20px auto;
-
-}
-
-.it {
-    border-radius: 5px;
-    /* width: 100px; */
-    outline: 2px solid #FFEAD2;
-    margin: 10px;
-    overflow: hidden;
-
-}
-
-.items .img_block {
-    /* outline: 2px solid black; */
-    position: relative;
-
-}
-
-.items .img_block>img {
-    width: 100%;
-    display: block;
-
-}
-
-.items .text_block {
-    /* outline: 2px solid rgb(255, 0, 0); */
-    line-height: 2;
-    text-align: center;
-}
-
-.items .text_block h3 {
-    color: #DC9F58;
-    font-weight: 600;
-}
+ }
 
 
-.img_block>p {
-    text-align: center;
-    line-height: 2.5;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.772);
-    color: black;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.5s ease;
-}
-
-.it:hover p {
-    opacity: 1;
-}
+ header.header nav.nav>a.logo img {
+     height: 60px;
+ }
 
 
 
-/* 輪播箭頭 */
-.slick-prev:before {
-    color: #DC9F58;
-    font-size: 2rem;
-    position: absolute;
-    left: -12px;
-}
+ header.header nav.nav ul.nav_list>li {
+     display: inline-flex;
+     height: 60px;
 
-.slick-next:before {
-    color: #DC9F58;
-    font-size: 2rem;
-    position: absolute;
-    right: -12px;
+ }
 
-}
+ header.header nav.nav ul.nav_list>li>a {
+     text-align: center;
+     line-height: 60px;
+     padding: 0 20px;
+     font-size: 1.2rem;
+     /* border: 3px solid red; */
 
-.slick-dots li.slick-active button:before {
-    color: #DC9F58;
 
-}
 
-.slick-dots li button:before {
-    color: #DC9F58;
+ }
 
-}
+ header.header nav.nav ul.nav_list>li>a.on,
+ header.header nav.nav ul.nav_list>li>a:hover {
+     color: #dc9f58;
+     border-bottom: 3px solid #dc9f58;
+ }
+
+ /* =============================footer=========================== */
+ footer {
+     background-color: #FFEAD2;
+
+ }
+
+ .footer {
+     /* border: 1px solid black; */
+     max-width: 1100px;
+     height: 200px;
+     margin: 0 auto;
+     display: flex;
+     padding: 10px 0;
+     /* font-size: .9rem; */
+ }
+
+ /* ------------------footer_left-------------------- */
+
+ .footer_left {
+     /* outline: 1px solid black; */
+     display: flex;
+     padding-top: 30px;
+     align-items: center;
+     justify-content: end;
+     flex-basis: 0;
+     flex-grow: 1;
+
+ }
+
+ .footer_left p {
+     /* border: 1px solid rgb(255, 0, 0); */
+     writing-mode: vertical-lr;
+     margin-right: 40px;
+     letter-spacing: 1rem;
+ }
+
+ .footer_left a:hover {
+     color: #DC9F58;
+ }
+
+ .footer_icons {
+     /* border: 1px solid rgb(0, 217, 255); */
+     display: flex;
+     flex-direction: column;
+ }
+
+ .footer_icons>a {
+     /* border: 1px solid rgb(255, 0, 0); */
+     margin-bottom: 24px;
+     writing-mode: vertical-lr;
+     font-size: 1.3rem;
+     color: black;
+ }
+
+
+ /* ------------------footer_logo-------------------- */
+
+ footer .footer_center {
+     /* outline: 1px solid rgb(255, 13, 13); */
+     position: relative;
+     margin: 0 80px;
+ }
+
+
+ footer .footer_center a img {
+     /* outline: 1px solid rgb(255, 13, 13); */
+     height: 100%;
+     width: 100%;
+     text-align: center;
+     padding: 10px;
+
+ }
+
+
+
+ .footer_center img.color {
+     height: 100%;
+     transition: all 300ms;
+     position: absolute;
+     left: 0;
+     top: 0;
+     opacity: 0;
+ }
+
+ .footer_center img.color:hover {
+     opacity: 1;
+
+ }
+
+ /* ------------------footer_right-------------------- */
+
+ .footer_right {
+     /* outline: 1px solid black; */
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+     justify-content: center;
+
+     flex-basis: 0;
+     flex-grow: 1;
+ }
+
+
+ .footer_right p {
+     line-height: 35px;
+
+ }
+
+ /* ------------------footer_bottom-------------------- */
+ footer .footer_bottom {
+     /* border: 1px solid rgb(255, 0, 0); */
+     margin: 0 auto;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ /* =======================共用================================= */
+
+ /*--------------分隔線----------------*/
+
+ .hr {
+     max-width: var(--page-width);
+     margin: 0 auto;
+     padding-top: 2px;
+     margin-bottom: 30px;
+     border: #DC9F58;
+     background: linear-gradient(to right, transparent, #DC9F58, transparent);
+ }
+
+ /*--------------熱門商品----------------*/
+
+ .hot_items .items {
+     /* outline: 2px solid black; */
+     display: flex;
+     /* max-width: var(--page-width); */
+     margin: 0 100px 30px;
+
+ }
+
+ .it {
+     border-radius: 5px;
+     /* width: 100px; */
+     outline: 2px solid #FFEAD2;
+     margin: 10px;
+     overflow: hidden;
+
+ }
+
+ .items .img_block {
+     /* outline: 2px solid black; */
+     position: relative;
+
+ }
+
+ .items .img_block>img {
+     width: 100%;
+     display: block;
+
+ }
+
+ .items .text_block {
+     /* outline: 2px solid rgb(255, 0, 0); */
+     line-height: 2;
+     text-align: center;
+ }
+
+ .items .text_block h3 {
+     color: #DC9F58;
+     font-weight: 600;
+ }
+
+
+ .img_block>p {
+     text-align: center;
+     line-height: 2.5;
+     width: 100%;
+     background-color: rgba(255, 255, 255, 0.772);
+     color: black;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     opacity: 0;
+     transition: 0.5s ease;
+ }
+
+ .it:hover p {
+     opacity: 1;
+ }
+
+
+
+ /* 輪播箭頭 */
+ .slick-prev:before {
+     color: #DC9F58;
+     font-size: 2rem;
+     position: absolute;
+     left: -12px;
+ }
+
+ .slick-next:before {
+     color: #DC9F58;
+     font-size: 2rem;
+     position: absolute;
+     right: -12px;
+
+ }
+
+ .slick-dots li.slick-active button:before {
+     color: #DC9F58;
+
+ }
+
+ .slick-dots li button:before {
+     color: #DC9F58;
+
+ }

@@ -1,19 +1,23 @@
+.wrapper {
+  /* outline: 2px solid rgb(0, 0, 0); */
+}
+
 /* -------------banner---------------- */
 .banner {
   margin: 0 auto;
-  padding: 0 40px;
+  /* padding: 0 40px; */
   position: relative;
+  width: var(--page-width);
   /* outline: 2px solid rgb(0, 0, 0); */
 
 }
 
 .banner_img {
+  width: 100%;
   margin: 0 auto;
   display: flex;
 
   /* outline: 2px solid rgb(255, 36, 36); */
-
-
 }
 
 .banner_img>img {
@@ -24,7 +28,6 @@
 .banner>img {
   /* outline: 2px solid rgb(213, 26, 26); */
   display: block;
-  padding: 0 40px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -47,8 +50,7 @@ section.main {
   display: block;
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 40px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 
@@ -58,7 +60,7 @@ section.main {
   background-image: url(../image/bgi/title\ \(3\)\ .png);
   background-repeat: no-repeat;
   background-position: top center;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -75,14 +77,15 @@ section.main {
 
 .news ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .news ul li {
   /* border: 4px solid rgb(247, 0, 255); */
-  width: 40%;
+  width: 30%;
   border-radius: 5px;
   overflow: hidden;
+  margin: 0 20px;
 }
 
 
@@ -133,7 +136,6 @@ li:hover p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* width: var(--page-width); */
   height: 450px;
   margin: 0 auto;
   display: flex;
@@ -186,16 +188,15 @@ li:hover p {
 /*--------------常見問題----------------*/
 
 .faq {
-  margin-top: 50px;
+  margin: 50px auto;
   /* outline: 2px solid #f30000; */
+  /* padding: 0 150px; */
 
 }
 
 .faq .title {
   position: relative;
   /* outline: 2px solid #f30000; */
-
-
 }
 
 
@@ -217,6 +218,8 @@ li:hover p {
 .faq ul {}
 
 .faq ul li {
+  width: 800px;
+  margin: 0 auto;
   outline: 2px solid #CCC;
   background-color: #FFEAD2;
   border-radius: 5px;
@@ -273,20 +276,19 @@ li:hover p {
 .information .map {
   /* outline: 2px solid black; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
 }
 
 iframe {
   /* outline: 2px solid rgb(192, 20, 20); */
-  height: 250px;
-  width: 45%;
-
-
+  height: 200px;
+  width: 40%;
 }
 
 .information .detail {
   /* outline: 2px solid rgb(255, 157, 157); */
+  margin-left: 50px;
 
 }
 

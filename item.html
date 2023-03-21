@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="right_block">
-                    <h1 class="item_name">提拉米蘇塔</h1>
+                    <h1 class="item_name">提拉米蘇塔 Tiramisu Tart</h1>
                     <div class="item_introduce">
                         <h3>產品介紹</h3>
                         <ul>
@@ -80,8 +80,9 @@
                     </div>
                     <h1 class="dollars">$199</h1>
                     <div class="item_size">
-                        <a href="">圓塔</a>
-                        <a href="">方塔</a>
+                        <button>圓塔</button>
+                        <button>方塔</button>
+
                     </div>
                     <div class="item_quantity">
                         <ul class="count">
@@ -104,7 +105,7 @@
             <div class="item_description">
 
                 <ul class="item_des_tittle">
-                    <li class="delivery">
+                    <li class="delivery" class="tablinks" onclick="changeSet(event, 'all')">
                         <a href="">
                             <h3>運送說明</h3>
                         </a>
@@ -145,12 +146,12 @@
                 <p><a href="">會員專區</a></p>
 
                 <div class="footer_icons">
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i>
 
                     </a>
-                    <a href="https://line.me/zh-hant/"> <i class="fa-brands fa-line"></i>
+                    <a href="https://line.me/zh-hant/" target="_blank"> <i class="fa-brands fa-line"></i>
 
                 </div>
             </div>
@@ -174,6 +175,25 @@
             <span class="test">本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示之用</span>
         </div>
     </footer>
+
+    <script>
+        function changeSet(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>
