@@ -1,13 +1,14 @@
 .wrapper {
+
   /* outline: 2px solid rgb(0, 0, 0); */
 }
 
 /* -------------banner---------------- */
 .banner {
   margin: 0 auto;
-  /* padding: 0 40px; */
   position: relative;
-  width: var(--page-width);
+  /* max-width: var(--page-width); */
+  /* display: flex; */
   /* outline: 2px solid rgb(0, 0, 0); */
 
 }
@@ -42,17 +43,7 @@ section.main {
 }
 
 /* -------------標題們---------------- */
-.news,
-.hot_items,
-.faq,
-.information {
-  /* outline: 2px solid rgb(255, 0, 0); */
-  display: block;
-  max-width: var(--page-width);
-  margin: 0 auto;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
+
 
 .title {
   /* border: 2px solid rgb(0, 21, 255); */
@@ -64,67 +55,134 @@ section.main {
   text-align: center;
 }
 
+/*--------------關於肥宅----------------*/
+.aboutMe {
 
+  background-image: url(../image/material/about_bg.png);
+  background-repeat: no-repeat;
+
+}
+
+.content {
+  margin: 0 auto;
+  width: var(--page-width);
+  display: flex;
+  justify-content: end;
+  position: relative;
+  /* border: 2px solid rgb(0, 21, 255); */
+
+
+}
+
+.square {
+  margin: 100px 150px 100px 0;
+  width: 400px;
+  height: 400px;
+  background-color: var(--primary-color);
+  border: 2px solid white;
+  box-shadow: 0 0 0 20px #FFEAD2;
+  padding: 25px;
+  padding-left: 50px;
+}
+
+.square p {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about_img {
+  width: 280px;
+  position: absolute;
+  top: 120px;
+  left: 300px;
+}
+
+.about_img img {
+  width: 100%;
+}
 
 
 
 /*--------------最新消息----------------*/
 
 .news {
-  margin-top: 50px;
+  background-color: var(--primary-color);
+  padding: 50px;
+}
+
+.news .title {
+  max-width: var(--page-width);
+  margin: 0 auto;
 }
 
 
 .news ul {
+  /* border: 4px solid rgb(247, 0, 255); */
+  margin: 0 auto;
+
+  max-width: var(--page-width);
+  padding: 0 50px;
   display: flex;
   justify-content: center;
+
 }
 
 .news ul li {
   /* border: 4px solid rgb(247, 0, 255); */
-  width: 30%;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 0 20px;
-}
 
-
-.news>ul>li>a img {
-  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-basis: 0;
+  flex-grow: 1;
 
 }
 
-.news_text_block {
-  /* border: 1px solid rgb(255, 0, 0); */
+.news ul li:nth-child(2) {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 
-  width: 100%;
-  position: relative;
 
 }
 
-.news_text_block>p {
+
+.news img {
+  margin: 0 auto;
   display: block;
-  background-color: rgba(255, 255, 255, 0.772);
-  width: 100%;
+  height: 150px;
+  /* border-radius: 50%; */
+  clip-path: circle(38% at 50% 50%);
+  margin-bottom: 20px;
+}
+
+.news ul li a>h3 {
+  /* border: 1px solid rgb(0, 0, 0); */
   text-align: center;
-  line-height: 70px;
-  color: black;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: all 0.5s ease;
+  padding: 10px 0;
+  color: var(--secondary-color);
 
 }
 
-li:hover p {
-  opacity: 1;
+.news ul li a>p {
+  /* border: 1px solid rgb(0, 0, 0); */
+  text-align: justify;
+  padding: 10px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.699);
+
 }
+
 
 
 /*--------------熱門商品----------------*/
 
-
+.hot_items {
+  /* outline: 2px solid rgb(255, 0, 0); */
+  display: block;
+  max-width: var(--page-width);
+  margin: 50px auto;
+  overflow: hidden;
+}
 
 
 /*--------------中間背景圖----------------*/
@@ -173,14 +231,13 @@ li:hover p {
 
 
 .center_bg .p1 {
-  font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.5rem;
   white-space: pre;
 
 }
 
 .center_bg .p2 {
-  padding-top: 20px;
+  padding-top: 10px;
 
 }
 
@@ -191,7 +248,7 @@ li:hover p {
   margin: 50px auto;
   /* outline: 2px solid #f30000; */
   /* padding: 0 150px; */
-
+  max-width: var(--page-width);
 }
 
 .faq .title {
@@ -202,74 +259,85 @@ li:hover p {
 
 /* ----more---- */
 .faq .title>a {
-  padding: 10px 0 10px 10px;
   text-align: center;
-  text-decoration: none;
-  color: #DC9F58;
+  color: var(--secondary-color);
   font-weight: bold;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 10%;
+  border-bottom: 2px solid #DC9F58;
   margin-bottom: 20px;
 
 }
 
 /* -------------question------------- */
-.faq ul {}
+.faq ul {
+  /* column-count: 2; */
+  /* outline: 1px solid #000000; */
+}
 
 .faq ul li {
-  width: 800px;
-  margin: 0 auto;
-  outline: 2px solid #CCC;
-  background-color: #FFEAD2;
-  border-radius: 5px;
   margin-bottom: 30px;
+
 }
 
-
-
-
-.faq ul li a {
-  /* outline: 1px solid #000000; */
-  width: 100%;
-  color: #000000;
-  text-decoration: none;
+.faq button {
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-align: start;
+  width: 60%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.faq ul li a p {
-  /* outline: 1px solid #000000; */
-}
-
-
-
-.faq .fa-solid {
-  display: block;
-  /* outline: 2px solid #ff0000; */
-  color: #DC9F58;
-}
-
-.faq .faq_answer {
-  /* outline: 2px solid #ff0000; */
-  width: var(--page-width);
-  background-color: #ffffff;
-  padding: 10px;
-  display: none;
-}
-
-.faq ul li:hover .faq_answer {
-  display: block;
+  background-color: #FFEAD2;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: inherit;
+  /* border-radius: 5px 5px 0 0; */
+  border: 2px solid white;
+  border-right: 0;
+  box-shadow: 0 0 0 5px #FFEAD2;
 
 }
 
 
+.faq button i {
+  transition: 0.3s;
+  padding-top: 5px;
+  color: var(--secondary-color);
+}
+
+.active i {
+  transform: rotate(90deg);
+
+
+}
+
+.faq_answer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 10px;
+  line-height: 1.5;
+  text-align: justify;
+  max-height: 0;
+  width: 60%;
+  overflow: hidden;
+
+  transition: max-height 0.2s ease-out;
+  box-shadow: 0 0 0 5px #FFEAD2;
+}
+
+.faq_answer p {
+  margin: 12px 0;
+}
 
 
 /*--------------地圖&營業時間----------------*/
+.information {
+  /* outline: 2px solid black; */
+  margin: 50px auto;
 
+}
 
 .information .title {}
 
@@ -283,7 +351,7 @@ li:hover p {
 iframe {
   /* outline: 2px solid rgb(192, 20, 20); */
   height: 200px;
-  width: 40%;
+  width: 500px;
 }
 
 .information .detail {
@@ -296,12 +364,12 @@ iframe {
   font-size: 2rem;
   font-weight: 600;
   color: #DC9F58;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   /* outline: 2px solid rgb(255, 157, 157); */
 
 
 }
 
 .information .detail p {
-  line-height: 2.5;
+  line-height: 2;
 }

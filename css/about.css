@@ -20,8 +20,8 @@ section {
 section .left {
     /* border: 2px solid rgb(255, 189, 142); */
 
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     background-image: url(../image/material/Choux.png);
     background-position: center top;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@ section .left {
 section .center {
     position: absolute;
     left: 38%;
-    top: 200px;
+    top: 210px;
     width: 300px;
 }
 
@@ -48,8 +48,8 @@ section .right {
     position: absolute;
     right: 8%;
     top: 8%;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background: #ffead2b8;
     border-radius: 50%;
     display: flex;
@@ -61,9 +61,9 @@ section .right {
 section .right p {
     /* border: 2px solid rgb(255, 89, 89); */
     width: 250px;
-    line-height: 2;
+    line-height: 1.5;
     padding: 10px;
-    text-align: center;
+    text-align: justify;
     /* animation: text 2.5s 1 forwards; */
 
 }
@@ -113,7 +113,7 @@ section .right p {
 .ingredients .text {
     /* outline: 5px solid rgb(0, 0, 0); */
 
-    line-height: 3;
+    line-height: 2;
     /* display: block; */
 }
 
@@ -130,14 +130,14 @@ li .text h1 {
 li:nth-child(odd) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to right, #FFEAD2, #FFFFFF);
-    border-radius: 40% 90% 70% 70% / 50% 90% 70% 70%;
+    border-radius: 15% 90% 70% 20% / 50% 90% 70% 70%;
 
 }
 
 li:nth-child(even) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to left, #FFEAD2, #FFFFFF);
-    border-radius: 90% 40% 70% 70%/ 90% 50% 80% 80%;
+    border-radius: 90% 40% 15% 70%/ 90% 50% 80% 80%;
     text-align: end;
 }
 

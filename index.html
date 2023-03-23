@@ -11,8 +11,6 @@
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
     <!-- 引入CSS -->
     <link rel="stylesheet" href="./css/common/all.css" />
-    <link rel="stylesheet" href="./css/common/header.css" />
-    <link rel="stylesheet" href="./css/common/footer.css" />
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/index.css" />
     <!-- 引入字體 -->
@@ -70,35 +68,72 @@
                     <img src="./image/banner/banner1.png" alt="">
 
                 </div>
-                <img src="./image/banner/banner.png" alt="">
+                <img src="./image/banner/banner.svg" alt="">
             </section>
 
             <!-- 主要區域 -->
             <section class="main">
+                <!-- 關於肥宅 -->
+                <div class="aboutMe">
+                    <div class="content">
+                        <div class="about_img">
+                            <img src="./image/items/macaron (1).jpg" alt="">
+                        </div>
+                        <div class="square">
+                            <p>歡迎來到 Fatzai Pâtisserie !</p>
+                            <p>我們是一家專業製作法式甜點的店鋪，所有甜點均由經驗豐富的法式甜點師傅親手製作。我們以最優質的食材和獨特的製作技巧，打造出味道獨特、外形精美的甜點。在這裡，您可以品嚐到各種經典的法式甜點，如馬卡龍、泡芙、小塔等，還有各種創意糕點等您來發掘。無論是單獨享用或與親友共享，我們獨特的甜點絕對會給您留下難忘的味覺體驗。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
                 <!-- 最新消息 -->
                 <div class="news">
-                    <h1 class="title">最新消息</h1>
-                    <ul>
+                    <h1 class="title" data-aos="fade-up" data-aos-duration="1000">最新消息</h1>
+                    <ul data-aos="fade-up" data-aos-duration="1000">
                         <!-- 最新消息1 -->
                         <li>
                             <a href="./shop_list_all.html">
-                                <img src="./image/material/Strawberry.png" alt="" data-aos="fade-up"
-                                    data-aos-duration="1500">
-                                <div class="news_text_block">
-                                    <p>－ 2/1 草莓季開跑啦 －</p>
-                                </div>
+                                <img src="./image/material/Matcha2.jpg" alt="">
+                                <h3>－抹茶季開跑啦 －</h3>
+                                <h3> 3/ 1 ~ 3/15 </h3>
+                                <p>萬眾期盼的抹茶季來啦，
+                                    綠油油的一字排開！
+                                    甜點師使用巧手將不一樣的茶韻層次，
+                                    層層堆疊融入各式甜點，
+                                    每一口都充滿濃濃的抹茶享受，
+                                    春天就是抹茶迷的季節，當然要大口吃抹茶！</p>
                             </a>
                         </li>
                         <!-- 最新消息2 -->
                         <li>
                             <a href="./shop_list_all.html">
-                                <div class="news_img_block">
-                                    <img src="./image/material/News_Matcha.png" alt="" data-aos="fade-up"
-                                        data-aos-duration="1500">
-                                    <div class="news_text_block">
-                                        <p>－ 1/1 抹茶季開跑啦 －</p>
-                                    </div>
-                                </div>
+                                <img src="./image/material/Strawberry.png" alt="">
+                                <h3>－ 草莓季開跑啦 －</h3>
+                                <h3> 1/1 - 1/31 </h3>
+                                <p>萬眾期盼的草莓季來啦，
+                                    紅通通的一字排開！
+                                    甜點師使用巧手將不一樣的酸甜層次，
+                                    層層堆疊融入各式甜點，
+                                    每一口都充滿香甜的草莓享受，
+                                    冬天就是草莓控的季節！</p>
+
+
+                            </a>
+                        </li>
+                        <!-- 最新消息3 -->
+                        <li>
+                            <a href="./shop_list_all.html">
+                                <img src="./image/items/cup cake (2).jpg" alt="">
+                                <h3>－ 杯子蛋糕新上架－</h3>
+                                <h3>2/10開始販售</h3>
+                                <p>萬眾期盼的杯子蛋糕來啦，
+                                    口味應有盡有你想的到想不到的都有，
+                                    雖然杯子蛋糕屬於美式甜點，但我們用法式作法，
+                                    不使用過多的奶油霜，
+                                    快來購買吧！</p>
+
                             </a>
                         </li>
                     </ul>
@@ -192,7 +227,7 @@
                 <!-- 中間背景圖 -->
                 <div class="center_bg">
                     <div class="center_text">
-                        <p class="p1">F a t z a i</p>
+                        <p class="p1">F A T Z A I</p>
                         <p class="p2">Pâtisserie</p>
                         <span></span>
                         <p>典雅 / 精緻 / 美味 </p>
@@ -205,41 +240,65 @@
                 <!-- 常見問題 -->
                 <div class=" faq">
                     <h1 class="title">常見問題
-                        <a href="#">more</a>
+                        <!-- <a href="#">more</a> -->
                     </h1>
                     <ul data-aos="fade-up" data-aos-duration="1000">
                         <li>
-                            <a href="">
-                                <p>Q1 蛋糕需要幾天前預訂 ?
-                                </p>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
+                            <button class="accordion">
+                                <h3>Q1 蛋糕需要幾天前預訂 ?</h3>
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </button>
+
                             <div class="faq_answer">
-                                <p>因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。</p>
+                                <p>因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。因法式甜點做工繁複，備料需要較長時間，請至少一周前預訂。
+                                </p>
                             </div>
                         </li>
                         <li>
-                            <a href="">
-                                <p>
-                                    Q2 蛋糕保存方式與期限 ?
-                                </p>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
+                            <button class="accordion">
+                                <h3> Q2 蛋糕保存方式與期限 ?</h3>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
                             <div class="faq_answer">
                                 <p>為確保新鮮及品質，請盡速食用，室溫請勿放置超過20分鐘，冷藏保存以3天為限。</p>
                             </div>
                         </li>
                         <li>
-                            <a href="">
-                                <p>
-                                    Q3 運費如何計算 ?
-                                </p>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
+                            <button class="accordion">
+                                <h3>Q3 運費如何計算 ?</h3>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
                             <div class="faq_answer">
-                                <p>冷凍宅配運費一律$170，消費滿$1000免運費。</p>
+                                <p>冷凍宅配運費一律$170，消費滿$1000免運費。
+                                </p>
                             </div>
                         </li>
+                        <li>
+                            <button class="accordion">
+                                <h3>Q4 運費如何計算 ?</h3>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <div class="faq_answer">
+                                <p>冷凍宅配運費一律$170，消費滿$1000免運費。
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="accordion">
+                                <h3>Q5 運費如何計算 ?</h3>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <div class="faq_answer">
+                                <p>冷凍宅配運費一律$170，消費滿$1000免運費。
+                                </p>
+                            </div>
+                        </li>
+
 
 
 
@@ -249,9 +308,9 @@
                 <!-- 分隔線 -->
                 <hr class="hr">
 
-                <!--營業時間 -->
+                <!--門市資訊 -->
                 <div class="information" data-aos="fade-up" data-aos-duration="1500">
-                    <h1 class="title">營業時間</h1>
+                    <h1 class="title">門市資訊</h1>
                     <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6823.0712499632755!2d121.50920377967074!3d25.054560016644665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a91146436021%3A0x6dafa0aee6af38bf!2z5aSn56i75Z-V56K86aCt6LKo5quD5biC6ZuG!5e0!3m2!1szh-TW!2stw!4v1678105561531!5m2!1szh-TW!2stw"
@@ -319,6 +378,24 @@
         $(document).ready(function () {
             AOS.init();
         })
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                ///////////////////////
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+
+            });
+        }
+
     </script>
 
 </body>

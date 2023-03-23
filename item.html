@@ -103,25 +103,13 @@
             <hr class="hr">
 
             <div class="item_description">
+                <div class="tab">
+                    <button class="tablinks" onclick="changeTab(event,'delivery')" id="defaultOpen">運送說明</button>
+                    <button class="tablinks" onclick="changeTab(event,'faq')">常見問題</button>
+                    <button class="tablinks" onclick="changeTab(event,'customer')">顧客評價</button>
+                </div>
 
-                <ul class="item_des_tittle">
-                    <li class="delivery" class="tablinks" onclick="changeSet(event, 'all')">
-                        <a href="">
-                            <h3>運送說明</h3>
-                        </a>
-                    </li>
-                    <li class="faq">
-                        <a href="">
-                            <h3>常見問題</h3>
-                        </a>
-                    </li>
-                    <li class="review">
-                        <a href="">
-                            <h3>顧客評價</h3>
-                        </a>
-                    </li>
-                </ul>
-                <div class="item_des_text">
+                <div id="delivery" class="tabcontent">
                     <p>Q1為什麼有些蛋糕無法宅配？</p>
                     <p>我們的宅配透過黑貓宅急便寄出，蛋糕屬於脆弱商品，運送過程中容易毀損，故無法寄送。</p>
                     <p>Q2可以指定到貨日期嗎？</p>
@@ -133,9 +121,30 @@
                     <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
                 </div>
 
+                <div id="faq" class="tabcontent">
+                    <p>常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題</p>
+                </div>
+
+                <div id="customer" class="tabcontent">
+                    <p>顧客回饋顧客回饋顧客回饋顧客回饋顧客回饋顧客回饋</p>
+                </div>
+
+                <!-- <div class="item_des_text">
+                    <p>Q1為什麼有些蛋糕無法宅配？</p>
+                    <p>我們的宅配透過黑貓宅急便寄出，蛋糕屬於脆弱商品，運送過程中容易毀損，故無法寄送。</p>
+                    <p>Q2可以指定到貨日期嗎？</p>
+                    <p>我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
+                    <p>Q3為什麼宅配無法指定到貨日期與時間？</p>
+                    <p>黑貓宅急便送貨量過多時，無法指定到貨日，有可能延遲二到三日到貨。</p>
+                    <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。</p>
+                    <p>※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。</p>
+                    <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
+                </div> -->
+
             </div>
         </div>
     </main>
+
 
     <footer>
         <div class="footer">
@@ -175,23 +184,25 @@
             <span class="test">本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示之用</span>
         </div>
     </footer>
-
     <script>
-        function changeSet(evt, cityName) {
+        function changeTab(evt, Tabname) {
             var i, tabcontent, tablinks;
+            //取得內容calss並輪流切換none
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
+
+            //取得內容calss並輪流取代tab為active
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].classList.remove('active')
             }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
 
-        // Get the element with id="defaultOpen" and click on it
+            document.getElementById(Tabname).style.display = "block";
+            // evt.currentTarget.className += " active";
+            evt.currentTarget.classList.add('active')
+        }
         document.getElementById("defaultOpen").click();
     </script>
 </body>

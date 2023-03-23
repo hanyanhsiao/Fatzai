@@ -223,7 +223,7 @@ main {
 
 .calendar>h1 {
     /* outline: 2px solid saddlebrown; */
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
     line-height: 70px;
     writing-mode: vertical-lr;
     height: 400px;

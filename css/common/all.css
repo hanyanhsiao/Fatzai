@@ -5,17 +5,17 @@
 }
 
 body {
-  font-family: "Noto Serif TC", serif;
+  font-family: "Noto Serif TC", "Arial";
   margin: 0 auto;
 
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   background-color: #ffffff;
-  /* background-image: url(/24864579_m.jpg); */
-  --page-width: 1000px;
-  /* 設定內容寬度 */
+  --page-width: 1100px;
+  --primary-color: #FFEAD2;
+  --secondary-color: #DC9F58;
 
 }
 

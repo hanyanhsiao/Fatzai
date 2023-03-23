@@ -2,7 +2,7 @@ main {
     /* outline: 2px solid black; */
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 
@@ -253,6 +253,12 @@ main {
     font-family: "Noto Serif TC", serif;
     border: 1px solid #ccc;
     font-size: 18px;
+    /* background-color: #DC9F58; */
+}
+
+select:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    border-radius: 2px;
 }
 
 
@@ -322,4 +328,8 @@ main {
     border-radius: 5px;
     cursor: pointer;
 
+}
+
+.buy>button:hover {
+    color: white;
 }

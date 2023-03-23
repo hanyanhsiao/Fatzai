@@ -34,8 +34,7 @@
 
 
 .main_block .aside ul li:hover {
-  background-color: #DC9F58;
-  color: white;
+  color: var(--secondary-color);
 }
 
 .main_block .aside ul li.active {
@@ -54,13 +53,11 @@
   /* outline: 2px solid rgb(0, 0, 0); */
   width: 80%;
   padding: 20px;
-  align-items: end;
 
 }
 
 .inner_block .title {
   /* border: 1px solid red; */
-
   display: flex;
   background-image: url(../image/material/title_bg.png);
   background-size: cover;
@@ -68,7 +65,7 @@
   background-position: center;
   height: 200px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   position: relative;
 }
 
@@ -90,19 +87,19 @@
 }
 
 .items_block ul {
-  display: flex;
-  flex-wrap: wrap;
-  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
+
+.items_block ul li {}
 
 
 .items_block ul li {
-  width: 230px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 30px;
   overflow: hidden;
   margin: 0 20px 20px 0;
+  margin: 10px;
   transition: all 0.5s ease 0s;
 
 }
@@ -133,10 +130,10 @@
   left: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.495);
-  height: 15%;
+  height: 18%;
   width: 100%;
   text-align: center;
-  padding: 12px 0;
+  padding: 10px;
   opacity: 0;
   transition: 0.2s ease;
 }

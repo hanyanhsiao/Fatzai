@@ -151,8 +151,7 @@
     }
 
     .item_size button:hover {
-        background-color: #DC9F58;
-        color: white;
+        background-color: var(--primary-color);
     }
 
     /* -----------數量------------ */
@@ -214,6 +213,8 @@
         border: 1px solid #DC9F58;
         width: 40%;
         margin-right: 30px;
+        /* border-radius: 5px; */
+
     }
 
     .btn1 a,
@@ -240,6 +241,10 @@
 
     }
 
+    .btn2:hover {
+        background-color: var(--primary-color);
+    }
+
     /*--------------分隔線----------------*/
 
     .hr {
@@ -259,49 +264,45 @@
         margin: 30px 0;
     }
 
-    .item_description ul {
+    .tab {
+        overflow: hidden;
         display: flex;
-        justify-content: center
+        justify-content: space-around;
+
     }
 
-    .item_description li {
-        /* border: 2px solid #ccc; */
-        width: 100%;
-        line-height: 50px;
-        text-align: center;
-    }
-
-    .item_description li a h3 {
+    .tab button {
         background-color: #FFEAD2;
-
-
+        width: 100%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        /* transition: 0.3s; */
+        font-size: inherit;
     }
 
-    .item_description .delivery h3 {
-        background-color: #DC9F58;
+    .tab button:hover {
+        color: #DC9F58;
     }
 
-    .item_des_tittle li a h3:hover {
+    .tab button.active {
         background-color: #DC9F58;
+        color: #ffffff;
     }
 
-
-    .item_description .delivery h3 {
-        background-color: #DC9F58;
+    .tabcontent {
+        display: none;
+        padding: 20px;
+        line-height: 2;
     }
 
 
     /* --------------描述文字---------------*/
-    .item_des_text {
-        padding: 30px;
-    }
 
-    .item_des_text>p {
-        padding: 10px;
-    }
 
-    .item_des_text>p:nth-child(2),
-    .item_des_text>p:nth-child(4),
+    .tabcontent>p:nth-child(2),
+    .tabcontent>p:nth-child(4),
     p:nth-child(6),
     p:nth-child(6) {
         color: #DC9F58;
