@@ -1,250 +1,231 @@
-main {
-    /* border: 1px solid black; */
-    position: relative;
-    max-width: var(--page-width);
-    margin: 0 auto;
-    overflow: hidden;
-}
+ main {
+     /* border: 1px solid black; */
+     position: relative;
+     max-width: var(--page-width);
+     margin: 0 auto;
+     overflow: hidden;
+ }
 
-/* ------------------------最新消息------------------------- */
-/* ===============new1================= */
-.news1 {
-    box-sizing: border-box;
-    height: 300px;
-    background-color: #ffeaf1;
-    display: flex;
-}
+ /* ------------------------最新消息------------------------- */
+ .news {
+     height: 250px;
+     background-color: var(--primary-color);
+     display: flex;
+     position: relative;
+ }
 
-/* ---------圖片---------*/
-.news1 img {
-    display: flex;
-    position: absolute;
-    top: 4%;
-    right: 10%;
-    width: 30%;
-    border-radius: 10px;
-    animation: img1 2s forwards;
-}
+ /* ---------背景文字---------*/
+ .news>h1 {
+     /* outline: 2px solid rgb(0, 0, 0); */
+     font-size: 10rem;
+     text-align: start;
+     font-weight: 900;
+     align-self: end;
+     font-family: "Orelega", serif;
+     color: white;
+     position: absolute;
+     left: 0;
+     animation: title1 5s linear infinite backwards;
+     /* animation-play-state: paused; */
 
-@keyframes img1 {
-    0% {
-        transform: translateX(500px);
-        opacity: 0;
-    }
+ }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+ @keyframes title1 {
+     0% {
+         transform: translateX(-120%);
+     }
 
-}
+     100% {
+         transform: translateX(230%)
+     }
+ }
+
+ /* ---------標題---------*/
+
+ .news_title {}
+
+ .news_title {
+     padding: 20px;
+     position: absolute;
+     top: 210px;
+     left: 40%;
+     font-size: 1.5rem;
+     border: 1px solid var(--secondary-color);
+     animation: clippath 1s ease forwards;
+
+ }
 
 
-/* ---------背景文字---------*/
-.news1 h1 {
-    /* outline: 2px solid rgb(0, 0, 0); */
-    font-size: 10rem;
-    text-align: start;
-    font-weight: 900;
-    align-self: end;
-    font-family: "Orelega", serif;
-    color: #f4a9a9;
+ @keyframes clippath {
+     0% {
+         clip-path: inset(10% 10% 10% 10%);
+     }
 
-    position: absolute;
-    left: 0;
+     25% {
+         clip-path: inset(10% 10% 10% 0);
+     }
 
-    animation: title1 6s 1s linear infinite backwards;
-    /* animation-play-state: paused; */
+     50% {
+         clip-path: inset(10% 10% 0 0);
+     }
 
-}
+     70% {
+         clip-path: inset(10% 0 0 0);
+     }
 
-@keyframes title1 {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(100%)
-    }
-}
-
-/* ---------按鈕---------*/
-.new1_title a {
-    /* outline: 2px solid red;  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 50px;
-    background-color: white;
-    padding: 20px 10px;
-    box-shadow: 3px 3px 2px #c3c3c3b6;
-    position: absolute;
-    top: 220px;
-    left: 300px;
-    animation: new1_title 2s forwards;
-    /* transition: transform 0.1s ease; */
-}
+     100% {
+         clip-path: inset(0 0 0 0);
+     }
+ }
 
 
 
-.new1_title p,
-.new1_title i {
-    display: inline-block;
-    color: black;
-    margin: 0 5px;
 
-}
+ @keyframes new1_title {
+     0% {
+         transform: translateX(-100%);
+         opacity: 0;
+     }
 
+     100% {
+         transform: translateX(150%);
+         opacity: 1;
+     }
 
-@keyframes new1_title {
-    0% {
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-}
+ }
 
 
+ /* ----------------新聞列表--------------------- */
 
-/* ===============new22222222222222222================= */
+ .new_block {
+     /* outline: 2px solid saddlebrown; */
+     padding-top: 100px;
 
-.news2 {
-    /* outline: 2px solid red; */
-    height: 300px;
-    background-color: #e2f4d9;
-    display: flex;
-}
+ }
 
-/* ---------圖片---------*/
-.news2 img {
-    display: flex;
-    position: absolute;
-    top: 380px;
-    left: 100px;
-    width: 30%;
-    border-radius: 10px;
-    animation: img2 2s forwards;
-}
+ .new {
+     border: 1px solid var(--secondary-color);
+     margin: 0 auto;
+     max-width: var(--page-width);
+     width: 650px;
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 50px;
+ }
 
-@keyframes img2 {
-    0% {
-        transform: translateX(-500px);
-        opacity: 0;
-    }
+ .new .number {
+     width: 40px;
+     height: 40px;
+     background-color: var(--primary-color);
+     text-align: center;
+     line-height: 40px;
+     position: absolute;
+     left: 20px;
+     top: -20px;
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+ }
 
-}
+ .new img {
+     width: 200px;
+     position: absolute;
+     right: 20px;
+     top: -20px;
 
-/* ---------背景文字---------*/
-.news2 h1 {
-    /* outline: 2px solid rgb(0, 0, 0); */
-    font-size: 10rem;
-    text-align: start;
-    font-weight: 900;
-    align-self: end;
-    font-family: "Orelega", serif;
-    color: #439f579f;
+ }
 
-    position: absolute;
-    right: 0;
+ .news_text {
+     /* outline: 2px solid saddlebrown; */
+     width: 63%;
+     height: 100%;
+     padding: 40px 20px 20px;
+     text-align: justify;
+ }
 
-    animation: title2 5s 1s linear infinite backwards;
-    /* animation-play-state: paused; */
-}
+ .news_text>h3 {
+     border-bottom: 2px solid var(--secondary-color);
+     padding-bottom: 10px;
+     color: var(--secondary-color);
+ }
 
-@keyframes title2 {
-    0% {
-        transform: translateX(100%);
-        ;
-    }
-
-    100% {
-        transform: translateX(-180%);
-    }
-}
-
-/* ---------按鈕---------*/
-.new2_title a {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 50px;
-    background-color: white;
-    padding: 20px 10px;
-
-    box-shadow: 3px 3px 2px #c3c3c3b6;
-    position: absolute;
-    top: 520px;
-    right: 300px;
-    animation: new2_title 2s forwards;
-}
-
-.new2_title p,
-.new2_title i {
-    display: inline-block;
-    color: black;
-    margin: 0 5px;
-}
-
-@keyframes new2_title {
-    0% {
-        transform: translateX(500px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-}
+ .news_text>p {
+     padding-top: 10px;
+     line-height: 1.5;
+ }
 
 
-/* ----------------日曆日曆--------------------- */
+ .btn_block,
+ .btn_block_close {
+     display: flex;
+     align-items: end;
+     margin: 0 60px 20px 0;
+ }
 
-.calendar {
-    height: 500px;
-    /* outline: 2px solid saddlebrown; */
-}
+ .new_block button {
+     height: 50px;
+     background-color: var(--primary-color);
+     cursor: pointer;
+     padding: 10px 20px;
+     text-align: center;
+     box-shadow: 2px 2px 2px var(--secondary-color);
+ }
+
+ .new_block button:hover {
+     color: var(--secondary-color);
+     transform: scale(1.05);
+ }
+
+ .btn_block_close>button {
+     height: 50px;
+     background-color: #cecece;
+     box-shadow: 2px 2px 2px #a5a5a5;
+     color: white;
+ }
+
+ .btn_block_close>button:hover {
+     color: white;
+     transform: scale(1);
+     cursor: default;
+
+ }
+
+ /* ----------------日曆日曆--------------------- */
+
+ .calendar {
+     /* outline: 1px solid rgb(255, 0, 191); */
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23ffead2' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+     padding: 100px 0;
+ }
 
 
 
-.calendar>h1 {
-    /* outline: 2px solid saddlebrown; */
-    background-color: var(--primary-color);
-    line-height: 70px;
-    writing-mode: vertical-lr;
-    height: 400px;
-    text-align: center;
-    letter-spacing: 2rem;
-    margin-top: 150px;
-    margin-left: 20%;
-}
+ .calendar>h1 {
+     /* outline: 1px solid rgb(255, 0, 191); */
 
-/* ----------------熱門商品(common)--------------------- */
+     background-color: var(--primary-color);
+     line-height: 50px;
+     writing-mode: vertical-lr;
+     padding-top: 40px;
+     text-align: center;
+     letter-spacing: 2rem;
+     margin-left: 20%;
+     box-shadow: 4px 4px var(--secondary-color);
+ }
 
-.title {
-    /* border: 2px solid rgb(0, 21, 255); */
+ /* ----------------熱門商品(common)--------------------- */
 
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 70px;
-}
+ .title {
+     /* border: 2px solid rgb(0, 21, 255); */
 
-.hot_items {
-    /* border: 2px solid rgb(0, 21, 255); */
-    margin-bottom: 50px;
+     font-size: 1.5rem;
+     text-align: center;
+     line-height: 70px;
+ }
 
-}
+ .hot_items {
+     /* border: 2px solid rgb(0, 21, 255); */
+     margin-bottom: 50px;
+
+ }
+
+ */

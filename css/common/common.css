@@ -47,6 +47,7 @@ header.header nav.nav ul.nav_list>li>a {
 header.header nav.nav ul.nav_list>li>a.on,
 header.header nav.nav ul.nav_list>li>a:hover {
     color: #dc9f58;
+    border-style: double;
 
     border-bottom: 3px solid #dc9f58;
 }

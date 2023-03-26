@@ -88,6 +88,9 @@ section.main {
 .square p {
   line-height: 1.8;
   text-align: justify;
+  /* color: rgba(0, 0, 0, 0.7); */
+  letter-spacing: 1px;
+
 }
 
 .about_img {
@@ -132,45 +135,89 @@ section.main {
 
   padding: 0 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
   flex-basis: 0;
   flex-grow: 1;
 
 }
 
 .news ul li:nth-child(2) {
+
   border-left: 2px solid white;
   border-right: 2px solid white;
 
 
 }
 
+.news a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
 
 .news img {
   margin: 0 auto;
   display: block;
-  height: 150px;
-  /* border-radius: 50%; */
-  clip-path: circle(38% at 50% 50%);
+  height: 100%;
+  margin-right: 100px;
+  border-radius: 50%;
+  /* clip-path: circle(38% at 50% 50%); */
   margin-bottom: 20px;
+  position: relative;
+  padding: 8px;
+  background-color: var(--primary-color);
+  border: 0 solid #ffffff;
+  /* transition: 0.5s ease; */
+
 }
 
-.news ul li a>h3 {
+.news img:hover {
+  border: 2px solid #ffffff;
+
+}
+
+
+.news ul li>h3 {
   /* border: 1px solid rgb(0, 0, 0); */
   text-align: center;
   padding: 10px 0;
+  font-weight: 300;
   color: var(--secondary-color);
 
 }
 
-.news ul li a>p {
+.news ul li>p {
   /* border: 1px solid rgb(0, 0, 0); */
   text-align: justify;
   padding: 10px;
   line-height: 1.8;
-  color: rgba(0, 0, 0, 0.699);
+  /* color: rgba(0, 0, 0, 0.7); */
+  text-indent: 2em;
+  letter-spacing: 1px;
+
 
 }
+
+/* .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+img:hover .cover {
+  transform: all 2s;
+  clip-path: circle(38% at 50% 50%);
+  opacity: 1;
+} */
 
 
 
@@ -208,7 +255,7 @@ section.main {
   background-color: #ffffff90;
   width: 30vw;
   padding: 50px;
-  border-radius: 10px;
+  /* border-radius: 5px; */
   text-align: center;
 
 
@@ -268,6 +315,7 @@ section.main {
   border-bottom: 2px solid #DC9F58;
   margin-bottom: 20px;
 
+
 }
 
 /* -------------question------------- */
@@ -296,6 +344,7 @@ section.main {
   border: 2px solid white;
   border-right: 0;
   box-shadow: 0 0 0 5px #FFEAD2;
+
 
 }
 
@@ -329,14 +378,18 @@ section.main {
 
 .faq_answer p {
   margin: 12px 0;
+  letter-spacing: 1px;
 }
 
 
 /*--------------地圖&營業時間----------------*/
 .information {
   /* outline: 2px solid black; */
-  margin: 50px auto;
-
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23ffead2' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* background-attachment: fixed; */
 }
 
 .information .title {}
@@ -362,7 +415,7 @@ iframe {
 
 .information .detail h1 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #DC9F58;
   margin-bottom: 20px;
   /* outline: 2px solid rgb(255, 157, 157); */

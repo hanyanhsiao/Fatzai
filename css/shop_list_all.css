@@ -72,7 +72,8 @@
 .inner_block .title h1 {
   align-items: center;
   position: absolute;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 300;
   left: 30%;
   top: 50%;
   transform: translate(-50%, -50%);

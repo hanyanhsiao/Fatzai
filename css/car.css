@@ -58,6 +58,8 @@ main {
 }
 
 
+
+
 /*---------中間那條線---------*/
 
 .step .badge::before {
@@ -72,6 +74,8 @@ main {
     z-index: 0;
     box-sizing: border-box
 }
+
+
 
 /*---------去掉頭尾--------*/
 
@@ -106,6 +110,16 @@ main {
     left: 50%;
     top: 50%;
     z-index: 0;
+}
+
+/* ----------第一步驟背景色---------- */
+.step .badge1::after {
+    background-color: var(--secondary-color);
+}
+
+.step .badge1::before {
+    content: " ";
+    background-color: var(--secondary-color);
 }
 
 

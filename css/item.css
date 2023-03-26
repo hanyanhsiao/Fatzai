@@ -45,6 +45,8 @@
     /* ---------------------left_block----------------- */
     .left_block {
         /* outline: 2px solid rgb(255, 0, 0); */
+        padding-right: 20px;
+
     }
 
     .left_block>img {
@@ -54,17 +56,26 @@
 
     .little_img {
         display: flex;
+
     }
 
-    .little_img a {
+    .little_img>img {
         /* outline: 2px solid rgb(255, 0, 0); */
         width: 110px;
         margin: 20px 20px 0 0;
+        cursor: pointer;
+
+
     }
 
-    .little_img a img {
-        width: 100%;
+    .little_img>img:hover {
+        border: 1px solid var(--secondary-color);
     }
+
+    .border {
+        border: 1px solid var(--secondary-color);
+    }
+
 
 
     /* ------------------right_block--------------------*/
@@ -83,7 +94,8 @@
         /* outline: 2px solid rgb(0, 0, 0); */
         font-size: 1.5rem;
         margin-bottom: 20px;
-        /* letter-spacing: .8rem; */
+        /* letter-spacing: .2rem; */
+        font-weight: 300;
         text-align: center;
     }
 
@@ -94,16 +106,20 @@
         outline: 1px solid #DC9F58;
         margin-bottom: 20px;
         padding: 20px;
+
         /* background-color: #cccccc3c; */
 
     }
 
     .item_introduce h3,
     .item_delivery_fee h3 {
+        /* outline: 2px solid rgb(0, 0, 0); */
+
         font-size: 1.2rem;
         margin-bottom: 20px;
-        /* outline: 2px solid rgb(0, 0, 0); */
         color: #DC9F58;
+        font-weight: 300;
+
 
 
     }
@@ -127,8 +143,7 @@
     /* -----------價錢------------ */
     .dollars {
         /* outline: 2px solid rgb(0, 0, 0); */
-        /* 48px */
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 20px;
         /* text-shadow: 2px 2px 2px #ccc; */
     }
@@ -301,9 +316,12 @@
     /* --------------描述文字---------------*/
 
 
-    .tabcontent>p:nth-child(2),
-    .tabcontent>p:nth-child(4),
-    p:nth-child(6),
-    p:nth-child(6) {
+    .tabcontent>p:nth-child(odd) {
         color: #DC9F58;
+        font-weight: 400;
     }
+
+    /* 無法更改指定的p顏色?????????????????????? */
+    /* #deliveryv>p:nth-child(1) {
+        color: #8a0000;
+    } */

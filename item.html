@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News</title>
     <link rel="stylesheet" href="./css/common/all.css" />
-    <link rel="stylesheet" href="./css/common/header.css" />
-    <link rel="stylesheet" href="./css/common/footer.css" />
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/item.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,10 +50,10 @@
             </ol>
             <div class="item_block">
                 <div class="left_block">
-                    <img src="./image/items/tart (1).jpg" alt="">
+                    <img src="./image/items/tart (1).jpg" alt="" id="main_item">
                     <div class="little_img">
-                        <a href=""><img src="./image/items/tart (7).JPG" alt=""></a>
-                        <a href=""><img src="./image/items/tart (6).jpg" alt=""></a>
+                        <img src="./image/items/tart (7).JPG" alt="" class="item_img">
+                        <img src="./image/items/tart (6).jpg" alt="" class="item_img">
                     </div>
                 </div>
                 <div class="right_block">
@@ -122,24 +120,42 @@
                 </div>
 
                 <div id="faq" class="tabcontent">
-                    <p>常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題常見問題</p>
+                    <p>Q1: 運輸方式及運費是多少？</p>
+                    <p>運費會根據您的地址和訂單重量而定，我們提供宅配及店面取貨兩種方式，具體運費請見結帳頁面。</p>
+
+                    <p>Q2: 支付方式有哪些？</p>
+                    <p>我們接受信用卡、店面現金支付、Line Pay等多種支付方式。</p>
+
+                    <p>Q3: 退換貨政策是什麼？</p>
+                    <p>如有任何產品品質問題，請在收到產品後的24小時內與我們聯繫。</p>
+
+                    <p>Q4: 產品保質期和保存方式是什麼？</p>
+                    <p>保質期會因產品不同而有所不同，詳細資訊請查看產品頁面或包裝上的標籤。<br>
+                        產品保存方式建議在陰涼乾燥處保存，不要直接放在陽光下。</p>
+
+
+                    <p>Q5: 是否有特別優惠或促銷活動？</p>
+                    <p>我們會不定期推出優惠和促銷活動，可以關注我們的官方網站和社交媒體獲取最新消息。</p>
+
+                    <p>Q6: 訂單是否可取消或更改？</p>
+                    <p>如需取消或更改訂單，請在收到訂單確認郵件後聯繫我們，我們將盡力協助處理。</p>
+
+
                 </div>
 
                 <div id="customer" class="tabcontent">
-                    <p>顧客回饋顧客回饋顧客回饋顧客回饋顧客回饋顧客回饋</p>
+                    <p>"他們的巧克力蛋糕真是太好吃了！"</p>
+                    <p>"我喜歡他們的提拉米蘇塔，但是價格有點貴。"</p>
+                    <p>"新出的杯子蛋糕是絕對不能錯過的！"</p>
+                    <p>"他們的泡芙選擇豐富，口感也很好。" </p>
+                    <p>"草莓千層真是令人驚艷。"</p>
+                    <p>"他們的蛋糕捲是我迄今為止吃過最好吃的。</p>
+                    <p>"檸檬塔口感非常清新，是夏天必嚐的甜點之一。" </p>
+                    <p>"我在這裡吃到了世界上最好吃的馬卡龍！"</p>
+                    <p>"Fatzai的蛋糕口感很細膩，非常好吃，是我吃過的最好的蛋糕沒有之一。</p>
+                    <p>"巧克力塔口感非常濃郁，巧克力味道十分濃厚，是巧克力控必嚐的甜點之一。"</p>
                 </div>
 
-                <!-- <div class="item_des_text">
-                    <p>Q1為什麼有些蛋糕無法宅配？</p>
-                    <p>我們的宅配透過黑貓宅急便寄出，蛋糕屬於脆弱商品，運送過程中容易毀損，故無法寄送。</p>
-                    <p>Q2可以指定到貨日期嗎？</p>
-                    <p>我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
-                    <p>Q3為什麼宅配無法指定到貨日期與時間？</p>
-                    <p>黑貓宅急便送貨量過多時，無法指定到貨日，有可能延遲二到三日到貨。</p>
-                    <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。</p>
-                    <p>※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。</p>
-                    <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
-                </div> -->
 
             </div>
         </div>
@@ -185,6 +201,8 @@
         </div>
     </footer>
     <script>
+
+        // 下方選單切換
         function changeTab(evt, Tabname) {
             var i, tabcontent, tablinks;
             //取得內容calss並輪流切換none
@@ -204,6 +222,32 @@
             evt.currentTarget.classList.add('active')
         }
         document.getElementById("defaultOpen").click();
+
+        //左側圖片切換
+        function changeImg() {
+            let img = document.getElementsByClassName("item_img");
+
+
+            for (let i = 0; i < img.length; i++) {
+                img[i].addEventListener("click", function () {
+                    //移除當前border class
+                    for (let i = 0; i < img.length; i++) {
+                        img[i].classList.remove("border");
+                    }
+                    img[i].classList.add("border");
+
+                    //做換圖
+                    let big_img = document.getElementById("main_item");
+                    //取得小圖的src屬性的值
+                    let item_img_src = this.getAttribute("src");
+                    //取得大圖的src屬性的值
+                    let main_img_src = big_img.getAttribute("src");
+                    img[i].setAttribute("src", main_img_src);
+                    big_img.setAttribute("src", item_img_src);
+                })
+            }
+        }
+        changeImg();
     </script>
 </body>
 

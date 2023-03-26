@@ -1,15 +1,18 @@
 @import url(./reset.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Noto Serif TC", "Arial";
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 100;
   margin: 0 auto;
 
 }
 
+/* "Noto Serif TC" */
 html {
   font-size: 18px;
   background-color: #ffffff;
@@ -22,7 +25,11 @@ html {
 button,
 a {
   font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
   text-decoration: none;
   color: black;
+  border: 0;
+
 
 }
