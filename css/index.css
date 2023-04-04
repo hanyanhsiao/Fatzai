@@ -7,9 +7,6 @@
 .banner {
   margin: 0 auto;
   position: relative;
-  /* max-width: var(--page-width); */
-  /* display: flex; */
-  /* outline: 2px solid rgb(0, 0, 0); */
 
 }
 
@@ -52,6 +49,7 @@ section.main {
   background-repeat: no-repeat;
   background-position: top center;
   padding-bottom: 30px;
+
   text-align: center;
 }
 
@@ -60,6 +58,7 @@ section.main {
 
   background-image: url(../image/material/about_bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -71,13 +70,12 @@ section.main {
   position: relative;
   /* border: 2px solid rgb(0, 21, 255); */
 
-
 }
 
 .square {
   margin: 100px 150px 100px 0;
   width: 400px;
-  height: 400px;
+  /* height: 400px; */
   background-color: var(--primary-color);
   border: 2px solid white;
   box-shadow: 0 0 0 20px #FFEAD2;
@@ -85,7 +83,7 @@ section.main {
   padding-left: 50px;
 }
 
-.square p {
+.square>p {
   line-height: 1.8;
   text-align: justify;
   /* color: rgba(0, 0, 0, 0.7); */
@@ -109,8 +107,10 @@ section.main {
 /*--------------最新消息----------------*/
 
 .news {
+  /* border: 4px solid rgb(247, 0, 255); */
+
   background-color: var(--primary-color);
-  padding: 50px;
+  padding: 50px 200px;
 }
 
 .news .title {
@@ -122,9 +122,6 @@ section.main {
 .news ul {
   /* border: 4px solid rgb(247, 0, 255); */
   margin: 0 auto;
-
-  max-width: var(--page-width);
-  padding: 0 50px;
   display: flex;
   justify-content: center;
 
@@ -203,22 +200,6 @@ section.main {
 
 }
 
-/* .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  height: 150px;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-}
-
-img:hover .cover {
-  transform: all 2s;
-  clip-path: circle(38% at 50% 50%);
-  opacity: 1;
-} */
-
 
 
 /*--------------熱門商品----------------*/
@@ -227,26 +208,116 @@ img:hover .cover {
   /* outline: 2px solid rgb(255, 0, 0); */
   display: block;
   max-width: var(--page-width);
-  margin: 50px auto;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+
+.hot_items .items {
+  /* outline: 2px solid black; */
+  display: flex;
+  margin: 0 100px 30px;
+
+}
+
+.it {
+  /* border-radius: 5px; */
+  outline: 1px solid var(--secondary-color);
+  margin: 10px;
+  overflow: hidden;
+
+}
+
+.items .img_block {
+  /* outline: 2px solid black; */
+  position: relative;
+
+}
+
+.items .img_block>img {
+  width: 100%;
+  display: block;
+
+}
+
+.items .text_block {
+  /* outline: 2px solid rgb(255, 0, 0); */
+  line-height: 2;
+  text-align: center;
+}
+
+.items .text_block h3 {
+  color: #DC9F58;
+  /* font-weight: 600; */
+}
+
+
+.img_block>p {
+  text-align: center;
+  line-height: 2;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.772);
+  color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.it:hover p {
+  opacity: 1;
+}
+
+
+
+/* 輪播箭頭 */
+.slick-prev:before {
+  color: #DC9F58;
+  font-size: 2rem;
+  position: absolute;
+  left: -12px;
+  line-height: 0;
+}
+
+.slick-next:before {
+  color: #DC9F58;
+  font-size: 2rem;
+  position: absolute;
+  right: -12px;
+  line-height: 0;
+
+
+}
+
+.slick-dots li.slick-active button:before {
+  color: #DC9F58;
+
+}
+
+.slick-dots li button:before {
+  color: #DC9F58;
+
 }
 
 
 /*--------------中間背景圖----------------*/
 .center_bg {
   /* outline: 2px solid #000000; */
-
+  max-width: auto;
   /* margin: 50px; */
   background-image: url(../image/bgi/Choux-1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center;*/
+  background-attachment: fixed;
+
   height: 450px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-attachment: fixed;
 
 }
 
@@ -292,9 +363,9 @@ img:hover .cover {
 /*--------------常見問題----------------*/
 
 .faq {
-  margin: 50px auto;
-  /* outline: 2px solid #f30000; */
-  /* padding: 0 150px; */
+  margin: 0 auto;
+  padding: 50px 0;
+
   max-width: var(--page-width);
 }
 
@@ -318,11 +389,27 @@ img:hover .cover {
 
 }
 
+
+
 /* -------------question------------- */
 .faq ul {
-  /* column-count: 2; */
   /* outline: 1px solid #000000; */
+  position: relative;
 }
+
+.star1 {
+  /* outline: 1px solid #000000; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.star2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 
 .faq ul li {
   margin-bottom: 30px;
@@ -330,6 +417,7 @@ img:hover .cover {
 }
 
 .faq button {
+
   margin: 0 auto;
   padding: 5px 10px;
   text-align: start;
@@ -387,15 +475,15 @@ img:hover .cover {
   /* outline: 2px solid black; */
   margin: 0 auto;
   padding: 50px 0;
-  background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23ffead2' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  /* background-attachment: fixed; */
 }
 
 .information .title {}
 
 .information .map {
   /* outline: 2px solid black; */
+  max-width: var(--page-width);
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 
@@ -419,8 +507,6 @@ iframe {
   color: #DC9F58;
   margin-bottom: 20px;
   /* outline: 2px solid rgb(255, 157, 157); */
-
-
 }
 
 .information .detail p {

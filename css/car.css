@@ -7,14 +7,14 @@ main {
 
 
 /* ------------------------訂購須知------------------------------ */
-.notice {
+/* .notice {
     background-color: #FFEAD2;
     height: 200px;
     text-align: center;
     margin: 20px 0 50px 0;
     outline: 2px solid black;
 
-}
+} */
 
 
 /* ------------------------訂購流程------------------------------ */
@@ -23,16 +23,13 @@ main {
     /* outline: 2px solid rgb(153, 0, 255); */
     text-align: center;
     margin-bottom: 50px;
-
 }
 
 
 .process .step {
-
     display: inline-block;
     vertical-align: top;
     width: 240px;
-    max-width: 33%;
     margin-left: -3px;
     margin-right: -3px;
     color: black;
@@ -58,8 +55,6 @@ main {
 }
 
 
-
-
 /*---------中間那條線---------*/
 
 .step .badge::before {
@@ -74,8 +69,6 @@ main {
     z-index: 0;
     box-sizing: border-box
 }
-
-
 
 /*---------去掉頭尾--------*/
 
@@ -141,6 +134,8 @@ main {
 .check>p {
     background-color: #FFEAD2;
     padding: 15px;
+    font-weight: 300;
+
 }
 
 /* ---------------------購物車-------------------- */
@@ -160,6 +155,9 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
+    text-align: center;
+    font-weight: 300;
+
 }
 
 /* ----------購物車內容---------- */
@@ -171,7 +169,13 @@ main {
     justify-content: space-between;
     padding: 15px;
     border-bottom: 1px solid #ccc;
-    /* outline: 2px solid rgb(0, 0, 0); */
+    opacity: 1;
+    transition: all 1s;
+}
+
+.car_item.fade_out {
+    opacity: 0;
+
 }
 
 .car_item li {
@@ -180,30 +184,41 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    text-align: center;
 }
+
+
+
 
 .car_item li img {
     width: 100%;
 }
 
+.car_item li img:hover {
+    border: 1px solid var(--secondary-color);
+}
+
+.car_item li:last-child>i {
+    cursor: pointer;
+}
+
+
 
 /* ---------------------加購---------------------- */
 
 .more_items {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 15px;
+
 }
 
 .more_items li {
     /* outline: 2px solid rgb(205, 0, 0); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-right: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
+
 
 .more_items li img {
     display: flex;
@@ -212,10 +227,16 @@ main {
 
 }
 
-.more_items li p {
+.more_items li h3 {
+    /* outline: 2px solid rgb(47, 0, 255); */
+    padding: 10px;
+}
+
+.more_items li>p {
+    /* outline: 2px solid rgb(47, 0, 255); */
     text-align: center;
-    padding: 5px;
-    margin-top: 10px;
+    padding: 10px;
+    padding-top: 0;
     color: #DC9F58;
 }
 
@@ -223,10 +244,15 @@ main {
     border: 1px solid #DC9F58;
     background-color: white;
     font-size: inherit;
-    color: black;
-    padding: 5px 20px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
     margin-top: 10px;
+    margin: 0 auto;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+
 }
 
 .more_items li button:hover {
@@ -240,7 +266,6 @@ main {
     display: flex;
     justify-content: space-between;
     /* outline: 2px solid blue; */
-
 }
 
 /* ----------左側運送資訊----------- */
@@ -264,9 +289,10 @@ main {
 .pay select {
     margin: 15px 0;
     height: 40px;
-    font-family: "Noto Serif TC", serif;
+    font-family: inherit;
+    font-weight: inherit;
     border: 1px solid #ccc;
-    font-size: 18px;
+    font-size: inherit;
     /* background-color: #DC9F58; */
 }
 
@@ -275,6 +301,10 @@ select:focus-visible {
     border-radius: 2px;
 }
 
+select>option {
+    font-weight: inherit;
+
+}
 
 .attention .content {
     background-color: #FFEAD2;
@@ -282,6 +312,7 @@ select:focus-visible {
     padding: 15px;
     margin-top: 15px;
     line-height: 2;
+
 }
 
 /* ----------右側訂單資訊----------- */
@@ -312,7 +343,7 @@ select:focus-visible {
 
 
 
-
+/* ----------折扣碼---------- */
 .money>button {
     background-color: #FFEAD2;
     border-radius: 5px;
@@ -334,13 +365,10 @@ select:focus-visible {
     line-height: 2rem;
     text-align: center;
     font-size: 1.2rem;
-    border: 0;
     box-shadow: 0 0 5px #CCC;
     letter-spacing: 12px;
-    margin-bottom: 0;
     width: 100%;
     border-radius: 5px;
-    cursor: pointer;
 
 }
 

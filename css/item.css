@@ -7,7 +7,7 @@
     /* ---------------------bread---------------------- */
     .breadcrumb {
         /* border: 2px solid saddlebrown; */
-        padding: 20px 0 10px 50px;
+        padding: 30px 0 20px 0;
         max-width: var(--page-width);
         display: flex;
         align-items: center;
@@ -15,6 +15,7 @@
 
     .breadcrumb li {
         padding: 10px 10px 10px 0;
+        font-size: .9rem;
     }
 
     .breadcrumb li+li::before {
@@ -32,7 +33,7 @@
     }
 
 
-    /* -----------------------item_block--------------- */
+    /* -------------------item_block--------------- */
 
     .item_block {
         /* border: 2px solid saddlebrown; */
@@ -107,8 +108,7 @@
         margin-bottom: 20px;
         padding: 20px;
 
-        /* background-color: #cccccc3c; */
-
+        background-color: #FFF4E8;
     }
 
     .item_introduce h3,
@@ -119,9 +119,6 @@
         margin-bottom: 20px;
         color: #DC9F58;
         font-weight: 300;
-
-
-
     }
 
     .item_introduce ul,
@@ -135,23 +132,33 @@
     .item_introduce ul li,
     .item_delivery_fee ul li {
         margin-bottom: 10px;
+        list-style: circle;
+    }
+
+    .item_introduce ul li:last-of-type {
         list-style: disc;
-
-
+        color: var(--secondary-color);
+        font-weight: 400;
     }
 
     /* -----------價錢------------ */
-    .dollars {
+    h1 {
         /* outline: 2px solid rgb(0, 0, 0); */
         font-size: 1.5rem;
         margin-bottom: 20px;
+        display: inline-block;
         /* text-shadow: 2px 2px 2px #ccc; */
     }
 
     /* -----------尺寸選擇------------ */
+    .item_size {
+        /* outline: 2px solid rgb(0, 0, 0); */
+
+        display: flex;
+        align-items: center;
+    }
 
     .item_size button {
-        display: inline-block;
         border: 1px solid #DC9F58;
         /* border-radius: 5px; */
         padding: 5px;
@@ -159,15 +166,15 @@
         text-align: center;
         color: black;
         margin-right: 20px;
-        font-size: inherit;
         background-color: #ffffff;
-        cursor: pointer;
-
     }
 
-    .item_size button:hover {
+
+    .item_size button.checked {
         background-color: var(--primary-color);
     }
+
+
 
     /* -----------數量------------ */
 
@@ -185,9 +192,8 @@
     }
 
 
-    .item_quantity .count .num-jian,
-    .input-num,
-    .num-jia {
+    .item_quantity .count .num-count,
+    .input-num {
         display: inline-block;
         width: 25px;
         height: 25px;
@@ -197,22 +203,20 @@
         border: 1px solid #DC9F58;
     }
 
-
-
-    .num-jian {
-        /* border-radius: 5px 0 0 5px; */
-        background-color: #DC9F58;
-    }
-
-    .num-jia {
-        /* border-radius: 0 5px 5px 0; */
-        background-color: #DC9F58;
-
-    }
-
     .input-num {
-        /* outline: 2px solid rgb(8, 136, 255); */
+        cursor: default;
         width: 150px;
+
+    }
+
+    #num-decrease {
+        border-radius: 2px 0 0 2px;
+        background-color: var(--secondary-color);
+    }
+
+    #num-jia {
+        border-radius: 0 2px 2px 0;
+        background-color: var(--secondary-color);
     }
 
 
@@ -276,7 +280,7 @@
     .item_description {
         /* border: 2px solid #000000; */
         border: 1px solid #DC9F58;
-        margin: 30px 0;
+        margin: 30px 20px;
     }
 
     .tab {
@@ -319,6 +323,11 @@
     .tabcontent>p:nth-child(odd) {
         color: #DC9F58;
         font-weight: 400;
+    }
+
+    #delivery>p:nth-child(7) {
+        color: inherit;
+        font-weight: 200;
     }
 
     /* 無法更改指定的p顏色?????????????????????? */

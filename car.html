@@ -8,37 +8,16 @@
     <title>Shopping Car</title>
     <link rel="stylesheet" href="./css/common/all.css" />
     <link rel="stylesheet" href="./css/common/common.css">
-    <link rel="stylesheet" href="./css/common/header.css" />
-    <link rel="stylesheet" href="./css/common/footer.css" />
     <link rel="stylesheet" href="./css/car.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/rwd.css">
+    <!--引入font-awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header class="header">
-        <!-- 導覽列 -->
-        <nav class="nav">
-            <!-- 左側LOGO -->
-            <a href="./index.html" class="logo">
-                <img src="./image/logo2.svg" alt="logo" />
-            </a>
-            <!-- 右側選單 -->
-            <ul class="nav_list">
-                <li> <a href="./about.html">關於Fatzai </a></li>
-                <li><a href="./news.html">最新消息</a></li>
-                <li><a href="./shop_list_all.html">產品列表</a></li>
-                <li><a href="#">會員專區</a></li>
-                <li><a href="#">購物車</a></li>
-            </ul>
-
-        </nav>
-
-    </header>
+    <header class="header"></header>
 
     <main>
         <div class="process">
@@ -86,14 +65,14 @@
                 <li>商品</li>
                 <li>名稱</li>
                 <li>規格</li>
-                <li>單件價格</li>
+                <li>金額</li>
                 <li>數量</li>
-                <li>小計</li>
+                <li>合計</li>
                 <li>刪除</li>
             </ul>
             <!-- 購買商品 -->
-            <div class="ar_item_block">
-                <ul class="car_item">
+            <div class="car_item_block">
+                <!-- <ul class="car_item">
                     <li> <a href="./item.html"><img src="./image/items/tart (1).jpg" alt=""></a></li>
                     <li>提拉米蘇塔</li>
                     <li>圓塔</li>
@@ -110,7 +89,7 @@
                     <li>2</li>
                     <li>$398</li>
                     <li><i class="fa-regular fa-circle-xmark"></i></li>
-                </ul>
+                </ul> -->
             </div>
 
         </div>
@@ -119,20 +98,41 @@
             <p>限量加購</p>
             <ul class="more_items">
                 <li>
-                    <img src="./image/material/Candles.png">
-                    <p>蠟燭一組 $50</p>
-                    <button>加入購物車</button>
+                    <img src="./image/material/candles.jpg">
+                    <h3>數字蠟燭一組</h3>
+                    <p>$50</p>
+                    <button>
+                        <p>加入購物車</p>
+                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                        <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" delay="1000"
+                            colors="primary:#dc9f58,secondary:#dc9f58" style="width:30px;height:30px">
+                        </lord-icon>
+                    </button>
 
                 </li>
                 <li>
                     <img src="./image/items/tart (5).jpg">
-                    <p>Pistache tart $160</p>
-                    <button>加入購物車</button>
+                    <h3>Pistache tart </h3>
+                    <p>$160</p>
+                    <button>
+                        <p>加入購物車</p>
+                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                        <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" delay="1000"
+                            colors="primary:#dc9f58,secondary:#dc9f58" style="width:30px;height:30px">
+                        </lord-icon>
+                    </button>
                 </li>
                 <li>
                     <img src="./image/items/mousse (5).jpg">
-                    <p>Chocolate Cake $99</p>
-                    <button>加入購物車</button>
+                    <h3>Chocolate Cake </h3>
+                    <p>$99</p>
+                    <button>
+                        <p>加入購物車</p>
+                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                        <lord-icon clas="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
+                            delay="1000" colors="primary:#dc9f58,secondary:#dc9f58" style="width:30px;height:30px">
+                        </lord-icon>
+                    </button>
                 </li>
                 <li>
                 </li>
@@ -219,6 +219,70 @@
 
     </main>
 
+    <footer class="footer"></footer>
+
+    <!-- -----------script------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        // -----------------------抓出localstorage商品並顯示--------------------------
+        function get_items() {
+            let items = JSON.parse(localStorage.getItem("car"));
+            // console.log(items);
+
+            if (items) {
+                let list_html = ""; //
+
+                items.forEach(function (item, i) {
+                    // console.log(item);
+                    list_html += `<ul class="car_item">
+                    <li> <a href="./item.html"><img src="${get_img(item.item_id)}" alt=""></a></li>
+                    <li>${item.name}</li>
+                    <li class="item_id">${item.item_id}</li>
+                    <li>${item.dollars}</li>
+                    <li>${item.num}</li>
+                    <li>${item.total}</li>
+                    <li><i class="fa-regular fa-circle-xmark"></i></li>
+                </ul>`;
+                })
+
+                $('.car_item_block').html(list_html);
+                // let ul_task_list = document.getElementsByClassName("task_list")[0];
+                // ul_task_list.innerHTML = list_html;
+            }
+
+        };
+
+        // -----------------------刪除商品及localstorage--------------------------
+        function delete_items() {
+            $('.fa-circle-xmark').click(function () {
+                //取出ul
+                let target_item_ul = $(this).closest('ul');
+                //取出item_id
+                let target_item = $(this).closest('ul').children('.item_id').html();
+
+                //1 移除整條商品列，淡出1秒
+                $(target_item_ul).addClass('fade_out');
+                setTimeout(function () { $(target_item_ul).remove() }, 1000);
+
+                //2 移除localstorage
+                let tasks = JSON.parse(localStorage.getItem("car"));
+                //不相同的要留下
+                let updated_tasks = tasks.filter(function (item, i) {
+                    return target_item != item.item_id;
+                });
+                // 回存至 localStorage
+                localStorage.setItem("car", JSON.stringify(updated_tasks));
+            })
+        }
+
+        $(function () {
+            get_items();
+            delete_items();
+        })
+
+    </script>
 </body>
 
 </html>

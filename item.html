@@ -5,40 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
+    <title>Items</title>
+    <!-- 引入css -->
     <link rel="stylesheet" href="./css/common/all.css" />
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/item.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/rwd.css">
+    <!--引入font-awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
 
-    <header class="header">
-        <!-- 導覽列 -->
-        <nav class="nav">
-            <!-- 左側LOGO -->
-            <a href="./index.html" class="logo">
-                <img src="./image/logo2.svg" alt="logo" />
-            </a>
-            <!-- 右側選單 -->
-            <ul class="nav_list">
-                <li><a href="./about.html">關於Fatzai </a></li>
-                <li><a href="./news.html">最新消息</a></li>
-                <li><a href="./shop_list_all.html">產品列表</a></li>
-                <li><a href="#">會員專區</a></li>
-                <li><a href="./car.html">購物車</a></li>
-            </ul>
-
-        </nav>
-
-    </header>
+    <header class="header"></header>
 
     <main>
         <div class="wrapper">
@@ -57,7 +38,8 @@
                     </div>
                 </div>
                 <div class="right_block">
-                    <h1 class="item_name">提拉米蘇塔 Tiramisu Tart</h1>
+                    <h1 class="item_name">提拉米蘇塔 </h1>
+                    <h1>Tiramisu Tart</h1>
                     <div class="item_introduce">
                         <h3>產品介紹</h3>
                         <ul>
@@ -66,6 +48,7 @@
                             <li>核桃</li>
                             <li>馬斯卡邦起司餡</li>
                             <li>苦甜巧克力餡</li>
+                            <li>本產品含有酒類及堅果</li>
                         </ul>
                     </div>
                     <div class="item_delivery_fee">
@@ -76,23 +59,26 @@
 
                         </ul>
                     </div>
-                    <h1 class="dollars">$199</h1>
+                    <h1 class="dollars_symbol">$</h1>
+                    <h1 class="dollars">199</h1>
                     <div class="item_size">
-                        <button>圓塔</button>
-                        <button>方塔</button>
+                        <button class="tart t_circle">圓塔</button>
+                        <button class="tart t_square">方塔</button>
+                        <p>圓塔：直徑8cm / 方塔：邊長6cm</p>
 
                     </div>
                     <div class="item_quantity">
                         <ul class="count">
-                            <li><span id="num-add" class="num-jian">－</span></li>
-                            <li><input type="text" class="input-num" id="input-num" value="0" /></li>
-                            <li><span id="num-jia" class="num-jia">＋</span></li>
+                            <li><span id="num-decrease" class="num-count">－</span></li>
+                            <li><input readonly disabled type="text" class="input-num" id="input-num" value="1"></input>
+                            </li>
+                            <li><span id="num-jia" class="num-count">＋</span></li>
                         </ul>
                     </div>
 
                     <div class="item_buy">
-                        <button class="btn1"><a href="./car.html">立即購買</a></button>
-                        <button class="btn2"><a href="">加入購物車</a></button>
+                        <button class="btn1 add_shopping_car"><a href="./car.html">立即購買</a></button>
+                        <button class="btn2 add_shopping_car">加入購物車</button>
                     </div>
                 </div>
             </div>
@@ -114,9 +100,9 @@
                     <p>我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
                     <p>Q3為什麼宅配無法指定到貨日期與時間？</p>
                     <p>黑貓宅急便送貨量過多時，無法指定到貨日，有可能延遲二到三日到貨。</p>
-                    <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。</p>
-                    <p>※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。</p>
-                    <p>※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
+                    <p>※疫情影響，可能會延遲2-3天到貨，也無法指定配送時間，亦不會當日寄出，當日就收到貨。<br>
+                        ※建議您先行聯繫收件人，告知商品配送日期與時間；若無法順利送達，恕無法辦理退貨與退款，如重新寄送將酌收配送費用。<br>
+                        ※若因天災或意外等人為不可抗力之因素，而無法按時配送，將通知您延後送貨或為您取消訂單。</p>
                 </div>
 
                 <div id="faq" class="tabcontent">
@@ -161,46 +147,20 @@
         </div>
     </main>
 
+    <footer class="footer"></footer>
 
-    <footer>
-        <div class="footer">
-            <div class="footer_left">
-                <p><a href="./about.html">關於我們</a></p>
-                <p><a href="./news.html">最新消息</a></p>
-                <p><a href="./shop_list_all.html">產品列表</a></p>
-                <p><a href="">會員專區</a></p>
-
-                <div class="footer_icons">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-                    <a href="https://line.me/zh-hant/" target="_blank"> <i class="fa-brands fa-line"></i>
-
-                </div>
-            </div>
-
-            <div class="footer_center">
-                <a href="./index.html">
-                    <img src="./image/logo3.svg" alt="">
-                    <img class="color" src="./image/logo2.svg" alt="">
-                </a>
-            </div>
-
-            <div class="footer_right">
-                <p>營業時間 : 週一至週五 11:30-19:30</p>
-                <p>最後取貨時間 : 週一至週五 19:00</p>
-                <p>聯絡電話 : 02-0953-9383</p>
-                <p>門市地址 : 108台北市萬華區西寧南路123號</p>
-
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <span class="test">本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示之用</span>
-        </div>
-    </footer>
+    <!-- -----------script------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="./js/common.js"></script>
     <script>
+
+        $(function () {
+            $('.tart').click(function () {
+                $('.tart').removeClass('checked');
+                $(this).addClass('checked');
+            })
+        })
 
         // 下方選單切換
         function changeTab(evt, Tabname) {
@@ -248,6 +208,66 @@
             }
         }
         changeImg();
+
+        //數字加減
+        $(function () {
+            const tart = $('.dollars').html();
+
+            $('.num-count').click(function () {
+                // console.log($('.dollars').html());
+                // console.log($('#input-num').val());
+
+                let num = $('#input-num').val();
+                // console.log(this.id);
+
+                switch (this.id) {
+                    case 'num-decrease':
+                        if (num > 1) {
+                            num--;
+                        }
+                        break;
+
+                    case 'num-jia':
+                        if (num < 10) {
+                            num++;
+                        }
+                        break;
+                }
+                $('#input-num').val(num);
+
+                //總額 = 數量 * 金額
+                let total = num * tart;
+                // console.log(total);
+
+                $('.dollars').html(total);
+
+            })
+        })
+
+        //加入購物車
+        $(function () {
+            const tart = $('.dollars').html();
+
+            $('.add_shopping_car').click(function () {
+                //------------------第一步：新增資料至 localStorage--------------------
+                let name = $('.item_name').html();
+                let item_id = $('button.checked').html();
+                let dollars = tart;
+                let num = $('#input-num').val() * 1; //轉換成數字
+                let total = tart * num
+                console.log(total);
+
+                let item = {
+                    "name": name,
+                    "item_id": item_id,
+                    "dollars": dollars,
+                    "num": num,
+                    "total": total
+                };
+                addCar(item);
+            })
+        })
+
     </script>
 </body>
 

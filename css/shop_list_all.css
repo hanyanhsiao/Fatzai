@@ -7,6 +7,7 @@
 
 }
 
+
 /* -------------------側邊欄---------------------- */
 .main_block .aside {
   /* border: 1px solid rgb(255, 0, 0); */
@@ -78,6 +79,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+
 
 /* -------------------商品區塊---------------------- */
 
@@ -155,19 +158,44 @@
   /* border: 1px solid rgb(255, 5, 5); */
 }
 
-.items_block p {
-  padding: 12px 0;
+.items_block .cash {
+  /* border: 1px solid rgb(255, 5, 5); */
+
+  background-color: #ffead285;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 10px;
   font-weight: bold;
   color: #DC9F58;
-  background-color: #ffead285;
 
+}
+
+.cash p {
+  /* border: 1px solid rgb(255, 5, 5); */
+
+  flex-grow: 3;
+  text-align: center;
 }
 
 
 
+.items_block i {
+  /* border: 1px solid rgb(255, 5, 5); */
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
 
+}
 
+.items_block i:last-child {
+  margin-right: 0;
 
+}
+
+.text_block .fa-cart-shopping {
+  display: none;
+}
 
 
 
@@ -178,7 +206,7 @@ ul.pagination {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 ul.pagination li {

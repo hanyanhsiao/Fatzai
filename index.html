@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/common/all.css" />
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/rwd.css">
     <!-- 引入字體-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,39 +25,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--引入font-lord icon -->
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
+
 
 
 </head>
 
 <body>
     <header class="header">
-        <!-- 導覽列 -->
-        <nav class="nav">
-            <!-- 左側LOGO -->
-            <a href="#" class="logo">
-                <img src="./image/logo2.svg" alt="logo" />
-            </a>
-            <!-- 右側選單 -->
-            <ul class="nav_list">
-                <li>
-                    <a href="./about.html">關於Fatzai </a>
-                </li>
-                <li><a href="./news.html">最新消息</a></li>
-                <li><a href="./shop_list_all.html">產品列表</a></li>
-                <li><a href="#">會員專區</a></li>
-                <li><a href="car.html">購物車</a></li>
-            </ul>
-            <!-- 下拉選單 -->
-            <!-- <div class="share_block">
-            <span class="share_text">社群連結</span>
-            <ul class="share_list">
-            <li><a href="https://www.facbbook.com">FB粉絲頁</a></li>
-            <li><a href="https://www.instagram.com">IG粉絲頁</a></li>
-            </ul>
-            </div> -->
-        </nav>
-
     </header>
+
     <div class="wrapper">
         <main>
             <!-- banner -->
@@ -81,8 +61,7 @@
                             <img src="./image/items/macaron (1).jpg" alt="">
                         </div>
                         <div class="square">
-                            <p data-aos="fade-up" data-aos-duration="1000">歡迎來到<strong>Fatzai Pâtisserie !</strong></p>
-                            <p data-aos="fade-up" data-aos-duration="1000">
+                            <p data-aos="fade-up" data-aos-duration="1000">歡迎來到<strong>Fatzai Pâtisserie !</strong><br>
                                 我們是一家專業製作法式甜點的店鋪，所有甜點均由經驗豐富的法式甜點師傅親手製作。我們以最優質的食材和獨特的製作技巧，打造出味道獨特、外形精美的甜點。在這裡，您可以品嚐到各種經典的法式甜點，如馬卡龍、泡芙、小塔等，還有各種創意糕點等您來發掘。無論是單獨享用或與親友共享，我們獨特的甜點絕對會給您留下難忘的味覺體驗。
                             </p>
                         </div>
@@ -91,15 +70,18 @@
                 </div>
 
                 <!-- 最新消息 -->
+
                 <div class="news">
                     <h1 class="title" data-aos="fade-up" data-aos-duration="1000">最新消息</h1>
                     <ul data-aos="fade-up" data-aos-duration="1000">
 
                         <!-- 最新消息1 -->
                         <li>
-                            <a href="./news.html">
-                                <img src="./image/material/cup cake (2).jpg" alt="">
-                            </a>
+                            <div class="news_img">
+                                <a href="./news.html">
+                                    <img src="./image/material/cup cake (2).jpg" alt="">
+                                </a>
+                            </div>
                             <h3>－ 杯子蛋糕新上架－</h3>
                             <h3>3/10開始販售</h3>
                             <p>萬眾期盼的杯子蛋糕來啦，
@@ -110,9 +92,11 @@
                         </li>
                         <!-- 最新消息2 -->
                         <li>
-                            <a href="./news.html">
-                                <img src="./image/material/Strawberry2.png" alt="">
-                            </a>
+                            <div class="news_img_block">
+                                <a href="./news.html">
+                                    <img src="./image/material/Strawberry2.png" alt="">
+                                </a>
+                            </div>
                             <h3>－ 草莓季開跑啦 －</h3>
                             <h3> 1/1 - 1/31 </h3>
                             <p>草莓季節到了！如果你是甜點愛好者，那麼你絕對不能錯過，這次我們推出了許多意想不到的組合，快點擊查看更多草莓季產品介紹！
@@ -120,9 +104,11 @@
                         </li>
                         <!-- 最新消息3 -->
                         <li>
-                            <a href="./news.html">
-                                <img src="./image/material/Matcha2-2.jpg" alt="">
-                            </a>
+                            <div class="news_img">
+                                <a href="./news.html">
+                                    <img src="./image/material/Matcha2-2.jpg" alt="">
+                                </a>
+                            </div>
                             <h3>－抹茶季開跑啦 －</h3>
                             <h3> (已結束) </h3>
                             <p>萬眾期盼的抹茶季來啦，
@@ -136,7 +122,7 @@
                 </div>
 
                 <!-- 分隔線 -->
-                <hr class="hr">
+                <!-- <hr class="hr"> -->
 
                 <!-- 熱門商品 -->
                 <div class="hot_items">
@@ -238,7 +224,12 @@
                     <h1 class="title">常見問題
                         <!-- <a href="#">more</a> -->
                     </h1>
+
                     <ul data-aos="fade-up" data-aos-duration="1000">
+                        <lord-icon class="star1" src="https://cdn.lordicon.com/whttoese.json" trigger="loop"
+                            delay="1000" colors="primary:#ffead2,secondary:#f4dc9c" scale="35"
+                            style="width:80px;height:80px">
+                        </lord-icon>
                         <li>
                             <button class="accordion">
                                 <h3>Q1: 蛋糕需要幾天前預訂 ?</h3>
@@ -295,15 +286,16 @@
                                 </p>
                             </div>
                         </li>
-
-
-
-
+                        <lord-icon class="star2" src="https://cdn.lordicon.com/whttoese.json" trigger="loop"
+                            delay="1500" colors="primary:#ffead2,secondary:#f4dc9c" scale="35"
+                            style="width:80px;height:80px">
+                        </lord-icon>
                     </ul>
+
                 </div>
 
                 <!-- 分隔線 -->
-                <hr class="hr">
+                <!-- <hr class="hr"> -->
 
                 <!--門市資訊 -->
                 <div class="information">
@@ -326,55 +318,23 @@
             </section>
         </main>
     </div>
-    <footer>
-        <div class="footer">
-            <div class="footer_left">
-                <p><a href="./about.html">關於我們</a></p>
-                <p><a href="./news.html">最新消息</a></p>
-                <p><a href="./shop_list_all.html">產品列表</a></p>
-                <p><a href="">會員專區</a></p>
 
-                <div class="footer_icons">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-                    <a href="https://line.me/zh-hant/" target="_blank"> <i class="fa-brands fa-line"></i>
-
-                </div>
-            </div>
-
-            <div class="footer_center">
-                <a href="./index.html">
-                    <img src="./image/logo3.svg" alt="">
-                    <img class="color" src="./image/logo2.svg" alt="">
-                </a>
-            </div>
-
-            <div class="footer_right">
-                <p>營業時間 : 週一至週五 11:30-19:30</p>
-                <p>最後取貨時間 : 週一至週五 19:00</p>
-                <p>聯絡電話 : 02-0953-9383</p>
-                <p>門市地址 : 108台北市萬華區西寧南路123號</p>
-
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <span class="test">本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示之用</span>
-        </div>
+    <footer class="footer">
     </footer>
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script type="text/javascript" src="./js/init_carousel.js"></script>
+    <script src="./js/init_carousel.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
     <script>
+
         $(document).ready(function () {
             AOS.init();
+
         })
+        // --常見問題js--
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -391,6 +351,7 @@
 
             });
         }
+
 
     </script>
 

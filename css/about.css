@@ -44,7 +44,8 @@ section .center img {
 
 
 section .right {
-    /* border: 2px solid rgb(0, 0, 0); */
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 10px #ffead2b8;
     position: absolute;
     right: 8%;
     top: 8%;
@@ -73,9 +74,9 @@ section .right p {
 /* --------------下方嚴選食材----------------- */
 
 /* 標題 */
-.title {
+.ing_title {
     /* border: 2px solid rgb(0, 21, 255); */
-    width: var(--page-width);
+    max-width: var(--page-width);
     margin: 0 auto;
     font-size: 1.5rem;
     background-image: url(../image/bgi/title\ \(3\)\ .png);
