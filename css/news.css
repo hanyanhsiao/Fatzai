@@ -199,17 +199,13 @@
 
  /* 標題 */
  .calendar_block>h1 {
-
-     background-color: var(--primary-color);
-     line-height: 50px;
-
      margin: 0 auto;
-     text-align: center;
-     letter-spacing: 2rem;
+     background-color: var(--primary-color);
      width: 300px;
-     padding-left: 30px;
-     box-shadow: 4px 4px var(--secondary-color);
+     line-height: 50px;
+     text-align: center;
      margin-bottom: 50px;
+     border: 1px solid var(--secondary-color);
  }
 
  #calendar {

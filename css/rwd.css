@@ -11,6 +11,10 @@
 
     }
 
+    .header {
+        background-color: #ffead2;
+    }
+
     .header .nav {
         /* border: 1px solid red; */
         padding: 0 20px;
@@ -102,7 +106,7 @@
 
 
     /*  手機才出現的icon */
-    lord-icon {
+    .mobile_icon {
         display: flex;
         margin-left: 5px;
         z-index: 100;
@@ -160,8 +164,19 @@
 
     /* ====================首頁======================= */
     /*--------------關於肥宅----------------*/
+    main {
+        position: relative;
+        margin: 0 autos;
+    }
+
     .title {
         background-image: url();
+    }
+
+    .aboutMe {
+        background-image: url(../image/material/macaron\ \(1\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .content {
@@ -169,17 +184,23 @@
         margin: 0 auto;
         width: auto;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         position: relative;
 
     }
 
     .square {
-        margin: 180px 50px 50px;
-        margin-left: 100px;
+        margin: 50px 50px 150px;
         width: 300px;
-        padding: 10px;
-        padding-top: 20px;
+        padding: 20px;
+        background-color: #ffffffde;
+        box-shadow: 0 0 0 0 transparent;
+        border: 0;
+    }
+
+    strong {
+        font-weight: 400;
+        color: var(--secondary-color);
     }
 
     .square>p {
@@ -187,14 +208,12 @@
         text-align: justify;
         letter-spacing: 1px;
 
+
+
     }
 
     .about_img {
-        width: 180px;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-
+        display: none;
     }
 
     .about_img img {
@@ -264,6 +283,13 @@
         writing-mode: vertical-lr;
         padding: 5px;
     }
+
+    /* 
+    .date {
+        text-orientation: upright;
+        outline: 2px solid black;
+    } */
+
 
     /*--------------熱門商品----------------*/
 
@@ -345,9 +371,6 @@
 
     }
 
-
-
-
     /*--------------地圖&營業時間----------------*/
     .information {
         /* outline: 2px solid black; */
@@ -395,8 +418,6 @@
         clip-path: 0;
         height: 520px;
 
-
-
     }
 
     section .center {
@@ -437,12 +458,15 @@
         max-width: auto;
         padding-bottom: 0;
 
+
     }
 
     /* 食材列表 */
     .ingredients {
         /* outline: 2px solid rgb(0, 0, 0); */
         max-width: auto;
+        padding: 0 10px;
+
     }
 
     .ingredients li {
@@ -451,31 +475,38 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 0;
         overflow: hidden;
-        padding: 20px;
+        padding: 20px 0;
         border-bottom: 1px solid var(--primary-color);
+    }
 
+    .ingredients li p {
+        display: none;
+    }
+
+    .mobile_p {
+        display: block;
+        text-align: justify;
     }
 
     .ingredients li:nth-of-type(2),
     li:nth-of-type(4) {
         flex-direction: column-reverse;
-
-
     }
 
     .ingredients li img {
         /* border: 2px solid #CCC; */
         border-radius: 5px;
+        border-radius: 50% 30% 50% 40%;
         width: 60%;
-        margin-top: 20px;
     }
 
     .ingredients .text {
-        text-align: center;
+        text-align: start;
+        padding: 10px;
     }
 
     li .text h1 {
@@ -560,8 +591,7 @@
     /* 標題 */
     .calendar_block>h1 {
         width: 200px;
-        letter-spacing: 1rem;
-        padding-left: 20px;
+
 
     }
 
@@ -653,7 +683,8 @@
 
     }
 
-    #mask {
+    #mask,
+    #common_mask {
         background-color: rgba(0, 0, 0, 0.534);
         position: absolute;
         top: 0;
@@ -775,7 +806,7 @@
 
     /* ===================購物車======================= */
 
-    main {
+    .wrapper {
         /* border: 2px solid black; */
         max-width: auto;
     }

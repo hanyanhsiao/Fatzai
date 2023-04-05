@@ -49,7 +49,7 @@
 }
 
 /*  手機才出現的icon */
-lord-icon {
+.mobile_icon {
     display: none;
 }
 

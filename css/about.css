@@ -91,11 +91,10 @@ section .right p {
     /* outline: 2px solid rgb(0, 0, 0); */
     max-width: var(--page-width);
     margin: 0 auto;
-
+    padding: 0 50px;
 }
 
 .ingredients li {
-    border-radius: 5px;
     /* border: 2px solid #CCC; */
     height: 200px;
     display: flex;
@@ -113,9 +112,8 @@ section .right p {
 
 .ingredients .text {
     /* outline: 5px solid rgb(0, 0, 0); */
-
     line-height: 2;
-    /* display: block; */
+
 }
 
 li .text h1 {
@@ -123,7 +121,6 @@ li .text h1 {
     background: #FFEAD2;
     font-size: 1.3rem;
     padding: 0 20px;
-    /* text-align: center; */
     margin-bottom: 10px;
 }
 
@@ -142,4 +139,6 @@ li:nth-child(even) h1 {
     text-align: end;
 }
 
-.text h1 p {}
+.mobile_p {
+    display: none;
+}

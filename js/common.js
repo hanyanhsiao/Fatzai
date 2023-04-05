@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(".header").load("common.html .header>.nav", function () {
         $('#mobile-menu').click(function () {
             $(this).toggleClass('active');
+            $('#common_mask').toggle()
             if ($(this).hasClass('active')) {
                 $('.nav_list').slideDown();
             } else {
@@ -14,8 +15,9 @@ $(document).ready(function () {
         })
     });
     $(".footer").load("common.html .footer>.footer1");
-
-
+    $('#common_mask').click(function () {
+        $('#mobile-menu').click()
+    });
 });
 
 //----------------------載入購物車的商品圖片-----------------------------

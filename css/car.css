@@ -1,4 +1,4 @@
-main {
+.wrapper {
     /* outline: 2px solid black; */
     max-width: var(--page-width);
     margin: 0 auto;

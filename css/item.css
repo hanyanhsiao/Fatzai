@@ -1,3 +1,9 @@
+    /* 為了遮罩全部遮住設的 */
+    main {
+        /* border: 1px solid saddlebrown; */
+        padding: 0 0 30px 0;
+    }
+
     .wrapper {
         /* border: 2px solid saddlebrown; */
         max-width: var(--page-width);
@@ -227,27 +233,18 @@
         display: flex;
     }
 
-    .btn1,
-    .btn2 {
-        border: 1px solid #DC9F58;
+    .add_shopping_car {
+        border: 1px solid var(--secondary-color);
         width: 40%;
         margin-right: 30px;
-        /* border-radius: 5px; */
-
-    }
-
-    .btn1 a,
-    .btn2 a {
-        /* border: 2px solid #000000; */
-
         display: block;
         line-height: 2;
         font-size: 1.2rem;
+        border-radius: 2px;
     }
 
     .btn1 {
-        background-color: #DC9F58;
-
+        background-color: var(--secondary-color);
     }
 
     .btn1:hover a {
@@ -257,7 +254,6 @@
 
     .btn2 {
         background-color: #ffffff;
-
     }
 
     .btn2:hover {
@@ -280,7 +276,7 @@
     .item_description {
         /* border: 2px solid #000000; */
         border: 1px solid #DC9F58;
-        margin: 30px 20px;
+        margin: 30px 20px 0;
     }
 
     .tab {
