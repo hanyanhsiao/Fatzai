@@ -209,13 +209,13 @@
 .more_items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 15px;
+    /* padding: 10px; */
 
 }
 
 .more_items li {
     /* outline: 2px solid rgb(205, 0, 0); */
-    padding-right: 20px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -251,7 +251,8 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-
+    margin-bottom: 10px;
+    /* outline: 2px solid rgb(47, 0, 255); */
 
 }
 

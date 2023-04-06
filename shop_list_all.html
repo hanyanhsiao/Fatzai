@@ -99,7 +99,7 @@
                             <a href="./item.html">
                                 <div class="img_block">
                                     <img src="./image/items/mousse (1).jpg" alt="">
-                                    <div class=" add">加入購物車
+                                    <div class="add">加入購物車
                                     </div>
                                 </div>
                             </a>
@@ -834,6 +834,19 @@
             });
         })
 
+        //點擊加入購物車出現右邊小圖
+        $(function () {
+            $('.add').click(function (e) {
+                e.preventDefault();
+                $('.addcar_item').fadeIn();
+                setTimeout(function () { $('.addcar_item').fadeOut() }, 1000);
+            })
+            $('.fa-cart-shopping').click(function (e) {
+                e.preventDefault();
+                $('.addcar_item').fadeIn();
+                setTimeout(function () { $('.addcar_item').fadeOut() }, 1000);
+            })
+        })
     </script>
 
 </body>

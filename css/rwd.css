@@ -109,7 +109,7 @@
     .mobile_icon {
         display: flex;
         margin-left: 5px;
-        z-index: 100;
+        z-index: 10;
         /* border: 2px solid rgb(0, 21, 255); */
 
     }
@@ -509,7 +509,7 @@
         padding: 10px;
     }
 
-    li .text h1 {
+    li .text>h1 {
         /* outline: 2px solid rgb(0, 0, 0); */
         background: #FFEAD2;
         font-size: 1.3rem;
@@ -518,14 +518,14 @@
         line-height: 20px;
     }
 
-    li:nth-child(odd) h1 {
+    li:nth-child(odd)>h1 {
         /* border: 2px solid rgb(0, 21, 255); */
         background: #FFEAD2;
         border-radius: 15% 90% 70% 20% / 50% 90% 70% 70%;
 
     }
 
-    li:nth-child(even) h1 {
+    li:nth-child(even)>h1 {
         /* border: 2px solid rgb(0, 21, 255); */
         background: #FFEAD2;
         border-radius: 90% 40% 15% 70%/ 90% 50% 80% 80%;
