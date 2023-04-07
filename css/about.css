@@ -125,14 +125,14 @@ li .text h1 {
 }
 
 
-li:nth-child(odd)>h1 {
+li:nth-child(odd) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to right, #FFEAD2, #FFFFFF);
     border-radius: 15% 90% 70% 20% / 50% 90% 70% 70%;
 
 }
 
-li:nth-child(even)>h1 {
+li:nth-child(even) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to left, #FFEAD2, #FFFFFF);
     border-radius: 90% 40% 15% 70%/ 90% 50% 80% 80%;

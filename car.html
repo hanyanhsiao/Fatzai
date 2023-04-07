@@ -288,7 +288,7 @@
 
                 //1 移除整條商品列，淡出1秒
                 $(target_item_ul).addClass('fade_out');
-                setTimeout(function () { $(target_item_ul).remove() }, 1000);
+                setTimeout(function () { $(target_item_ul).remove() }, 500);
 
                 //2 移除localstorage
                 let tasks = JSON.parse(localStorage.getItem("car"));

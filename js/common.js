@@ -27,6 +27,34 @@ function get_img(item_id) {
             return './image/items/tart (1).jpg';
         case '方塔':
             return './image/items/tart (6).jpg';
+        case '開心果優格慕斯':
+            return './image/items/mousse (1).jpg';
+        case '巧克力溜溜球蛋糕':
+            return './image/items/mousse (5).jpg';
+        case '草莓塔':
+            return './image/items/tart (24).jpg';
+        case '草莓開心果塔':
+            return './image/items/tart (22).jpg';
+        case '草莓杯子蛋糕':
+            return './image/items/cup cake (5).jpg';
+        case '薄荷巧克力杯子蛋糕':
+            return './image/items/cup cake (1).jpg';
+        case 'Oreo杯子蛋糕':
+            return './image/items/cup cake (6).jpg';
+        case '焦糖煎餅杯子蛋糕':
+            return './image/items/cup cake (7).jpg';
+        case '抹茶乳酪塔':
+            return './image/items/tart (4).jpg"';
+        case '開心果塔':
+            return './image/items/tart (5).jpg"';
+        case '香濃芝麻泡芙':
+            return './image/items/choux (1).jpg';
+        case '開心果泡芙':
+            return './image/items/choux (3).png';
+        case '玫瑰泡芙':
+            return './image/items/choux (8).png';
+
+
 
         default:
             return "";
@@ -36,6 +64,7 @@ function get_img(item_id) {
 //-----------------------加入購物車商品存入localstorage----------------------------
 
 function addCar(itemObj) {
+
 
     let items = JSON.parse(localStorage.getItem("car"));
     if (items) { // 若存在

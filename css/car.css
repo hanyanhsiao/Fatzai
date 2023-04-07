@@ -162,8 +162,6 @@
 
 /* ----------購物車內容---------- */
 
-
-
 .car_item {
     display: flex;
     justify-content: space-between;
@@ -179,12 +177,14 @@
 }
 
 .car_item li {
-    /* outline: 2px solid rgb(205, 0, 0); */
+    /* outline: 1px solid rgb(205, 0, 0); */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     text-align: center;
+    padding: 5px;
+    white-space: pre-wrap
 }
 
 

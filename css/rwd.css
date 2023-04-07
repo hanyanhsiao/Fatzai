@@ -659,8 +659,6 @@
         transform: translateX(-220px);
         transition: all .5s;
         z-index: 10;
-
-
     }
 
     .main_block .aside ul li {
