@@ -1,0 +1,197 @@
+main {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+/* ------------- 會員專區標題 ----------- */
+.Member_Area {
+    height: 250px;
+    background-color: var(--primary-color);
+    display: flex;
+    position: relative;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+/* ---------背景文字---------*/
+.Member_Area>h1 {
+    font-size: 10rem;
+    font-weight: 900;
+    font-family: "Orelega", serif;
+    color: white;
+    padding-top: 30px;
+
+
+}
+
+
+/* ---------標題---------*/
+
+.Member_Area_title {
+    position: absolute;
+    top: 210px;
+    left: 40%;
+    padding: 20px;
+    font-size: 1.5rem;
+    border: 1px solid var(--secondary-color);
+    animation: clippath 1s ease forwards;
+}
+
+@keyframes clippath {
+    0% {
+        clip-path: inset(10% 10% 10% 10%);
+    }
+
+    25% {
+        clip-path: inset(10% 10% 10% 0);
+    }
+
+    50% {
+        clip-path: inset(10% 10% 0 0);
+    }
+
+    70% {
+        clip-path: inset(10% 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ------------- 會員專區標題 ----------- */
+
+
+/* ---------------------------------------------- */
+.Member_Area_wrapper {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+
+}
+
+/* 左側側邊欄 */
+
+.openMenu {
+    display: none;
+}
+
+.Member_Area_aside {
+    /* border: 1px solid #ff0606; */
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.Member_Area_aside li {
+    /* border: 1px solid #1706ff; */
+    padding: 10px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.Member_Area_aside li:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+.Member_Area_aside li.active {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+/* 右側內容欄 */
+
+section {}
+
+/* 右側上半部會員資訊 */
+
+.Member_information {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+
+}
+
+.personal_inf {
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.personal_inf .customer_name {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    display: inline-block;
+    font-weight: 400;
+
+}
+
+button {
+    border: 1px solid #ccc;
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 2px;
+    width: 80px;
+}
+
+.shopping_inf {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.shopping_inf li {
+    padding: 10px;
+}
+
+/* 右側下半部近期訂單 */
+
+.recent_orders_title {
+    padding: 20px;
+    padding-left: 0;
+    font-weight: 400;
+}
+
+.order {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.recent_orders {}
+
+.order_title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    background-color: #e0e0e0;
+    line-height: 40px;
+
+}
+
+.order_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    line-height: 100px;
+}
+
+.order_content li {
+    border-right: 1px solid #ccc;
+}
+
+.order_content li:last-child {
+    border-right: 0;
+}
+
+.order_number {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -23,6 +23,26 @@
 
     <main>
         <div class="wrapper">
+            <div class="addcar_item">
+                <ul>
+                    <li>
+                        <a href="./item.html">
+                            <img src="" alt="">
+                        </a>
+                        <div class="addcar_item_text">
+                            <h1></h1>
+                            <div class="addcar_item_dollars">
+                                $<p></p>
+                                <p> &nbsp; x &nbsp;</p>
+                                <p></p>
+                            </div>
+                            <p class="item_id"></p>
+                            <p>已加入購物車</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="./car.html" class="cart_pay">購物車結帳</a>
+            </div>
             <ol class="breadcrumb">
                 <li><a href="./index.html">首頁</a></li>
                 <li><a href="./shop_list_all.html">產品列表</a></li>
@@ -62,7 +82,7 @@
                     <h1 class="dollars_symbol">$</h1>
                     <h1 class="dollars">199</h1>
                     <div class="item_size">
-                        <button class="tart t_circle">圓塔</button>
+                        <button class="tart t_circle checked">圓塔</button>
                         <button class="tart t_square">方塔</button>
                         <p>圓塔：直徑8cm / 方塔：邊長6cm</p>
 
@@ -242,15 +262,15 @@
                 // console.log(total);
 
                 $('.dollars').html(total);
-
             })
         })
 
-        //加入購物車
+        //加入購物車及顯示右邊小圖
         $(function () {
             const tart = $('.dollars').html();
 
             $('.add_shopping_car').click(function () {
+
                 //------------------第一步：新增資料至 localStorage--------------------
                 let name = $('.item_name').html();
                 let item_id = $('button.checked').html();
@@ -267,8 +287,42 @@
                     "total": total
                 };
                 addCar(item);
+                //------------------第二步：取出資料顯示在小圖上--------------------
+
+                get_items();
+
+                //小圖滑入
+                $('.addcar_item').addClass('fadeInRight');
+
+                // 建立一個Timer物件(第一個參數:要做的事,第二個參數:多久後執行)
+                timer = new Timer(() => $('.addcar_item').removeClass('fadeInRight'), 1500)
+
+                var timer;
+
+                // 滑鼠移入執行暫停功能
+                $('.addcar_item').mouseenter(function () {
+                    console.log("timer2: " + timer)
+                    timer.pause();
+                })
+                // 滑鼠移出執行繼續功能
+                $('.addcar_item').mouseleave(function () {
+                    console.log("timer3: " + timer)
+                    timer.resume();
+                })
+
             })
         })
+
+
+
+
+        // 手機版
+        $('.fa-cart-shopping').click(
+            function () {
+                $(this).closest('li').find('.add').click();
+            }
+        )
+
 
     </script>
 </body>

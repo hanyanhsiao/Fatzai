@@ -816,25 +816,9 @@
                 document.getElementById(tabname).click();
             } else {
                 document.getElementById("defaultOpen").click();
-
             }
-
         })
 
-
-        //側邊欄顯示
-        $(function () {
-
-            $('#aside-menu').click(function () {
-                $('.aside').toggleClass('open');
-                $(this).toggleClass('active')
-                $('#mask').toggle()
-
-            })
-            $('#mask').click(function () {
-                $('#aside-menu').click()
-            });
-        })
 
         //點擊加入購物車出現右邊小圖及加入local
         $(function () {
@@ -842,7 +826,6 @@
             // 網頁版
             $('.add').click(function (e) {
                 e.preventDefault();
-
                 //加入購物車新增資料至 localStorage
                 let current_div = $(this).closest('li').children('div'); //text_block
                 let name = $(current_div).find('.item_name').html();
@@ -862,10 +845,23 @@
                 get_items();
 
                 $('.addcar_item').addClass('fadeInRight');
-                setTimeout(function () { $('.addcar_item').removeClass('fadeInRight') }, 1500);
+
+                // 建立一個Timer物件(第一個參數:要做的事,第二個參數:多久後執行)
+                timer = new Timer(() => $('.addcar_item').removeClass('fadeInRight'), 1500)
             })
 
+            var timer;
 
+            // 滑鼠移入執行暫停功能
+            $('.addcar_item').mouseenter(function () {
+                console.log("timer2: " + timer)
+                timer.pause();
+            })
+            // 滑鼠移出執行繼續功能
+            $('.addcar_item').mouseleave(function () {
+                console.log("timer3: " + timer)
+                timer.resume();
+            })
 
             // 手機版
             $('.fa-cart-shopping').click(
@@ -873,44 +869,23 @@
                     $(this).closest('li').find('.add').click();
                 }
             )
+        })
 
+        //手機側邊欄顯示
+        $(function () {
+
+            $('#aside-menu').click(function () {
+                $('.aside').toggleClass('open');
+                $(this).toggleClass('active')
+                $('#mask').toggle()
+
+            })
+            $('#mask').click(function () {
+                $('#aside-menu').click()
+            });
         })
 
 
-        // 抓出localstorage商品並顯示在小圖上
-        function get_items() {
-            let items = JSON.parse(localStorage.getItem("car"));
-            // console.log(items);
-
-            if (items) {
-                let list_html = "";
-
-                items.forEach(function (item, i) {
-
-                    list_html += `
-                    <li>
-                        <a href="./item.html">
-                            <img src="${get_img(item.item_id)}" alt="">
-                        </a>
-                        <div class="addcar_item_text">
-                            <h1>${item.name}</h1>
-                            <div class="addcar_item_dollars">
-                                $<p>${item.dollars}</p>
-                                <p> &nbsp; x &nbsp;</p>
-                                <p>${item.num}</p>
-                            </div>
-                            <p class="item_id">${item.item_id}</p>
-                            <p>已加入購物車</p>
-                        </div>
-                    </li>`;
-                })
-
-                $('.addcar_item').find('ul').html(list_html);
-                // let ul_task_list = document.getElementsByClassName("task_list")[0];
-                // ul_task_list.innerHTML = list_html;
-            }
-
-        };
     </script>
 
 </body>

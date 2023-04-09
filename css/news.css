@@ -44,10 +44,10 @@
  /* ---------標題---------*/
 
  .news_title {
-     padding: 20px;
      position: absolute;
      top: 210px;
      left: 40%;
+     padding: 20px;
      font-size: 1.5rem;
      border: 1px solid var(--secondary-color);
      animation: clippath 1s ease forwards;

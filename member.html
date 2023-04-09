@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Area</title>
+    <!-- 引入CSS -->
+    <link rel="stylesheet" href="./css/common/all.css" />
+    <link rel="stylesheet" href="./css/common/common.css">
+    <link rel="stylesheet" href="./css/member.css" />
+    <link rel="stylesheet" href="./css/rwd.css">
+    <!-- 引入AOS滑入套件 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--引入font-awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--引入font-lord icon -->
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+</head>
+
+<body>
+    <header class="header"> </header>
+    <main>
+        <!-- 會員專區標題 -->
+        <div class="Member_Area">
+            <!-- 背景文字 -->
+            <h1>Member Area</h1>
+            <!-- 標題文字 -->
+            <div class="Member_Area_title">
+                <p>會 員 專 區</p>
+            </div>
+        </div>
+        <div class="Member_Area_wrapper">
+            <aside class="Member_Area_aside">
+                <div class="openMenu">
+                    <div class="openMenu_left">
+                        <span>選單</span>
+                        <lord-icon class="openMenu_arrow" src="https://cdn.lordicon.com/rvuqcvqy.json" trigger="loop"
+                            delay="1000" colors="primary:#dc9f58,secondary:#b4b4b4" style="width:30px;height:30px">
+                        </lord-icon>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="Member_Area_menu">
+                    <li class="tablinks" onclick="changeSet(event, 'myAccount')" id="defaultOpen">我的帳戶</li>
+                    <li class="tablinks" onclick="changeSet(event, 'personal')">修改個人資訊</li>
+                    <li class="tablinks" onclick="changeSet(event, 'order')">訂單查詢</li>
+                    <li class="tablinks" onclick="changeSet(event, 'coupon')">我的優惠券</li>
+                    <li class="tablinks" onclick="changeSet(event, 'favoritelist')">收藏清單</li>
+                </ul>
+            </aside>
+            <section class="tabcontent" id="myAccount">
+                <!-- 右側上半部會員資訊 -->
+                <div class="Member_information">
+                    <div class="personal_inf">
+                        <div style="display: inline-block;">歡迎回來，<p class="customer_name">Trump</p>
+                        </div>
+                        <button>登出</button>
+                    </div>
+                    <ul class="shopping_inf">
+                        <li class="total_spent item">
+                            <span class="text">總累計消費金額</span>
+                            <span class="value"><span class="money_tag" data-amount="">NT$210</span></span>
+                        </li>
+                        <li class="total_bonus_points item">
+                            <span class="text">可用紅利點數</span>
+                            <span class="value">540</span>
+                            <span class="text">點</span>
+                        </li>
+                        <li class="total_coupons item">
+                            <span class="text">專屬優惠券</span>
+                            <a href="" class="value">1</a>
+                            <span class=" text">張</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 右側下半部近期訂單 -->
+                <h1 class="recent_orders_title">近期訂單</h1>
+                <div class="recent_orders">
+                    <div class="order">
+                        <ul class="order_title">
+                            <li>訂單編號</li>
+                            <li>訂單日期</li>
+                            <li>總金額</li>
+                            <li>運送方式</li>
+                            <li>付款狀態</li>
+                            <li>訂單狀態</li>
+
+                        </ul>
+                        <ul class="order_content">
+                            <li class="order_number">#OR2661060</li>
+                            <li>2022-11-26</li>
+                            <li>NT$660</li>
+                            <li>宅配</li>
+                            <li>已收到款項</li>
+                            <li>已出貨</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="order">
+                        <ul class="order_title">
+                            <li>訂單編號</li>
+                            <li>訂單日期</li>
+                            <li>總金額</li>
+                            <li>運送方式</li>
+                            <li>付款狀態</li>
+                            <li>訂單狀態</li>
+
+                        </ul>
+                        <ul class="order_content">
+                            <li class="order_number">#OR2661060</li>
+                            <li>2022-11-26</li>
+                            <li>NT$660</li>
+                            <li>宅配</li>
+                            <li>已收到款項</li>
+                            <li>已出貨</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="order">
+                        <ul class="order_title">
+                            <li>訂單編號</li>
+                            <li>訂單日期</li>
+                            <li>總金額</li>
+                            <li>運送方式</li>
+                            <li>付款狀態</li>
+                            <li>訂單狀態</li>
+
+                        </ul>
+                        <ul class="order_content">
+                            <li class="order_number">#OR2661060</li>
+                            <li>2022-11-26</li>
+                            <li>NT$660</li>
+                            <li>宅配</li>
+                            <li>已收到款項</li>
+                            <li>已出貨</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="tabcontent" id="personal">建置中1</section>
+            <section class="tabcontent" id="order">建置中2</section>
+            <section class="tabcontent" id="coupon">建置中3</section>
+            <section class="tabcontent" id="favoritelist">建置中4</section>
+
+        </div>
+        <!--手機才有的遮罩-->
+        <div id="common_mask"></div>
+    </main>
+    <footer class="footer"> </footer>
+
+    <!-- javascript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(function () {
+            document.getElementById("defaultOpen").click();
+        })
+
+        //電腦版側邊選單切換
+        function changeSet(event, TabName) {
+            console.log("DDD");
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(TabName).style.display = "block";
+            console.log(event.currentTarget.className);
+
+            event.currentTarget.className += " active";
+        }
+
+        //手機板上方選單切換
+        $('.openMenu').click(function () {
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $('.Member_Area_menu').slideDown();
+            } else {
+                $('.Member_Area_menu').slideUp();
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

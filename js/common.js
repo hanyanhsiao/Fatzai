@@ -29,6 +29,8 @@ function get_img(item_id) {
             return './image/items/tart (6).jpg';
         case '開心果優格慕斯':
             return './image/items/mousse (1).jpg';
+        case '開心果覆盆子慕斯':
+            return './image/items/mousse (8).png';
         case '巧克力溜溜球蛋糕':
             return './image/items/mousse (5).jpg';
         case '草莓塔':
@@ -53,6 +55,11 @@ function get_img(item_id) {
             return './image/items/choux (3).png';
         case '玫瑰泡芙':
             return './image/items/choux (8).png';
+        // 加購
+        case '(任選兩支)':
+            return './image/material/candles.jpg';
+        case '(一組五人份)':
+            return './image/material/plate.jpg';
 
 
 
@@ -90,13 +97,17 @@ function addCar(itemObj) {
             if (exist_item[0].num > 10) {
                 alert("購物車商品已達上限10個")
                 return;
+            } else if (exist_item[0].num < 1) {
+                alert("購物車商品最少1個")
+                return;
+
             }
 
             //合併不一樣的產品和一樣的產品
-            exist_item_di.unshift(exist_item[0]);
+            exist_item_di.push(exist_item[0]);
 
         } else {
-            items.unshift(itemObj);  //在陣列中加入在第一個則可以使用 unshift()
+            items.push(itemObj);  //在陣列中加入最後一個可以使用 push()
         }
     } else { // 若不存在
         items = [itemObj];
@@ -106,5 +117,62 @@ function addCar(itemObj) {
     //將 JavaScript 值轉換為 JSON 字符串，物件變字串存入
 }
 
+
+// 抓出localstorage商品並顯示在小圖上
+function get_items() {
+    let items = JSON.parse(localStorage.getItem("car"));
+    // console.log(items);
+
+    if (items) {
+        let list_html = "";
+
+        items.forEach(function (item, i) {
+
+            list_html += `
+            <li>
+                <a href="./item.html">
+                    <img src="${get_img(item.item_id)}" alt="">
+                </a>
+                <div class="addcar_item_text">
+                    <h1>${item.name}</h1>
+                    <div class="addcar_item_dollars">
+                        $<p>${item.dollars}</p>
+                        <p> &nbsp; x &nbsp;</p>
+                        <p>${item.num}</p>
+                    </div>
+                    <p class="item_id">${item.item_id}</p>
+                    <p>已加入購物車</p>
+                </div>
+            </li>`;
+        })
+
+        $('.addcar_item').find('ul').html(list_html);
+        // let ul_task_list = document.getElementsByClassName("task_list")[0];
+        // ul_task_list.innerHTML = list_html;
+    }
+};
+
+
+
+// -----------------封裝setTimeout功能變成一個類別-----------------------------------
+var Timer = function (callback, delay) {
+    var timerId, start, remaining = delay;
+
+    this.pause = function () {
+        window.clearTimeout(timerId);
+        timerId = null;
+        remaining -= Date.now() - start;
+    };
+    this.resume = function () {
+        if (timerId) {
+            return;
+        }
+
+        start = Date.now();
+        timerId = window.setTimeout(callback, remaining);
+    };
+    this.resume();
+};
+// -----------------封裝setTimeout功能變成一個類別-----------------------------------
 
 

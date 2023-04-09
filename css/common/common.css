@@ -44,8 +44,8 @@
 
 
 .nav_list>li>a:hover {
-    color: #dc9f58;
-    border-bottom: 3px solid #dc9f58;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 /*  手機才出現的icon */
@@ -55,7 +55,7 @@
 
 /* =============================footer=========================== */
 footer {
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
 }
 
 .footer_top {
@@ -84,7 +84,7 @@ footer {
 }
 
 .footer_left a:hover {
-    color: #DC9F58;
+    color: var(--secondary-color);
 }
 
 
@@ -137,7 +137,7 @@ footer {
 }
 
 .footer_icons>a:hover {
-    color: #DC9F58;
+    color: var(--secondary-color);
 }
 
 /* ------------------footer_right-------------------- */
@@ -175,6 +175,6 @@ footer .footer_bottom {
     max-width: var(--page-width);
     margin: 0 auto;
     padding-top: 2px;
-    border: #DC9F58;
-    background: linear-gradient(to right, transparent, #DC9F58, transparent);
+    border: var(--secondary-color);
+    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
 }

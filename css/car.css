@@ -124,7 +124,7 @@
     display: flex;
     flex-direction: column;
     outline: 1px solid #ccc;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -132,7 +132,7 @@
 .more>p,
 .delivery>p,
 .check>p {
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
     padding: 15px;
     font-weight: 300;
 
@@ -141,19 +141,16 @@
 /* ---------------------購物車-------------------- */
 
 /* ----------購物車標題---------- */
-
 .car_title {
-    display: flex;
-    justify-content: space-between;
     padding: 15px;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr 1fr .6fr;
     /* outline: 2px solid rgb(0, 0, 0); */
-
 }
 
 .car_title li {
-    /* outline: 2px solid rgb(205, 0, 0); */
-    display: flex;
-    justify-content: center;
+    /* outline: 1px solid rgb(205, 0, 0); */
     width: 100%;
     text-align: center;
     font-weight: 300;
@@ -163,9 +160,9 @@
 /* ----------購物車內容---------- */
 
 .car_item {
-    display: flex;
-    justify-content: space-between;
     padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr 1fr .6fr;
     border-bottom: 1px solid #ccc;
     opacity: 1;
     transition: all 1s;
@@ -173,7 +170,6 @@
 
 .car_item.fade_out {
     opacity: 0;
-
 }
 
 .car_item li {
@@ -182,13 +178,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    white-space: pre-wrap;
     text-align: center;
-    padding: 5px;
-    white-space: pre-wrap
+
 }
-
-
-
 
 .car_item li img {
     width: 100%;
@@ -198,18 +191,60 @@
     border: 1px solid var(--secondary-color);
 }
 
-.car_item li:last-child>i {
+.car_item i.fa-circle-xmark {
     cursor: pointer;
 }
 
+.mobile_delete {
+    display: none;
+}
 
+/* -----------數量加減------------ */
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid var(--secondary-color); */
+}
+
+.count li {}
+
+.num-count,
+.input-num {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    /* border: 1px solid var(--secondary-color); */
+}
+
+.input-num {
+    cursor: default;
+    width: 40px;
+    font-family: inherit;
+}
+
+#num-decrease {
+    border-radius: 2px 0 0 2px;
+    /* background-color: #ccc; */
+    border: 1px solid #ccc;
+}
+
+#num-jia {
+    border-radius: 0 2px 2px 0;
+    /* background-color: #ccc; */
+    border: 1px solid #ccc;
+}
+
+/* -----------數量加減------------ */
 
 /* ---------------------加購---------------------- */
 
 .more_items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* padding: 10px; */
+    padding: 10px;
 
 }
 
@@ -224,40 +259,50 @@
     display: flex;
     width: 100%;
     /* outline: 2px solid rgb(47, 0, 255); */
+}
+
+
+.more_items li img:hover {
+    border: 1px solid var(--secondary-color);
 
 }
 
 .more_items li h3 {
     /* outline: 2px solid rgb(47, 0, 255); */
-    padding: 10px;
+    padding: 5px;
+}
+
+.more_items li h3.item_id {
+    font-size: .8rem;
+    color: var(--secondary-color);
 }
 
 .more_items li>p {
-    /* outline: 2px solid rgb(47, 0, 255); */
+    display: inline-block;
     text-align: center;
-    padding: 10px;
-    padding-top: 0;
-    color: #DC9F58;
+    padding: 8px;
 }
 
 .more_items li button {
-    border: 1px solid #DC9F58;
+    border: 1px solid var(--secondary-color);
     background-color: white;
-    font-size: inherit;
     color: var(--secondary-color);
     padding: 5px 10px;
-    margin-top: 10px;
     margin: 0 auto;
-    cursor: pointer;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    border-radius: 2px;
     /* outline: 2px solid rgb(47, 0, 255); */
 
 }
 
 .more_items li button:hover {
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
+}
+
+.more_items .item_id {
+    /* display: none; */
 }
 
 
@@ -272,7 +317,7 @@
 /* ----------左側運送資訊----------- */
 .order_inf .delivery {
     display: flex;
-    width: 47%;
+    width: 48%;
 
 }
 
@@ -308,7 +353,7 @@ select>option {
 }
 
 .attention .content {
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
     border: 1px solid #ccc;
     padding: 15px;
     margin-top: 15px;
@@ -319,7 +364,7 @@ select>option {
 /* ----------右側訂單資訊----------- */
 .order_inf .check {
     display: flex;
-    width: 47%;
+    width: 48%;
 
 }
 
@@ -346,7 +391,7 @@ select>option {
 
 /* ----------折扣碼---------- */
 .money>button {
-    background-color: #FFEAD2;
+    background-color: var(--primary-color);
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
@@ -355,13 +400,13 @@ select>option {
 
 }
 
-.total {
+.sum {
     border-bottom: 1px solid #ccc;
 }
 
 
 .buy>button {
-    background-color: #DC9F58;
+    background-color: var(--secondary-color);
     padding: 15px;
     line-height: 2rem;
     text-align: center;

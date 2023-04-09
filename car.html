@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -81,15 +82,7 @@
                         <li>2</li>
                         <li>$398</li>
                         <li><i class="fa-regular fa-circle-xmark"></i></li>
-                    </ul>
-                    <ul class="car_item">
-                        <li> <a href="./item.html"><img src="./image/items/tart (6).jpg" alt=""></a></li>
-                        <li>提拉米蘇塔</li>
-                        <li>方塔</li>
-                        <li>$199</li>
-                        <li>2</li>
-                        <li>$398</li>
-                        <li><i class="fa-regular fa-circle-xmark"></i></li>
+                        <li class="addit delete" style="background-color: black; color: white;">刪除</li>//手機板
                     </ul> -->
                 </div>
 
@@ -100,22 +93,23 @@
                 <ul class="more_items">
                     <li>
                         <img src="./image/material/candles.jpg">
-                        <h3>數字蠟燭一組</h3>
-                        <p>$50</p>
-                        <button>
+                        <h3 class="item_name">數字蠟燭組</h3>
+                        <h3 class="item_id">(任選兩支)</h3>
+                        $<p class="dollars">50</p>
+                        <button class="moreItem_addCart">
                             <p>加入購物車</p>
                             <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                             <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" delay="1000"
                                 colors="primary:#dc9f58,secondary:#dc9f58" style="width:30px;height:30px">
                             </lord-icon>
                         </button>
-
                     </li>
                     <li>
                         <img src="./image/material/plate.jpg">
-                        <h3>雲朵盤叉組</h3>
-                        <p>$99</p>
-                        <button>
+                        <h3 class="item_name">雲朵盤叉組</h3>
+                        <h3 class="item_id">(一組五人份)</h3>
+                        $<p class="dollars">99</p>
+                        <button class="moreItem_addCart">
                             <p>加入購物車</p>
                             <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                             <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" delay="1000"
@@ -125,10 +119,11 @@
 
                     </li>
                     <li>
-                        <img src="./image/items/tart (5).jpg">
-                        <h3>Pistache tart </h3>
-                        <p>$160</p>
-                        <button>
+                        <a href="./item.html"><img src="./image/items/tart (5).jpg"></a>
+                        <h3 class="item_name">Pistache tart</h3>
+                        <h3 class="item_id">開心果塔</h3>
+                        $<p class="dollars">160</p>
+                        <button class="moreItem_addCart">
                             <p>加入購物車</p>
                             <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                             <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop" delay="1000"
@@ -137,10 +132,11 @@
                         </button>
                     </li>
                     <li>
-                        <img src="./image/items/mousse (5).jpg">
-                        <h3>Chocolate Cake </h3>
-                        <p>$120</p>
-                        <button>
+                        <a href="./item.html"><img src="./image/items/mousse (5).jpg"></a>
+                        <h3 class="item_name">Chocolate Cake</h3>
+                        <h3 class="item_id">巧克力溜溜球蛋糕</h3>
+                        $<p class="dollars">120</p>
+                        <button class="moreItem_addCart">
                             <p>加入購物車</p>
                             <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                             <lord-icon clas="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
@@ -149,11 +145,13 @@
                         </button>
                     </li>
                     <li>
-                        <img src="./image/items/mousse (8).png">
-                        <h3>Pistache Mousse </h3>
-                        <p>$190</p>
-                        <button>
-                            <p>加入購物車</p>
+                        <a href="./item.html"><img src="./image/items/mousse (8).png">
+                        </a>
+                        <h3 class="item_name">Pistache Raspberry Mousse</h3>
+                        <h3 class="item_id">開心果覆盆子慕斯</h3>
+                        $<p class="dollars">190</p>
+                        <button class="moreItem_addCart">
+                            <p> 加入購物車</p>
                             <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                             <lord-icon clas="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
                                 delay="1000" colors="primary:#dc9f58,secondary:#dc9f58" style="width:30px;height:30px">
@@ -198,14 +196,10 @@
                             <p>※ 我們宅配與黑貓宅急便配合運送，無法指定到貨日期。</p>
                             <p>※ 店面自取時間: 週一至週五11:30-19:00</p>
                             <p>※ 請確認購買商品與聯絡資訊正確無誤。</p>
-
-
                         </div>
                     </div>
 
                 </div>
-
-
 
                 <!------右側訂單資訊-------->
                 <div class="check">
@@ -213,21 +207,21 @@
                     <div class="money">
                         <div>
                             <p>小計:</p>
-                            <p>$796</p>
+                            <p>$ <span id="summary">899</span></p>
                         </div>
-                        <button>使用折扣碼</button>
+                        <button>使用優惠券</button>
                         <div>
                             <p>折扣:</p>
-                            <p>$50</p>
+                            <p>$ <span id="discount">50</span></p>
                         </div>
                         <div>
                             <p>運費:</p>
-                            <p>$170</p>
+                            <p>$ <span id="delivery_fee">0</span></p>
                         </div>
 
-                        <div class="total">
-                            <p>合計:</p>
-                            <p>$916</p>
+                        <div class="sum">
+                            <p>總金額:</p>
+                            <p>$ <span id="sum">899</span></p>
                         </div>
                         <div class="buy">
                             <button type="button">確認結帳</button>
@@ -248,6 +242,8 @@
     <!-- -----------script------------- -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
+
     <script src="./js/common.js"></script>
     <script>
         // -----------------------抓出localstorage商品並顯示--------------------------
@@ -260,16 +256,28 @@
 
                 items.forEach(function (item, i) {
                     // console.log(item);
-                    list_html += `<ul class="car_item">
+                    list_html += `
+                <ul class="car_item">
                     <li> <a href="./item.html"><img src="${get_img(item.item_id)}" alt=""></a></li>
-                    <li>${item.name}</li>
+                    <li class="item_name">${item.name}</li>
                     <li class="item_id">${item.item_id}</li>
-                    <li>${item.dollars}</li>
-                    <li>${item.num}</li>
-                    <li>${item.total}</li>
-                    <li><i class="fa-regular fa-circle-xmark"></i></li>
-                </ul>`;
+                    <li class="dollars">${item.dollars}</li>
+                    <li class="num">
+                        <ul class="count">
+                            <li><span id="num-decrease" class="num-count">－</span>
+                            </li>
+                            <li><input readonly disabled type="text" class="input-num" id="input-num" value="${item.num}"></input>
+                            </li>
+                            <li> <span id="num-jia" class="num-count">＋</span></li>
+                        </ul>
+                    </li>
+                    <li class="total">${item.total}</li>
+                    <li class="delete"><i class="fa-regular fa-circle-xmark"></i></li>
+                 </ul> 
+                <div class="mobile_delete">刪除</div>
+                `;
                 })
+
 
                 $('.car_item_block').html(list_html);
                 // let ul_task_list = document.getElementsByClassName("task_list")[0];
@@ -280,6 +288,7 @@
 
         // -----------------------刪除商品及localstorage--------------------------
         function delete_items() {
+            //電腦版
             $('.fa-circle-xmark').click(function () {
                 //取出ul
                 let target_item_ul = $(this).closest('ul');
@@ -288,7 +297,12 @@
 
                 //1 移除整條商品列，淡出1秒
                 $(target_item_ul).addClass('fade_out');
-                setTimeout(function () { $(target_item_ul).remove() }, 500);
+
+                setTimeout(function () {
+                    $(target_item_ul).remove()
+                    calculate_sum();
+                }, 500);
+
 
                 //2 移除localstorage
                 let tasks = JSON.parse(localStorage.getItem("car"));
@@ -298,12 +312,158 @@
                 });
                 // 回存至 localStorage
                 localStorage.setItem("car", JSON.stringify(updated_tasks));
+
+            })
+            //手機板
+            $('.mobile_delete').click(function () {
+                //取出ul
+                let target_item_ul = $(this).prev('ul');
+                //取出item_id
+                let target_item = $(this).prev('ul').children('.item_id').html();
+                //1 移除整條商品列，淡出1秒
+                $(target_item_ul).addClass('fade_out');
+                setTimeout(function () {
+                    $(target_item_ul).remove()
+                    calculate_sum();
+                }, 500);
+                $(this).remove()
+
+                //2 移除localstorage
+                let tasks = JSON.parse(localStorage.getItem("car"));
+                //不相同的要留下
+                let updated_tasks = tasks.filter(function (item, i) {
+                    return target_item != item.item_id;
+                });
+                // 回存至 localStorage
+                localStorage.setItem("car", JSON.stringify(updated_tasks));
+
+
             })
         }
 
+        //各商品數字加減
+        function addition_items() {
+            $('.num-count').click(function () {
+                // 取得點擊那行的數量
+
+                let num = $(this).closest('ul').find('.input-num').val();
+                // let nums = parseInt(num) + 1;
+
+                switch (this.id) {
+                    case 'num-decrease':
+                        if (num > 1) {
+                            num--;
+                        }
+                        break;
+
+                    case 'num-jia':
+                        if (num < 10) {
+                            num++;
+                        }
+                        break;
+                }
+                // console.log(num);
+
+
+                // $(this).closest('li')
+                // 塞入點擊那行的數量
+                $(this).closest('ul').find('.input-num').val(num);
+
+                // 取得點擊那行的金額
+                let each_dollars = $(this).closest('.num').siblings(".dollars").html();
+                // console.log(each_dollars);
+
+                //取得點擊那行的總額 = 數量*金額
+                let total = num * each_dollars;
+                console.log(total);
+                $(this).closest('.num').siblings('.total').html(total);
+
+                //------------------新增資料至 localStorage--------------------
+                let name = $(this).closest('.car_item').find('.item_name').html();
+                let item_id = $(this).closest('.car_item').find('.item_id').html();
+
+                let nums = this.id == 'num-jia' ? +1 : -1;
+                let totals = nums * each_dollars;
+
+                let item = {
+                    "name": name,
+                    "item_id": item_id,
+                    "dollars": each_dollars,
+                    "num": nums,
+                    "total": totals
+                };
+                // console.log(item);
+
+                addCar(item);
+                calculate_sum()
+            })
+        }
+
+        //加購商品加入購物車
+        $('.moreItem_addCart').click(function () {
+            //------------------第一步：新增資料至 localStorage--------------------
+            let name = $(this).prevAll('.item_name').html();
+            let item_id = $(this).prevAll('.item_id').html();
+            let dollars = $(this).siblings('.dollars').html();
+            let num = 1; //轉換成數字
+            let total = dollars * num
+
+            let item = {
+                "name": name,
+                "item_id": item_id,
+                "dollars": dollars,
+                "num": num,
+                "total": total
+            };
+            addCar(item);
+
+            //------------------第二步：取出資料顯示--------------------
+            get_items();
+            delete_items();
+            addition_items();
+            calculate_sum();
+
+        })
+
+        //執行
         $(function () {
             get_items();
             delete_items();
+            addition_items();
+        })
+
+
+        function calculate_sum() {
+            // 合計
+            let summary = 0;
+            document.querySelectorAll('.total').forEach(function (li) {
+                summary += parseInt(li.innerHTML);
+            })
+            document.getElementById('summary').innerHTML = summary;
+
+            // 折扣
+            let discount = document.getElementById('discount').innerHTML;
+
+            // 算出是否需要運費170
+            let total = summary - discount;
+            console.log(total);
+
+            if (total < 1000) {
+                document.getElementById('delivery_fee').innerHTML = 170;
+            } else {
+                document.getElementById('delivery_fee').innerHTML = 0;
+
+            }
+            let delivery_fee = parseInt(document.getElementById('delivery_fee').innerHTML);
+
+            //總金額
+            let sum = summary - discount + delivery_fee;
+            console.log(sum);
+            document.getElementById('sum').innerHTML = sum;
+
+        }
+        $(function () {
+            calculate_sum();
         })
 
     </script>
