@@ -305,7 +305,7 @@ section.main {
   /* outline: 2px solid #000000; */
   max-width: auto;
   /* margin: 50px; */
-  background-image: url(../image/bgi/Choux-1.png);
+  background-image: url(../image/bgi/index_bgi.png);
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center;*/
@@ -349,11 +349,13 @@ section.main {
 .center_bg .p1 {
   font-size: 1.5rem;
   white-space: pre;
+  font-weight: 300;
 
 }
 
 .center_bg .p2 {
   padding-top: 20px;
+  font-weight: 300;
 
 }
 

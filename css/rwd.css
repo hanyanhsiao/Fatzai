@@ -174,7 +174,7 @@
     }
 
     .aboutMe {
-        background-image: url(../image/material/macaron\ \(1\).jpg);
+        background-image: url(../image/items/macaron\ \(0\).jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -340,13 +340,13 @@
     }
 
     .center_text span {
-        display: block;
+        /* display: block; */
         width: 100%;
         border: 1px solid var(--secondary-color);
         margin: 20px auto;
         transition: 1s;
-
     }
+
 
     /*--------------常見問題----------------*/
 
@@ -1012,6 +1012,10 @@
         cursor: pointer;
     }
 
+    /* 改變加減欄未寬度 */
+    .car_item .input-num {
+        width: 30px;
+    }
 
 
     /* ----------加購商品區------------ */

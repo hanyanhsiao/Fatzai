@@ -262,7 +262,7 @@
 
    .item_size button {
        border: 1px solid var(--secondary-color);
-       /* border-radius: 5px; */
+       border-radius: 2px;
        padding: 5px;
        width: 80px;
        text-align: center;
@@ -280,47 +280,54 @@
 
    /* -----------數量------------ */
 
-   .item_quantity {}
-
-   .item_quantity ul {
-       display: flex;
-       margin-bottom: 20px;
-
+   .item_quantity {
+       margin-bottom: 30px;
    }
 
-   .item_quantity li {
-       display: inline-block;
+   .item_quantity .count {
+       border: 1px solid var(--secondary-color);
        margin-top: 20px;
+       width: 150px;
+       display: flex;
+       border-radius: 2px;
+
    }
 
+   .count li {
+       display: inline-block;
+   }
 
-   .item_quantity .count .num-count,
-   .input-num {
+   /* + - */
+   .num-count {
        display: inline-block;
        width: 25px;
        height: 25px;
        line-height: 25px;
        text-align: center;
        cursor: pointer;
-       border: 1px solid var(--secondary-color);
    }
 
+   /* 中間數字 */
    .input-num {
-       cursor: default;
-       width: 150px;
-
+       height: 25px;
+       text-align: center;
+       /* width: 99px; */
+       border-radius: 0;
+       border: 0;
+       width: 100%;
+       background-color: white;
+       border-right: 1px solid var(--secondary-color);
    }
+
 
    #num-decrease {
-       border-radius: 2px 0 0 2px;
        background-color: var(--secondary-color);
    }
 
    #num-jia {
-       border-radius: 0 2px 2px 0;
        background-color: var(--secondary-color);
-   }
 
+   }
 
 
    /* -----------購買/加入購物車------------ */
