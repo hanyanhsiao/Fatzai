@@ -116,23 +116,24 @@ section .right p {
 
 }
 
-li .text h1 {
+.ingredients li .text h1 {
     /* outline: 2px solid rgb(0, 0, 0); */
     background: var(--primary-color);
     font-size: 1.3rem;
     padding: 0 20px;
     margin-bottom: 10px;
+    font-weight: 200;
 }
 
 
-li:nth-child(odd) h1 {
+.ingredients li:nth-child(odd) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to right, var(--primary-color), #FFFFFF);
     border-radius: 15% 90% 70% 20% / 50% 90% 70% 70%;
 
 }
 
-li:nth-child(even) h1 {
+.ingredients li:nth-child(even) h1 {
     /* border: 2px solid rgb(0, 21, 255); */
     background: linear-gradient(to left, var(--primary-color), #FFFFFF);
     border-radius: 90% 40% 15% 70%/ 90% 50% 80% 80%;

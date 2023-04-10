@@ -1,429 +1,533 @@
-    /* 為了遮罩全部遮住設的 */
-    main {
-        /* border: 1px solid saddlebrown; */
-        padding: 0 0 30px 0;
-    }
-
-    .wrapper {
-        /* border: 2px solid saddlebrown; */
-        max-width: var(--page-width);
-        margin: 0 auto;
-        position: relative;
-    }
-
-    /* -----加入購物車小圖---- */
-
-    .addcar_item {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        transform: translateX(350px);
-        transition: all .5s;
-        background-color: white;
-        z-index: 11;
-
-    }
-
-    .addcar_item>ul {
-        max-height: 260px;
-        overflow-y: scroll;
-        padding: 10px;
-        border: 1px solid var(--secondary-color);
-    }
-
-    .addcar_item>ul::-webkit-scrollbar {
-        border-width: 2px;
-        background-clip: padding-box;
-    }
-
-    .addcar_item>ul::-webkit-scrollbar-thumb {
-        background: var(--primary-color);
-        border: 1px solid var(--secondary-color);
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #fff;
-    }
-
-
-    .fadeInRight {
-        transform: translateX(0px);
-    }
-
-    .addcar_item li {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 30px;
-        border-bottom: 1px solid var(--secondary-color);
-        padding: 10px 5px;
-
-    }
-
-    .addcar_item li a img {
-        width: 80px;
-        flex-grow: 1;
-        /* border: 1px solid rgb(0, 0, 0); */
-
-    }
-
-    .addcar_item_text {
-        /* border: 1px solid rgb(0, 0, 0); */
-        flex-grow: 2;
-        margin-left: 20px;
-        line-height: 22px;
-        font-size: .8rem;
-
-    }
-
-    .addcar_item_text>h1 {
-        color: black;
-        border-radius: 0;
-        background-color: var(--primary-color);
-        text-align: center;
-        padding: 5px;
-    }
+   .wrapper {
+       /* border: 2px solid saddlebrown; */
+       max-width: var(--page-width);
+       margin: 0 auto;
+       position: relative;
+   }
+
+   /* -----加入購物車小圖---- */
+
+   .addcar_item {
+       position: fixed;
+       top: 60px;
+       right: 0;
+       transform: translateX(350px);
+       transition: all .5s;
+       background-color: white;
+       z-index: 1;
+
+   }
+
+   .addcar_item>ul {
+       max-height: 260px;
+       overflow-y: scroll;
+       padding: 10px;
+       border: 1px solid var(--secondary-color);
+   }
+
+   .addcar_item>ul::-webkit-scrollbar {
+       border-width: 2px;
+       background-clip: padding-box;
+   }
+
+   .addcar_item>ul::-webkit-scrollbar-thumb {
+       background: var(--primary-color);
+       border: 1px solid var(--secondary-color);
+   }
+
+   ::-webkit-scrollbar-track {
+       background: #fff;
+   }
+
+
+   .fadeInRight {
+       transform: translateX(0px);
+   }
+
+   .addcar_item li {
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding-right: 30px;
+       border-bottom: 1px solid var(--secondary-color);
+       padding: 10px 5px;
+
+   }
+
+   .addcar_item li a img {
+       width: 80px;
+       flex-grow: 1;
+       /* border: 1px solid rgb(0, 0, 0); */
+
+   }
+
+   .addcar_item_text {
+       /* border: 1px solid rgb(0, 0, 0); */
+       flex-grow: 2;
+       margin-left: 20px;
+       line-height: 22px;
+       font-size: .8rem;
+
+   }
+
+   .addcar_item_text>h1 {
+       color: black;
+       border-radius: 0;
+       background-color: var(--primary-color);
+       text-align: center;
+       padding: 5px;
+   }
 
-    .addcar_item_dollars {
-        display: flex;
-
-    }
-
+   .addcar_item_dollars {
+       display: flex;
 
-    .cart_pay {
-        display: block;
-        line-height: 40px;
-        text-align: center;
-        background-color: var(--secondary-color);
-    }
-
-    .cart_pay:hover {
-        color: white;
-    }
+   }
+
 
-    /* -----加入購物車小圖---- */
+   .cart_pay {
+       display: block;
+       line-height: 40px;
+       text-align: center;
+       background-color: var(--secondary-color);
+   }
+
+   .cart_pay:hover {
+       color: white;
+   }
+
+   /* -----加入購物車小圖---- */
 
 
-    /* ---------------------bread---------------------- */
-    .breadcrumb {
-        /* border: 2px solid saddlebrown; */
-        padding: 30px 0 20px 0;
-        max-width: var(--page-width);
-        display: flex;
-        align-items: center;
-    }
+   /* ---------------------bread---------------------- */
+   .breadcrumb {
+       /* border: 2px solid saddlebrown; */
+       padding: 30px 0 20px 0;
+       max-width: var(--page-width);
+       display: flex;
+       align-items: center;
+   }
 
-    .breadcrumb li {
-        padding: 10px 10px 10px 0;
-        font-size: .9rem;
-    }
+   .breadcrumb li {
+       padding: 10px 10px 10px 0;
+       font-size: .9rem;
+   }
 
-    .breadcrumb li+li::before {
-        content: "/";
-        color: #000000;
-        padding-right: 10px;
-    }
+   .breadcrumb li+li::before {
+       content: "/";
+       color: #000000;
+       padding-right: 10px;
+   }
 
-    .breadcrumb li:last-child a {
-        color: var(--secondary-color);
-    }
+   .breadcrumb li:last-child a {
+       color: var(--secondary-color);
+   }
 
-    .breadcrumb li a:hover {
-        color: var(--secondary-color);
-    }
+   .breadcrumb li a:hover {
+       color: var(--secondary-color);
+   }
 
 
-    /* -------------------item_block--------------- */
+   /* -------------------item_block--------------- */
 
-    .item_block {
-        /* border: 2px solid saddlebrown; */
-        max-width: var(--page-width);
-        display: flex;
-        justify-content: center;
-    }
+   .item_block {
+       /* border: 2px solid saddlebrown; */
+       max-width: var(--page-width);
+       display: flex;
+       justify-content: center;
+   }
 
 
-    /* ---------------------left_block----------------- */
-    .left_block {
-        /* outline: 2px solid rgb(255, 0, 0); */
-        padding-right: 20px;
+   /* ---------------------left_block----------------- */
+   .left_block {
+       /* outline: 2px solid rgb(255, 0, 0); */
+       padding-right: 20px;
 
-    }
+   }
 
-    .left_block>img {
-        display: block;
-        width: 400px;
-    }
-
-    .little_img {
-        display: flex;
+   .left_block>img {
+       display: block;
+       width: 400px;
+   }
+
+   .little_img {
+       display: flex;
+
+   }
+
+   .little_img>img {
+       /* outline: 2px solid rgb(255, 0, 0); */
+       width: 110px;
+       margin: 20px 20px 0 0;
+       cursor: pointer;
+
+
+   }
+
+   .little_img>img:hover {
+       border: 1px solid var(--secondary-color);
+   }
+
+   .border {
+       border: 1px solid var(--secondary-color);
+   }
+
+
+
+   /* ------------------right_block--------------------*/
+
+   .right_block {
+       /* outline: 2px solid rgb(0, 109, 163); */
+       display: block;
+       width: 50%;
+       padding: 30px;
+       padding-top: 0;
+   }
 
-    }
-
-    .little_img>img {
-        /* outline: 2px solid rgb(255, 0, 0); */
-        width: 110px;
-        margin: 20px 20px 0 0;
-        cursor: pointer;
+   /* -----------產品名稱------------ */
 
-
-    }
-
-    .little_img>img:hover {
-        border: 1px solid var(--secondary-color);
-    }
-
-    .border {
-        border: 1px solid var(--secondary-color);
-    }
-
-
-
-    /* ------------------right_block--------------------*/
-
-    .right_block {
-        /* outline: 2px solid rgb(0, 109, 163); */
-        display: block;
-        width: 50%;
-        padding: 30px;
-        padding-top: 0;
-    }
+   .right_block>h1 {
+       /* outline: 2px solid rgb(0, 0, 0); */
+       font-size: 1.5rem;
+       margin-bottom: 20px;
+       display: inline-block;
+       font-weight: 300;
+       text-align: center;
+   }
 
-    /* -----------產品名稱------------ */
+   /* -----------產品介紹與運費------------ */
 
-    .right_block .item_name {
-        /* outline: 2px solid rgb(0, 0, 0); */
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        /* letter-spacing: .2rem; */
-        font-weight: 300;
-        text-align: center;
-    }
+   .item_introduce,
+   .item_delivery_fee {
+       outline: 1px solid var(--secondary-color);
+       margin-bottom: 20px;
+       padding: 20px;
 
-    /* -----------產品介紹與運費------------ */
+       background-color: #FFF4E8;
+   }
 
-    .item_introduce,
-    .item_delivery_fee {
-        outline: 1px solid var(--secondary-color);
-        margin-bottom: 20px;
-        padding: 20px;
+   .item_introduce h3,
+   .item_delivery_fee h3 {
+       /* outline: 2px solid rgb(0, 0, 0); */
 
-        background-color: #FFF4E8;
-    }
+       font-size: 1.2rem;
+       margin-bottom: 20px;
+       color: var(--secondary-color);
+       font-weight: 300;
+   }
+
+   .item_introduce ul,
+   .item_delivery_fee ul {
+       /* outline: 2px solid rgb(0, 0, 0); */
+       margin-left: 20px;
+       column-count: 2;
 
-    .item_introduce h3,
-    .item_delivery_fee h3 {
-        /* outline: 2px solid rgb(0, 0, 0); */
+   }
 
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        color: var(--secondary-color);
-        font-weight: 300;
-    }
+   .item_introduce ul li,
+   .item_delivery_fee ul li {
+       margin-bottom: 10px;
+       list-style: circle;
+   }
 
-    .item_introduce ul,
-    .item_delivery_fee ul {
-        /* outline: 2px solid rgb(0, 0, 0); */
-        margin-left: 20px;
-        column-count: 2;
+   .item_introduce ul li:last-of-type {
+       list-style: disc;
+       color: var(--secondary-color);
+       font-weight: 400;
+   }
+
+   /* -----------價錢------------ */
+
+   .dollars_symbol {
+       display: inline-block;
+       font-size: 1.5rem;
+   }
+
+   .dollars {
+       /* outline: 2px solid rgb(0, 0, 0); */
+       display: inline-block;
+       font-size: 1.5rem;
+       margin-bottom: 20px;
+       display: inline-block;
+       /* text-shadow: 2px 2px 2px #ccc; */
+   }
+
+   /* -----------尺寸選擇------------ */
+   .item_size {
+       /* outline: 2px solid rgb(0, 0, 0); */
+
+       display: flex;
+       align-items: center;
+   }
 
-    }
+   .item_size button {
+       border: 1px solid var(--secondary-color);
+       /* border-radius: 5px; */
+       padding: 5px;
+       width: 80px;
+       text-align: center;
+       color: black;
+       margin-right: 20px;
+       background-color: #ffffff;
+   }
 
-    .item_introduce ul li,
-    .item_delivery_fee ul li {
-        margin-bottom: 10px;
-        list-style: circle;
-    }
+
+   .item_size button.checked {
+       background-color: var(--primary-color);
+   }
+
+
+
+   /* -----------數量------------ */
+
+   .item_quantity {}
+
+   .item_quantity ul {
+       display: flex;
+       margin-bottom: 20px;
+
+   }
+
+   .item_quantity li {
+       display: inline-block;
+       margin-top: 20px;
+   }
+
+
+   .item_quantity .count .num-count,
+   .input-num {
+       display: inline-block;
+       width: 25px;
+       height: 25px;
+       line-height: 25px;
+       text-align: center;
+       cursor: pointer;
+       border: 1px solid var(--secondary-color);
+   }
+
+   .input-num {
+       cursor: default;
+       width: 150px;
+
+   }
+
+   #num-decrease {
+       border-radius: 2px 0 0 2px;
+       background-color: var(--secondary-color);
+   }
+
+   #num-jia {
+       border-radius: 0 2px 2px 0;
+       background-color: var(--secondary-color);
+   }
+
+
+
+   /* -----------購買/加入購物車------------ */
+   .item_buy {
+       /* outline: 2px solid rgb(0, 0, 0); */
+       display: flex;
+   }
+
+   .add_shopping_car {
+       border: 1px solid var(--secondary-color);
+       width: 40%;
+       margin-right: 30px;
+       display: block;
+       line-height: 2;
+       font-size: 1.2rem;
+       border-radius: 2px;
+   }
+
+   .btn1 {
+       background-color: var(--secondary-color);
+   }
+
+   .btn1:hover a {
+       color: white;
+   }
+
+
+   .btn2 {
+       background-color: #ffffff;
+   }
+
+   .btn2:hover {
+       background-color: var(--primary-color);
+   }
+
+   /*--------------分隔線----------------*/
+
+   .hr {
+       max-width: var(--page-width);
+       margin: 0 auto;
+       padding-top: 2px;
+       border: var(--secondary-color);
+       background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+   }
+
+   /* -------------------item_description-------------------- */
+
+   /* --------------選單---------------*/
+   .item_description {
+       /* border: 2px solid #000000; */
+       border: 1px solid var(--secondary-color);
+       margin: 30px 20px 0;
+   }
+
+   .tab {
+       overflow: hidden;
+       display: flex;
+       justify-content: space-around;
+
+   }
+
+   .tab button {
+       background-color: var(--primary-color);
+       width: 100%;
+       border: none;
+       outline: none;
+       cursor: pointer;
+       padding: 14px 16px;
+       /* transition: 0.3s; */
+       font-size: inherit;
+   }
+
+   .tab button:hover {
+       color: var(--secondary-color);
+   }
+
+   .tab button.active {
+       background-color: var(--secondary-color);
+       color: #ffffff;
+   }
 
-    .item_introduce ul li:last-of-type {
-        list-style: disc;
-        color: var(--secondary-color);
-        font-weight: 400;
-    }
+   .tabcontent {
+       display: none;
+       padding: 20px;
+       line-height: 2;
+   }
 
-    /* -----------價錢------------ */
-
-    .dollars_symbol {
-        display: inline-block;
-        font-size: 1.5rem;
-    }
-
-    .dollars {
-        /* outline: 2px solid rgb(0, 0, 0); */
-        display: inline-block;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        display: inline-block;
-        /* text-shadow: 2px 2px 2px #ccc; */
-    }
 
-    /* -----------尺寸選擇------------ */
-    .item_size {
-        /* outline: 2px solid rgb(0, 0, 0); */
+   /* --------------描述文字---------------*/
 
-        display: flex;
-        align-items: center;
-    }
 
-    .item_size button {
-        border: 1px solid var(--secondary-color);
-        /* border-radius: 5px; */
-        padding: 5px;
-        width: 80px;
-        text-align: center;
-        color: black;
-        margin-right: 20px;
-        background-color: #ffffff;
-    }
+   .tabcontent>p:nth-child(odd) {
+       color: var(--secondary-color);
+       font-weight: 400;
+   }
 
+   #delivery>p:nth-child(7) {
+       color: inherit;
+       font-weight: 200;
+   }
 
-    .item_size button.checked {
-        background-color: var(--primary-color);
-    }
 
+   /*--------------更多商品----------------*/
 
-
-    /* -----------數量------------ */
-
-    .item_quantity {}
-
-    .item_quantity ul {
-        display: flex;
-        margin-bottom: 20px;
-
-    }
-
-    .item_quantity li {
-        display: inline-block;
-        margin-top: 20px;
-    }
-
-
-    .item_quantity .count .num-count,
-    .input-num {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid var(--secondary-color);
-    }
-
-    .input-num {
-        cursor: default;
-        width: 150px;
-
-    }
-
-    #num-decrease {
-        border-radius: 2px 0 0 2px;
-        background-color: var(--secondary-color);
-    }
-
-    #num-jia {
-        border-radius: 0 2px 2px 0;
-        background-color: var(--secondary-color);
-    }
-
-
-
-    /* -----------購買/加入購物車------------ */
-    .item_buy {
-        /* outline: 2px solid rgb(0, 0, 0); */
-        display: flex;
-    }
-
-    .add_shopping_car {
-        border: 1px solid var(--secondary-color);
-        width: 40%;
-        margin-right: 30px;
-        display: block;
-        line-height: 2;
-        font-size: 1.2rem;
-        border-radius: 2px;
-    }
-
-    .btn1 {
-        background-color: var(--secondary-color);
-    }
-
-    .btn1:hover a {
-        color: white;
-    }
-
-
-    .btn2 {
-        background-color: #ffffff;
-    }
-
-    .btn2:hover {
-        background-color: var(--primary-color);
-    }
-
-    /*--------------分隔線----------------*/
-
-    .hr {
-        max-width: var(--page-width);
-        margin: 0 auto;
-        padding-top: 2px;
-        border: var(--secondary-color);
-        background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
-    }
-
-    /* -------------------item_description-------------------- */
-
-    /* --------------選單---------------*/
-    .item_description {
-        /* border: 2px solid #000000; */
-        border: 1px solid var(--secondary-color);
-        margin: 30px 20px 0;
-    }
-
-    .tab {
-        overflow: hidden;
-        display: flex;
-        justify-content: space-around;
-
-    }
-
-    .tab button {
-        background-color: var(--primary-color);
-        width: 100%;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        /* transition: 0.3s; */
-        font-size: inherit;
-    }
-
-    .tab button:hover {
-        color: var(--secondary-color);
-    }
-
-    .tab button.active {
-        background-color: var(--secondary-color);
-        color: #ffffff;
-    }
-
-    .tabcontent {
-        display: none;
-        padding: 20px;
-        line-height: 2;
-    }
-
-
-    /* --------------描述文字---------------*/
-
-
-    .tabcontent>p:nth-child(odd) {
-        color: var(--secondary-color);
-        font-weight: 400;
-    }
-
-    #delivery>p:nth-child(7) {
-        color: inherit;
-        font-weight: 200;
-    }
+   .hot_items {
+       /* outline: 2px solid rgb(255, 0, 0); */
+       display: block;
+       max-width: var(--page-width);
+       overflow: hidden;
+       margin: 0 auto;
+       margin-top: 50px;
+       padding: 50px 0;
+       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23ffead2' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+   }
+
+   .hot_items .title {
+       font-size: 1.5rem;
+       background-image: url(../image/bgi/title\ \(3\)\ .png);
+       background-repeat: no-repeat;
+       background-position: top center;
+       padding-bottom: 30px;
+
+       text-align: center;
+       /* outline: 2px solid rgb(255, 0, 0); */
+
+   }
+
+   .hot_items .items {
+       /* outline: 2px solid black; */
+       display: flex;
+       margin: 0 100px 30px;
+
+   }
+
+   .it {
+       /* border-radius: 2px; */
+       outline: 1px solid #ccc;
+       margin: 10px;
+       overflow: hidden;
+
+   }
+
+   .items .img_block {
+       /* outline: 2px solid black; */
+       position: relative;
+       overflow: hidden;
+
+   }
+
+   .items .img_block>img {
+       width: 100%;
+       display: block;
+       transform: scale(1);
+       transition: all 0.5s ease;
+
+
+   }
+
+   .items .text_block {
+       /* outline: 2px solid rgb(255, 0, 0); */
+       line-height: 2;
+       text-align: center;
+   }
+
+   .items .text_block h3 {
+       color: var(--secondary-color);
+   }
+
+   .img_block>img:hover {
+       transform: scale(1.2);
+
+   }
+
+   .items .text_block>p {
+       background-color: var(--primary-color);
+   }
+
+
+
+
+   /* 輪播箭頭 */
+
+   .slick-prev:before {
+       color: var(--secondary-color);
+       font-size: 2rem;
+       position: absolute;
+       left: -14px;
+       line-height: 0;
+       font-weight: 500;
+   }
+
+
+   .slick-next:before {
+       color: var(--secondary-color);
+       font-size: 2rem;
+       position: absolute;
+       right: -14px;
+       line-height: 0;
+       font-weight: 500;
+   }
+
+   .slick-dots li.slick-active button:before {
+       color: var(--secondary-color);
+
+   }
+
+   .slick-dots li button:before {
+       color: var(--secondary-color);
+
+   }

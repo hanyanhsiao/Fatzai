@@ -12,7 +12,7 @@
     }
 
     .header {
-        background-color: #ffead2;
+        background-color: var(--primary-color);
     }
 
     .header .nav {
@@ -109,7 +109,7 @@
     .mobile_icon {
         display: flex;
         margin-left: 5px;
-        z-index: 10;
+        z-index: 1;
         /* border: 2px solid rgb(0, 21, 255); */
 
     }
@@ -501,8 +501,8 @@
 
     .ingredients li img {
         /* border: 2px solid #CCC; */
-        border-radius: 5px;
-        border-radius: 50% 30% 50% 40%;
+        border-radius: 2px;
+        /* border-radius: 50% 30% 50% 40%; */
         width: 60%;
     }
 
@@ -511,7 +511,7 @@
         padding: 10px;
     }
 
-    li .text>h1 {
+    .ingredients li .text>h1 {
         /* outline: 2px solid rgb(0, 0, 0); */
         background: var(--primary-color);
         font-size: 1.3rem;
@@ -522,18 +522,19 @@
 
     }
 
-    li:nth-child(odd)>h1 {
+    .ingredients li:nth-child(odd) h1 {
         /* border: 2px solid rgb(0, 21, 255); */
-        background: var(--primary-color);
-        border-radius: 15% 90% 70% 20% / 50% 90% 70% 70%;
+        background: 0;
+        border-radius: 0;
+        color: var(--secondary-color);
         text-align: center;
-
     }
 
-    li:nth-child(even)>h1 {
+    .ingredients li:nth-child(even) h1 {
         /* border: 2px solid rgb(0, 21, 255); */
-        background: var(--primary-color);
-        border-radius: 90% 40% 15% 70%/ 90% 50% 80% 80%;
+        background: 0;
+        border-radius: 0;
+        color: var(--secondary-color);
         text-align: center;
 
     }
@@ -664,7 +665,7 @@
         top: 0;
         transform: translateX(-220px);
         transition: all .5s;
-        z-index: 10;
+        z-index: 1;
     }
 
     .main_block .aside ul li {
@@ -682,9 +683,7 @@
 
     .main_block .aside.open {
         transform: translateX(0px);
-        /* outline: 2px solid rgb(0, 0, 0); */
-
-
+        /* outline: 2px solid rgb(0, 0, 0) */
     }
 
     #mask,
@@ -851,6 +850,11 @@
         border-bottom: 1px solid #ccc;
     }
 
+    /* 手機點擊不要放大 */
+    .Member_Area_aside li:hover {
+        transform: scale(1);
+    }
+
     /* 手機才有的選單按鈕 */
     .openMenu {
         background-color: var(--secondary-color);
@@ -887,24 +891,6 @@
         border-bottom: 1px solid var(--primary-color);
     }
 
-    .openMenu>i {
-        /* padding-top: 10px; */
-        color: var(--secondary-color);
-        transition: 0.4s;
-    }
-
-    .active i {
-        transition: 0.3s;
-        transform: rotate(90deg);
-
-    }
-
-
-
-
-
-
-
     /* 右側上半部會員資訊 */
     .personal_inf .customer_name {
         padding: 5px 5px 5px 0;
@@ -940,15 +926,15 @@
         grid-template: 1fr 1fr / 1fr 1fr 1fr;
         text-align: center;
         line-height: 50px;
-    }
-
-    .order_content li {
         border: 1px solid #e4e4e4;
     }
 
-    .order_content li:last-child {
-        border-right: 1px solid #e4e4e4;
+    .order_content li {
+        border-bottom: 1px solid #e4e4e4;
+        border-right: 0;
+
     }
+
 
 
 

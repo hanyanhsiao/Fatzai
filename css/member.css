@@ -89,11 +89,13 @@ main {
     padding: 10px;
     line-height: 30px;
     border-bottom: 1px solid #ccc;
+    transform: scale(1);
 }
 
 .Member_Area_aside li:hover {
     color: var(--secondary-color);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -132,12 +134,18 @@ section {}
 
 }
 
-button {
+.signOut {
     border: 1px solid #ccc;
     background-color: var(--primary-color);
     padding: 5px 10px;
     border-radius: 2px;
     width: 80px;
+}
+
+/*點擊登出*/
+.signOut:active {
+    box-shadow: inset 0 0 10px 2px #f8d1a4;
+
 }
 
 .shopping_inf {
@@ -150,12 +158,22 @@ button {
     padding: 10px;
 }
 
+.total_coupons>a {
+    text-decoration: underline;
+}
+
+.value {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+
 /* 右側下半部近期訂單 */
 
 .recent_orders_title {
     padding: 20px;
-    padding-left: 0;
     font-weight: 400;
+    text-align: center;
 }
 
 .order {
@@ -184,14 +202,15 @@ button {
 
 .order_content li {
     border-right: 1px solid #ccc;
+    font-size: .9rem;
 }
 
 .order_content li:last-child {
     border-right: 0;
 }
 
-.order_number {
+.order_number a {
     color: red;
     text-decoration: underline;
-    cursor: pointer;
+    /* cursor: pointer; */
 }

@@ -206,8 +206,12 @@
                     <p>訂單資訊</p>
                     <div class="money">
                         <div>
-                            <p>小計:</p>
-                            <p>$ <span id="summary">899</span></p>
+                            <p>合計:</p>
+                            <p>$ <span id="summary">0</span></p>
+                        </div>
+                        <div>
+                            <p>品項:</p>
+                            <p>共 <span id="item_num">0</span> 樣</p>
                         </div>
                         <button>使用優惠券</button>
                         <div>
@@ -221,7 +225,7 @@
 
                         <div class="sum">
                             <p>總金額:</p>
-                            <p>$ <span id="sum">899</span></p>
+                            <p>$ <span id="sum">0</span></p>
                         </div>
                         <div class="buy">
                             <button type="button">確認結帳</button>
@@ -432,7 +436,7 @@
             addition_items();
         })
 
-
+        //訂單資訊 計算總金額
         function calculate_sum() {
             // 合計
             let summary = 0;
@@ -440,6 +444,12 @@
                 summary += parseInt(li.innerHTML);
             })
             document.getElementById('summary').innerHTML = summary;
+
+            //各品項數量
+            let item_num = $('.car_item_block').find('.car_item').length;
+            console.log(item_num + "AA");
+
+            document.getElementById('item_num').innerHTML = item_num;
 
             // 折扣
             let discount = document.getElementById('discount').innerHTML;

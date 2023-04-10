@@ -19,7 +19,7 @@
   transform: translateX(350px);
   transition: all .5s;
   background-color: white;
-  z-index: 11;
+  z-index: 10;
 
 }
 
@@ -219,7 +219,7 @@
   /* border: 1px solid rgb(255, 5, 5); */
 }
 
-.items_block ul li:hover img {
+.items_block img:hover {
   transform: scale(1.1);
 }
 
@@ -245,7 +245,6 @@
 /* ---文字區塊--- */
 .text_block {
   text-align: center;
-
 }
 
 .items_block h3 {
@@ -255,39 +254,33 @@
 
 .items_block .cash {
   /* border: 1px solid rgb(255, 5, 5); */
-
   background-color: #ffead285;
   display: flex;
-  /* justify-content: space-around; */
-  align-items: center;
   padding: 10px;
   font-weight: bold;
   color: var(--secondary-color);
-
 }
 
 .cash p {
   /* border: 1px solid rgb(255, 5, 5); */
-
   flex-grow: 3;
   text-align: center;
 }
-
-
 
 .items_block i {
   /* border: 1px solid rgb(255, 5, 5); */
   width: 20px;
   cursor: pointer;
   margin-right: 10px;
-
 }
 
+
+/* 愛心icon */
 .items_block i:last-child {
   margin-right: 0;
-
 }
 
+/* 購物車icon */
 .text_block .fa-cart-shopping {
   display: none;
 }
@@ -295,36 +288,38 @@
 
 
 
-/* -------------------切換分頁區塊-------------------- */
-ul.pagination {
+/* -------------------全部商品/切換頁數區塊-------------------- */
+.pagination {
   /* border: 1px solid rgb(255, 5, 5); */
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 20px auto 0;
 }
 
-ul.pagination li {
-  display: inline;
-}
-
-ul.pagination li a {
-  color: black;
-  float: left;
-  padding: 8px 12px;
+.pagination span {
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: -3px;
   /* border: 1px solid rgb(255, 5, 5); */
 
 
 }
 
-ul.pagination li a.active {
+.pagination li {
+  display: inline-block;
+  color: black;
+  float: left;
+  padding: 8px 12px;
+  cursor: pointer;
+
+}
+
+ul.pagination li.active {
   background-color: var(--secondary-color);
   color: white;
   border-radius: 50%;
-}
-
-ul.pagination li a:hover:not(.active) {
-  background-color: var(--primary-color);
-  border-radius: 50%;
-
 }

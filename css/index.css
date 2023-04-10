@@ -183,7 +183,7 @@ section.main {
   /* border: 1px solid rgb(0, 0, 0); */
   text-align: center;
   padding: 10px 0;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--secondary-color);
 
 }
@@ -196,6 +196,7 @@ section.main {
   /* color: rgba(0, 0, 0, 0.7); */
   text-indent: 2em;
   letter-spacing: 1px;
+  font-size: .9rem;
 
 
 }
@@ -275,6 +276,7 @@ section.main {
   position: absolute;
   left: -14px;
   line-height: 0;
+  font-weight: 500;
 }
 
 
@@ -284,8 +286,7 @@ section.main {
   position: absolute;
   right: -14px;
   line-height: 0;
-
-
+  font-weight: 500;
 }
 
 .slick-dots li.slick-active button:before {

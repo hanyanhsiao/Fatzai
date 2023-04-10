@@ -164,10 +164,20 @@
      height: 50px;
      background-color: var(--primary-color);
      cursor: pointer;
-     padding: 10px 20px;
+     padding: 0;
      text-align: center;
      box-shadow: 2px 2px 2px var(--secondary-color);
  }
+
+ .new_block button a {
+     /* outline: 1px solid rgb(255, 0, 191); */
+     line-height: 50px;
+     text-align: center;
+     display: block;
+     width: 100%;
+     padding: 0 15px;
+ }
+
 
  .new_block button:hover {
      color: var(--secondary-color);
@@ -179,6 +189,8 @@
      background-color: #cecece;
      box-shadow: 2px 2px 2px #a5a5a5;
      color: white;
+     padding: 0 15px;
+
  }
 
  .btn_block_close>button:hover {

@@ -36,20 +36,18 @@
         <div class="Member_Area_wrapper">
             <aside class="Member_Area_aside">
                 <div class="openMenu">
-                    <div class="openMenu_left">
-                        <span>選單</span>
-                        <lord-icon class="openMenu_arrow" src="https://cdn.lordicon.com/rvuqcvqy.json" trigger="loop"
-                            delay="1000" colors="primary:#dc9f58,secondary:#b4b4b4" style="width:30px;height:30px">
-                        </lord-icon>
-                    </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>選單</span>
+                    <lord-icon class="openMenu_arrow" src="https://cdn.lordicon.com/rvuqcvqy.json" trigger="loop"
+                        delay="500" colors="primary:#dc9f58,secondary:#b4b4b4" style="width:30px;height:30px">
+                    </lord-icon>
                 </div>
                 <ul class="Member_Area_menu">
                     <li class="tablinks" onclick="changeSet(event, 'myAccount')" id="defaultOpen">我的帳戶</li>
-                    <li class="tablinks" onclick="changeSet(event, 'personal')">修改個人資訊</li>
-                    <li class="tablinks" onclick="changeSet(event, 'order')">訂單查詢</li>
-                    <li class="tablinks" onclick="changeSet(event, 'coupon')">我的優惠券</li>
-                    <li class="tablinks" onclick="changeSet(event, 'favoritelist')">收藏清單</li>
+                    <li class="tablinks" onclick="changeSet(event, 'personal')" id="personal_tab">修改個人資訊</li>
+                    <li class="tablinks" onclick="changeSet(event, 'order')" id="order_tab">訂單查詢</li>
+                    <li class="tablinks" onclick="changeSet(event, 'coupon')" id="coupon_tab">我的優惠券</li>
+                    <li class="tablinks" onclick="changeSet(event, 'favoritelist')" id="favoritelist_tab">收藏清單</li>
                 </ul>
             </aside>
             <section class="tabcontent" id="myAccount">
@@ -58,7 +56,7 @@
                     <div class="personal_inf">
                         <div style="display: inline-block;">歡迎回來，<p class="customer_name">Trump</p>
                         </div>
-                        <button>登出</button>
+                        <button class="signOut">登出</button>
                     </div>
                     <ul class="shopping_inf">
                         <li class="total_spent item">
@@ -72,7 +70,7 @@
                         </li>
                         <li class="total_coupons item">
                             <span class="text">專屬優惠券</span>
-                            <a href="" class="value">1</a>
+                            <a href="http://192.168.1.134:5502/member.html?memberArea=coupon_tab" class="value">0</a>
                             <span class=" text">張</span>
                         </li>
                     </ul>
@@ -91,8 +89,10 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number">#OR2661060</li>
-                            <li>2022-11-26</li>
+                            <li class="order_number"><a
+                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            </li>
+                            <li>2023-01-26</li>
                             <li>NT$660</li>
                             <li>宅配</li>
                             <li>已收到款項</li>
@@ -112,12 +112,14 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number">#OR2661060</li>
+                            <li class="order_number"><a
+                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            </li>
                             <li>2022-11-26</li>
-                            <li>NT$660</li>
-                            <li>宅配</li>
+                            <li>NT$1090</li>
+                            <li>門市自取</li>
                             <li>已收到款項</li>
-                            <li>已出貨</li>
+                            <li>已成立</li>
                         </ul>
 
                     </div>
@@ -133,7 +135,9 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number">#OR2661060</li>
+                            <li class="order_number"><a
+                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            </li>
                             <li>2022-11-26</li>
                             <li>NT$660</li>
                             <li>宅配</li>
@@ -145,10 +149,10 @@
 
                 </div>
             </section>
-            <section class="tabcontent" id="personal">建置中1</section>
-            <section class="tabcontent" id="order">建置中2</section>
-            <section class="tabcontent" id="coupon">建置中3</section>
-            <section class="tabcontent" id="favoritelist">建置中4</section>
+            <section class="tabcontent" id="personal">修改個人資訊</section>
+            <section class="tabcontent" id="order">訂單查詢</section>
+            <section class="tabcontent" id="coupon">我的優惠券</section>
+            <section class="tabcontent" id="favoritelist">收藏清單</section>
 
         </div>
         <!--手機才有的遮罩-->
@@ -162,8 +166,19 @@
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="./js/common.js"></script>
     <script>
+        //預設開啟"我的帳戶"那頁
         $(function () {
             document.getElementById("defaultOpen").click();
+            //預設全部商品，從最新消息草莓季鈕點進來就是季節限定商品
+            let Parameters = new URLSearchParams(window.location.search);
+            if (Parameters.has("memberArea")) {
+                let tabname = Parameters.get("memberArea");
+                document.getElementById(tabname).click();
+                // console.log(tabname);
+
+            } else {
+                document.getElementById("defaultOpen").click();
+            }
         })
 
         //電腦版側邊選單切換
@@ -196,6 +211,10 @@
             }
         })
 
+        //點擊登出
+        $('.signOut').click(function () {
+            alert("確定要登出嗎?")
+        })
     </script>
 </body>
 

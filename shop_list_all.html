@@ -283,13 +283,13 @@
 
                 <!-- 切換頁數區塊 -->
                 <ul class="pagination">
-                    <li><a href="#">«</a></li>
-                    <li><a class="active" href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">»</a></li>
+                    <span class="previous_page">«</span>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <span class="next_page">»</span>
                 </ul>
             </div>
 
@@ -768,7 +768,6 @@
             </div>
 
 
-
             <!--手機才有的遮罩-->
             <div id="mask"></div>
             <!--手機才有的遮罩(herder的)-->
@@ -786,6 +785,17 @@
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="./js/common.js"></script>
     <script>
+        //預設全部商品，從最新消息草莓季鈕點進來就是季節限定商品
+        let Parameters = new URLSearchParams(window.location.search);
+        if (Parameters.has("product")) {
+            let tabname = Parameters.get("product");
+            document.getElementById(tabname).click();
+            // console.log(tabname);
+
+        } else {
+            document.getElementById("defaultOpen").click();
+        }
+
         //側邊選單切換
         function changeSet(evt, cityName) {
             var i, tabcontent, tablinks;
@@ -806,19 +816,40 @@
             $('.fa-heart').click(function () {
                 $(this).toggleClass("fa-regular fa-solid"); //自動偵測是否存在這個class
             });
-
-
-            let Parameters = new URLSearchParams(window.location.search);
-            // console.log(tabname);
-
-            if (Parameters.has("product")) {
-                let tabname = Parameters.get("product");
-                document.getElementById(tabname).click();
-            } else {
-                document.getElementById("defaultOpen").click();
-            }
         })
 
+        //全部商品下方切換頁數區塊
+        $(function () {
+            $(".pagination li:first").addClass('active');
+
+            $(".pagination li").click(function () {
+                $(this).siblings("li").removeClass("active");
+                $(this).addClass("active")
+            });
+
+            //向左點
+            $('.previous_page').click(function () {
+
+                if ($(".pagination>.active").prev().is('li')) {
+                    let target_active_page = $(".pagination>.active");
+                    target_active_page.removeClass("active");
+                    target_active_page.prev().addClass("active");
+                    console.log("AAA");
+                }
+            })
+
+            //向右點
+            $('.next_page').click(function () {
+
+                if ($(".pagination>.active").next().is('li')) {
+                    let target_active_page = $(".pagination>.active");
+                    target_active_page.removeClass("active");
+                    target_active_page.next().addClass("active");
+                    console.log("AACCCA");
+                }
+            })
+
+        })
 
         //點擊加入購物車出現右邊小圖及加入local
         $(function () {
