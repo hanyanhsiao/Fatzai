@@ -167,7 +167,6 @@
     main {
         position: relative;
         margin: 0 autos;
-        overflow: hidden;
     }
 
     .title {
@@ -418,6 +417,7 @@
     section .left {
         clip-path: 0;
         height: 520px;
+        overflow: hidden;
 
     }
 
@@ -467,6 +467,7 @@
         /* outline: 2px solid rgb(0, 0, 0); */
         max-width: auto;
         padding: 0 10px;
+        overflow: hidden;
 
     }
 
