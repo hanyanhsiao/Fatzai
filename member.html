@@ -112,8 +112,7 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number"><a
-                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            <li class="order_number"><a href="./member.html?memberArea=order_tab">#OR2661060</a>
                             </li>
                             <li>2022-11-26</li>
                             <li>NT$1090</li>
@@ -135,8 +134,7 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number"><a
-                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            <li class="order_number"><a href="./member.html?memberArea=order_tab">#OR2661060</a>
                             </li>
                             <li>2022-11-26</li>
                             <li>NT$660</li>
@@ -169,7 +167,7 @@
         //預設開啟"我的帳戶"那頁
         $(function () {
             document.getElementById("defaultOpen").click();
-            //預設全部商品，從最新消息草莓季鈕點進來就是季節限定商品
+
             let Parameters = new URLSearchParams(window.location.search);
             if (Parameters.has("memberArea")) {
                 let tabname = Parameters.get("memberArea");
