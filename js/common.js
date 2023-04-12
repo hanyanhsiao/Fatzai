@@ -13,6 +13,7 @@ $(document).ready(function () {
 
             }
         })
+        console.log(document.querySelector('.nav_list .cart_num').innerHTML);
     });
     $(".footer").load("common.html .footer>.footer1");
     $('#common_mask').click(function () {
@@ -23,22 +24,47 @@ $(document).ready(function () {
 //----------------------載入購物車的商品圖片-----------------------------
 function get_img(item_id) {
     switch (item_id) {
+        //全部商品
         case '圓塔':
             return './image/items/tart (1).jpg';
         case '方塔':
             return './image/items/tart (6).jpg';
         case '開心果優格慕斯':
             return './image/items/mousse (1).jpg';
-        case '開心果覆盆子慕斯':
-            return './image/items/mousse (8).png';
+
         case '巧克力溜溜球蛋糕':
             return './image/items/mousse (5).jpg';
+        case '香草蛋糕捲':
+            return './image/items/mousse (9).JPG';
+        case '草莓繪圖蛋糕':
+            return './image/items/mousse (11).jpg';
+        case '黑醋栗椰子慕斯':
+            return './image/items/mousse (7).jpg';
+        case '抹茶乳酪塔':
+            return './image/items/tart (4).jpg';
+        case '開心果塔':
+            return './image/items/tart (5).jpg"';
+        case '綜合美式軟餅乾':
+            return './image/items/cookies (0).jpg';
+        case '開心果覆盆子慕斯':
+            return './image/items/mousse (8).png';
+        case '開心果泡芙':
+            return './image/items/choux (3).png';
+        case '玫瑰泡芙':
+            return './image/items/choux (8).png';
+        //季節限定
         case '草莓塔':
             return './image/items/tart (24).jpg';
         case '草莓開心果塔':
             return './image/items/tart (22).jpg';
         case '草莓杯子蛋糕':
             return './image/items/cup cake (5).jpg';
+        case '草莓愛心馬卡龍':
+            return './image/items/macaron (6).jpg';
+        case '草莓夏洛特':
+            return './image/items/mousse (13).jpg';
+        //杯子蛋糕
+
         case '薄荷巧克力杯子蛋糕':
             return './image/items/cup cake (1).jpg';
         case 'Oreo杯子蛋糕':
@@ -47,14 +73,10 @@ function get_img(item_id) {
             return './image/items/cup cake (7).jpg';
         case '抹茶乳酪塔':
             return './image/items/tart (4).jpg"';
-        case '開心果塔':
-            return './image/items/tart (5).jpg"';
+
         case '香濃芝麻泡芙':
             return './image/items/choux (1).jpg';
-        case '開心果泡芙':
-            return './image/items/choux (3).png';
-        case '玫瑰泡芙':
-            return './image/items/choux (8).png';
+
         // 加購
         case '(任選兩支)':
             return './image/material/candles.jpg';
@@ -68,7 +90,7 @@ function get_img(item_id) {
     }
 }
 
-//-----------------------加入購物車商品存入localstorage----------------------------
+//-----------------------加入購物車商品存入localstorage (car)----------------------------
 
 function addCar(itemObj) {
 
@@ -153,7 +175,6 @@ function get_items() {
 };
 
 
-
 // -----------------封裝setTimeout功能變成一個類別-----------------------------------
 var Timer = function (callback, delay) {
     var timerId, start, remaining = delay;
@@ -174,5 +195,55 @@ var Timer = function (callback, delay) {
     this.resume();
 };
 // -----------------封裝setTimeout功能變成一個類別-----------------------------------
+
+
+//-------------------收藏商品加入清單並存入localstorage (favorite)----------------------------
+
+function addFavorite(itemObj) {
+
+    let items = JSON.parse(localStorage.getItem("favorite"));
+    if (items) { // 若存在
+
+        //1找出已經存在的產品與選擇的產品做判斷
+        let exist_item = items.filter(function (local_item_obj) {
+            return local_item_obj.item_id == itemObj.item_id
+        })
+        // console.log(exist_item);
+        // console.log(exist_item.length);
+
+        //2找出不一樣的產品做判斷
+        let exist_item_di = items.filter(function (local_item_obj) {
+            if (local_item_obj.item_id != itemObj.item_id) {
+                return true;
+            }
+        })
+
+        //3 合併一樣的產品數量跟金額
+        if (exist_item.length != 0) {
+            exist_item[0].num += itemObj.num;
+            exist_item[0].total += itemObj.total;
+            if (exist_item[0].num > 10) {
+                alert("購物車商品已達上限10個")
+                return;
+            } else if (exist_item[0].num < 1) {
+                alert("購物車商品最少1個")
+                return;
+            }
+
+            //合併不一樣的產品和一樣的產品
+            exist_item_di.push(exist_item[0]);
+
+        } else {
+            items.push(itemObj);  //在陣列中加入最後一個可以使用 push()
+        }
+    } else { // 若不存在
+        items = [itemObj];
+    }
+    // console.log(items);
+    localStorage.setItem("favorite", JSON.stringify(items));
+    //將 JavaScript 值轉換為 JSON 字符串，物件變字串存入
+}
+
+
 
 

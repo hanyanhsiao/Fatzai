@@ -47,7 +47,15 @@
                     <li class="tablinks" onclick="changeSet(event, 'personal')" id="personal_tab">修改個人資訊</li>
                     <li class="tablinks" onclick="changeSet(event, 'order')" id="order_tab">訂單查詢</li>
                     <li class="tablinks" onclick="changeSet(event, 'coupon')" id="coupon_tab">我的優惠券</li>
-                    <li class="tablinks" onclick="changeSet(event, 'favoritelist')" id="favoritelist_tab">收藏清單</li>
+                    <li class="tablinks" onclick="changeSet(event, 'favoritelist')" id="favoritelist_tab">
+                        <div class="aside_favorite">
+                            收藏清單
+                            <lord-icon src="https://cdn.lordicon.com/pnhskdva.json" trigger="loop" delay="1000"
+                                colors="primary:#dc9f58" style="width:28px;height:28px">
+                            </lord-icon>
+                        </div>
+
+                    </li>
                 </ul>
             </aside>
             <section class="tabcontent" id="myAccount">
@@ -70,7 +78,7 @@
                         </li>
                         <li class="total_coupons item">
                             <span class="text">專屬優惠券</span>
-                            <a href="http://192.168.1.134:5502/member.html?memberArea=coupon_tab" class="value">0</a>
+                            <a href="./member.html?memberArea=coupon_tab" class="value">0</a>
                             <span class=" text">張</span>
                         </li>
                     </ul>
@@ -89,8 +97,7 @@
 
                         </ul>
                         <ul class="order_content">
-                            <li class="order_number"><a
-                                    href="http://192.168.1.134:5502/member.html?memberArea=order_tab">#OR2661060</a>
+                            <li class="order_number"><a href="./member.html?memberArea=order_tab">#OR2661060</a>
                             </li>
                             <li>2023-01-26</li>
                             <li>NT$660</li>
@@ -150,7 +157,28 @@
             <section class="tabcontent" id="personal">修改個人資訊</section>
             <section class="tabcontent" id="order">訂單查詢</section>
             <section class="tabcontent" id="coupon">我的優惠券</section>
-            <section class="tabcontent" id="favoritelist">收藏清單</section>
+            <section class="tabcontent" id="favoritelist">
+                <div class="favorite_block">
+                    <!-- <ul class="favorite_list">
+                        <li class="img"><a href="./item.html"><img src="" alt=""></a></li>
+                        <li class="favorite_inf">
+                            <div class="item_name">商品名稱</div>
+                            <div class="item_id">規格</div>
+                            <div class="dollars">價錢</div>
+                        </li>
+                        <li class="favorite_button">
+                            <button class="add_cart">
+                                <p>加入購物車</p>
+                                <lord-icon clas="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
+                                    delay="1000" colors="primary:#dc9f58,secondary:#dc9f58"
+                                    style="width:30px;height:30px">
+                                </lord-icon>
+                            </button>
+                            <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+                        </li>
+                    </ul> -->
+                </div>
+            </section>
 
         </div>
         <!--手機才有的遮罩-->
@@ -172,7 +200,7 @@
             if (Parameters.has("memberArea")) {
                 let tabname = Parameters.get("memberArea");
                 document.getElementById(tabname).click();
-                // console.log(tabname);
+                console.log(tabname);
 
             } else {
                 document.getElementById("defaultOpen").click();
@@ -181,7 +209,7 @@
 
         //電腦版側邊選單切換
         function changeSet(event, TabName) {
-            console.log("DDD");
+            // console.log("DDD");
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -192,7 +220,7 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(TabName).style.display = "block";
-            console.log(event.currentTarget.className);
+            // console.log(event.currentTarget.className);
 
             event.currentTarget.className += " active";
         }
@@ -213,6 +241,114 @@
         $('.signOut').click(function () {
             confirm("確定要登出嗎?")
         })
+
+        //顯示收藏商品資訊及圖片
+        function get_favorite_items() {
+            let favorite_items = JSON.parse(localStorage.getItem("favorite"));
+            // console.log(favorite_items);
+
+            if (favorite_items) {
+                let list_html = "";
+
+                favorite_items.forEach(function (item, i) {
+                    // console.log(item);
+                    list_html += `
+                    <ul class="favorite_list">
+                        <li class="img"><a href="./item.html"><img src="${get_img(item.item_id)}" alt=""></a></li>
+                        <li class="favorite_inf">
+                            <div class="item_name">${item.name}</div>
+                            <div class="item_id">${item.item_id}</div>
+                            <div class="cash">
+                                <p>$&nbsp;</p>
+                                <div class="dollars">${item.dollars}</div>
+                            </div>
+                        </li>
+                        <li class="favorite_button">
+                            <button class="add_cart">
+                                <p>加入購物車</p>
+                                <lord-icon clas="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
+                                    delay="1000" colors="primary:#dc9f58,secondary:#dc9f58"
+                                    style="width:30px;height:30px">
+                                </lord-icon>
+                            </button>
+                            <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+                        </li>
+                    </ul>
+                `;
+                })
+
+                $('.favorite_block').html(list_html);
+            }
+        };
+
+        get_favorite_items();
+
+        //移除收藏商品
+        $(function () {
+            $('.favorite_list .delete').click(function () {
+                if (confirm("確定要移除收藏商品嗎?")) {
+                    //移除整條ul
+                    $(this).closest('ul').remove("ul");
+                    //取出item_id
+                    let target_item = $(this).closest('li').prev('.favorite_inf').find('.item_id').html();
+                    console.log(target_item);
+
+
+                    //2 移除localstorage
+                    let favorite = JSON.parse(localStorage.getItem("favorite"));
+                    //不相同的要回存
+                    let updated_favorite = favorite.filter(function (item, i) {
+                        return target_item != item.item_id;
+                    });
+                    // 回存至 localStorage
+                    localStorage.setItem("favorite", JSON.stringify(updated_favorite));
+                }
+            })
+        })
+
+        //收藏商品加入購物車並淡出移除
+        $(function () {
+            $('.add_cart').click(function (e) {
+                alert("商品已加入購物車")
+                //加入購物車新增資料至 localStorage
+                //取出ul
+                let target_item_ul = $(this).closest('ul');
+
+                let name = target_item_ul.find('.item_name').html();
+                let item_id = target_item_ul.find('.item_id').html();
+                let dollars = target_item_ul.find('.dollars').html();
+                let num = 1;
+                let total = dollars * num;
+
+                let item = {
+                    "name": name,
+                    "item_id": item_id,
+                    "dollars": dollars,
+                    "num": num,
+                    "total": total
+                };
+                // console.log(item);
+                addCar(item);
+
+                //1移除畫面
+                target_item_ul.addClass('fade_out');
+
+                setTimeout(function () {
+                    target_item_ul.remove()
+                }, 500);
+
+                //2 移除favorite的localstorage
+                let favorite = JSON.parse(localStorage.getItem("favorite"));
+                //不相同的要回存
+                let updated_favorite = favorite.filter(function (item, i) {
+                    return item_id != item.item_id;
+                });
+                // 回存至 localStorage
+                localStorage.setItem("favorite", JSON.stringify(updated_favorite));
+            })
+
+        })
+
     </script>
 </body>
 

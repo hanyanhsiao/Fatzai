@@ -65,7 +65,7 @@ main {
 /* ------------- 會員專區標題 ----------- */
 
 
-/* ---------------------------------------------- */
+/* --------------------我的帳戶-------------------------- */
 .Member_Area_wrapper {
     display: grid;
     grid-template-columns: .5fr 1fr;
@@ -96,12 +96,22 @@ main {
     color: var(--secondary-color);
     cursor: pointer;
     transform: scale(1.1);
+    font-weight: 400;
+
 }
 
 
 .Member_Area_aside li.active {
     color: var(--secondary-color);
     font-weight: 400;
+}
+
+.aside_favorite {
+    display: flex;
+}
+
+.aside_favorite lord-icon {
+    margin-left: 5px;
 }
 
 /* 右側內容欄 */
@@ -138,7 +148,7 @@ section {}
     border: 1px solid #ccc;
     background-color: var(--primary-color);
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 5px;
     width: 80px;
 }
 
@@ -213,4 +223,92 @@ section {}
     color: red;
     text-decoration: underline;
     /* cursor: pointer; */
+}
+
+/* --------------------修改個人資訊-------------------------- */
+/* --------------------訂單查詢-------------------------- */
+/* --------------------我的優惠券-------------------------- */
+/* --------------------收藏清單-------------------------- */
+.favorite_block {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    padding: 40px;
+    height: auto;
+}
+
+.favorite_list {
+    display: grid;
+    grid-template-columns: .4fr 1fr .5fr;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: all 1s;
+
+}
+
+.favorite_list.fade_out {
+    opacity: 0;
+}
+
+
+.favorite_list img {
+    /* border: 1px solid #ff0202; */
+    width: 100%;
+}
+
+.favorite_list img:hover {
+    border: 2px solid var(--secondary-color);
+}
+
+.favorite_inf {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cash {
+    display: flex;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+
+.favorite_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.favorite_button>button {
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.favorite_button>button:hover {
+    background-color: var(--primary-color);
+}
+
+
+.favorite_button .delete {
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favorite_button .delete:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
 }

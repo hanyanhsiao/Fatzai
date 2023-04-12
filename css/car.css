@@ -166,6 +166,11 @@
     width: 100%;
     white-space: pre-wrap;
     text-align: center;
+}
+
+.car_item li.item_name {
+    /* outline: 1px solid rgb(205, 0, 0); */
+    padding: 0 5px;
 
 }
 
@@ -174,7 +179,7 @@
 }
 
 .car_item li img:hover {
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .car_item i.fa-circle-xmark {
@@ -257,18 +262,24 @@
 
 
 .more_items li img:hover {
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 
 }
 
-.more_items li h3 {
+.more_items li h3.item_name {
     /* outline: 2px solid rgb(47, 0, 255); */
     padding: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .more_items li h3.item_id {
     font-size: .8rem;
     color: var(--secondary-color);
+    padding: 5px 0;
+
 }
 
 .more_items li>p {
@@ -286,7 +297,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
     /* outline: 2px solid rgb(47, 0, 255); */
 
 }

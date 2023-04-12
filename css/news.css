@@ -181,7 +181,7 @@
 
  .new_block button:hover {
      color: var(--secondary-color);
-     transform: scale(1.05);
+     transform: scale(1.1);
  }
 
  .btn_block_close>button {

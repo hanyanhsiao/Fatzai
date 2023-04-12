@@ -57,8 +57,13 @@
                     <li><a href="./news.html">最新消息</a></li>
                     <li><a href="./shop_list_all.html">產品列表</a></li>
                     <li><a href="./member.html">會員專區</a></li>
-                    <li><a href="car.html">購物車</a></li>
-
+                    <li><a href="car.html">購物車
+                            <lord-icon class="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
+                                delay="1000" colors="primary:#000000,secondary:#000000" style="width:30px;height:30px">
+                            </lord-icon>
+                            <span class="cart_num active">1</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- 下拉選單 -->
                 <!-- <ul class="item_list">
@@ -115,6 +120,15 @@
             </div>
         </div>
     </footer>
+
+    <script class="script">
+        if (localStorage.getItem("car") != null) {
+            console.log("AAA");
+            $('.cart_num').addClass('active');
+        }
+
+    </script>
 </body>
+
 
 </html>
