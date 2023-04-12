@@ -246,8 +246,6 @@
     <!-- -----------script------------- -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-
-
     <script src="./js/common.js"></script>
     <script>
         // -----------------------抓出localstorage商品並顯示--------------------------
@@ -256,7 +254,7 @@
             // console.log(items);
 
             if (items) {
-                let list_html = ""; //
+                let list_html = "";
 
                 items.forEach(function (item, i) {
                     // console.log(item);
@@ -282,10 +280,16 @@
                 `;
                 })
 
-
                 $('.car_item_block').html(list_html);
                 // let ul_task_list = document.getElementsByClassName("task_list")[0];
                 // ul_task_list.innerHTML = list_html;
+                if (document.querySelector('.nav_list .cart_num')) {
+                    document.querySelector('.nav_list .cart_num').innerHTML = items.length;
+                    if (items.length > 0) {
+                        $('.nav_list .cart_num').addClass('active');
+                    }
+                }
+
             }
 
         };
@@ -316,6 +320,11 @@
                 });
                 // 回存至 localStorage
                 localStorage.setItem("car", JSON.stringify(updated_tasks));
+                document.querySelector('.nav_list .cart_num').innerHTML = updated_tasks.length;
+                if (updated_tasks.length == 0) {
+                    $('.nav_list .cart_num').removeClass('active');
+                }
+
 
             })
             //手機板
@@ -340,6 +349,7 @@
                 });
                 // 回存至 localStorage
                 localStorage.setItem("car", JSON.stringify(updated_tasks));
+                document.querySelector('.nav_list .cart_num').innerHTML = updated_tasks.length;
 
 
             })
@@ -379,7 +389,7 @@
 
                 //取得點擊那行的總額 = 數量*金額
                 let total = num * each_dollars;
-                console.log(total);
+                // console.log(total);
                 $(this).closest('.num').siblings('.total').html(total);
 
                 //------------------新增資料至 localStorage--------------------
@@ -447,7 +457,7 @@
 
             //各品項數量
             let item_num = $('.car_item_block').find('.car_item').length;
-            console.log(item_num + "AA");
+            // console.log(item_num + "AA");
 
             document.getElementById('item_num').innerHTML = item_num;
 
@@ -456,7 +466,7 @@
 
             // 算出是否需要運費170
             let total = summary - discount;
-            console.log(total);
+            // console.log(total);
 
             if (total < 1000) {
                 document.getElementById('delivery_fee').innerHTML = 170;
@@ -468,7 +478,7 @@
 
             //總金額
             let sum = summary - discount + delivery_fee;
-            console.log(sum);
+            // console.log(sum);
             document.getElementById('sum').innerHTML = sum;
 
         }

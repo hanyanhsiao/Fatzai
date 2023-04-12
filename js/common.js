@@ -13,7 +13,13 @@ $(document).ready(function () {
 
             }
         })
-        console.log(document.querySelector('.nav_list .cart_num').innerHTML);
+        let items = JSON.parse(localStorage.getItem("car"));
+        console.log(items.length);
+        document.querySelector('.nav_list .cart_num').innerHTML = items.length;
+        if (items.length == 0) {
+            $('.nav_list .cart_num').removeClass('active');
+        }
+
     });
     $(".footer").load("common.html .footer>.footer1");
     $('#common_mask').click(function () {
@@ -171,9 +177,14 @@ function get_items() {
         $('.addcar_item').find('ul').html(list_html);
         // let ul_task_list = document.getElementsByClassName("task_list")[0];
         // ul_task_list.innerHTML = list_html;
+
+        document.querySelector('.nav_list .cart_num').innerHTML = items.length;
+        if (items.length > 0) {
+            $('.nav_list .cart_num').addClass('active');
+        }
+
     }
 };
-
 
 // -----------------封裝setTimeout功能變成一個類別-----------------------------------
 var Timer = function (callback, delay) {
