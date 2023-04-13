@@ -63,7 +63,7 @@ lord-icon.car_icon {
 }
 
 .cart_num {
-    /* border: 1px solid red; */
+    /* border: 1px solid var(--secondary-color); */
     border-radius: 50px;
     background-color: var(--secondary-color);
     position: absolute;
@@ -76,7 +76,11 @@ lord-icon.car_icon {
     opacity: 0;
 }
 
-.cart_num.active {
+.nav_list>li>a:hover .cart_num {
+    color: white;
+}
+
+.cart_num.num_active {
     opacity: 1;
 }
 

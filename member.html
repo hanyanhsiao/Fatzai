@@ -239,7 +239,11 @@
 
         //點擊登出
         $('.signOut').click(function () {
-            confirm("確定要登出嗎?")
+            if (confirm("確定要登出嗎?") == true) {
+                localStorage.clear();
+                // window.location.replace("HTTP://www.google.com")
+                window.location.replace("./index.html");
+            }
         })
 
         //顯示收藏商品資訊及圖片

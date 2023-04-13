@@ -248,7 +248,7 @@
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        // -----------------------抓出localstorage商品並顯示--------------------------
+        // -----------------------顯示購物車商品--------------------------
         function get_items() {
             let items = JSON.parse(localStorage.getItem("car"));
             // console.log(items);
@@ -283,12 +283,7 @@
                 $('.car_item_block').html(list_html);
                 // let ul_task_list = document.getElementsByClassName("task_list")[0];
                 // ul_task_list.innerHTML = list_html;
-                if (document.querySelector('.nav_list .cart_num')) {
-                    document.querySelector('.nav_list .cart_num').innerHTML = items.length;
-                    if (items.length > 0) {
-                        $('.nav_list .cart_num').addClass('active');
-                    }
-                }
+                // 
 
             }
 
@@ -320,10 +315,6 @@
                 });
                 // 回存至 localStorage
                 localStorage.setItem("car", JSON.stringify(updated_tasks));
-                document.querySelector('.nav_list .cart_num').innerHTML = updated_tasks.length;
-                if (updated_tasks.length == 0) {
-                    $('.nav_list .cart_num').removeClass('active');
-                }
 
 
             })
@@ -349,7 +340,6 @@
                 });
                 // 回存至 localStorage
                 localStorage.setItem("car", JSON.stringify(updated_tasks));
-                document.querySelector('.nav_list .cart_num').innerHTML = updated_tasks.length;
 
 
             })
@@ -437,6 +427,7 @@
             addition_items();
             calculate_sum();
 
+
         })
 
         //執行
@@ -446,7 +437,7 @@
             addition_items();
         })
 
-        //訂單資訊 計算總金額
+        //右下角訂單資訊 計算總金額
         function calculate_sum() {
             // 合計
             let summary = 0;
@@ -482,6 +473,7 @@
             document.getElementById('sum').innerHTML = sum;
 
         }
+
         $(function () {
             calculate_sum();
         })

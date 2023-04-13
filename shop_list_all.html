@@ -250,19 +250,19 @@
                         <li>
                             <a href="./item.html">
                                 <div class="img_block">
-                                    <img src="./image/items/choux (3).png" alt="">
+                                    <img src="./image/items/choux (1).jpg" alt="">
                                     <div class="add">加入購物車</div>
                                 </div>
                             </a>
                             <div class="text_block">
-                                <h3>Pistache Choux</h3>
+                                <h3 class="item_name">Seasame Choux</h3>
+                                <p class="item_id" style="display: none;">香濃芝麻泡芙</p>
                                 <div class="cash">
-                                    <p>$199</p>
+                                    <p class="dollars">$190</p>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
                             </div>
-
                         </li>
                         <li>
                             <a href="./item.html">
@@ -272,14 +272,14 @@
                                 </div>
                             </a>
                             <div class="text_block">
-                                <h3>Rose Choux</h3>
+                                <h3 class="item_name">Rose Choux</h3>
+                                <p class="item_id" style="display: none;">玫瑰泡芙</p>
                                 <div class="cash">
-                                    <p>$220</p>
+                                    <p class="dollars">$200</p>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
                 </div>
@@ -596,9 +596,10 @@
                                 </div>
                             </a>
                             <div class="text_block">
-                                <h3>Strawberry Tart</h3>
+                                <h3 class="item_name">Strawberry Pistache Tart</h3>
+                                <p class="item_id" style="display: none;">草莓開心果塔</p>
                                 <div class="cash">
-                                    <p>$199</p>
+                                    <p class="dollars">$200</p>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
@@ -766,13 +767,6 @@
             evt.currentTarget.className += " active";
         }
 
-        //愛心按了填滿
-        $(function () {
-            $('.fa-heart').click(function () {
-                $(this).toggleClass("fa-regular fa-solid"); //自動偵測是否存在這個class
-            });
-        })
-
         //全部商品下方切換頁數區塊
         $(function () {
             $(".pagination li:first").addClass('active');
@@ -840,12 +834,12 @@
 
             // 滑鼠移入執行暫停功能
             $('.addcar_item').mouseenter(function () {
-                console.log("timer2: " + timer)
+                // console.log("timer2: " + timer)
                 timer.pause();
             })
             // 滑鼠移出執行繼續功能
             $('.addcar_item').mouseleave(function () {
-                console.log("timer3: " + timer)
+                // console.log("timer3: " + timer)
                 timer.resume();
             })
 
@@ -871,33 +865,34 @@
             });
         })
 
+
         // 點擊愛心加入收藏清單
         $(function () {
             $('.fa-heart').click(function () {
+
+                //愛心按了填滿
+                $(this).toggleClass("fa-regular fa-solid"); //自動偵測是否存在這個class
 
                 //抓取點擊的商品
                 let current_div = $(this).closest('li>div'); //<div class="text_block">
                 let name = $(current_div).find('.item_name').html();
                 let item_id = $(current_div).find('.item_id').html();
                 let dollars = parseInt($(current_div).find('.dollars').html().substring(1));
-                // console.log(name);
 
                 let itemfavorite = {
                     "name": name,
                     "item_id": item_id,
                     "dollars": dollars
                 };
-                // console.log(itemfavorite);
 
                 //抓取已存入的商品(是個陣列)
                 let loacal_item = JSON.parse(localStorage.getItem("favorite"));
-                // console.log(loacal_item);
 
                 if (loacal_item) {
                     //陣列轉map
                     // const map = new Map(arr.map((obj) => [obj.key, obj.value]));
                     const favorite_map = new Map(loacal_item.map((obj) => [obj.item_id, obj]))
-                    console.log(favorite_map);
+                    // console.log(favorite_map);
                     if (favorite_map.has(itemfavorite.item_id)) {
                         favorite_map.delete(itemfavorite.item_id);
                     } else {
@@ -913,12 +908,42 @@
                 } else {
                     loacal_item = [itemfavorite];
                     localStorage.setItem("favorite", JSON.stringify(loacal_item));
-
                 }
-
-
             });
         });
+
+        //頁面載入顯示收藏的商品
+        $(function () {
+            let loacal_item = JSON.parse(localStorage.getItem("favorite"));
+
+            if (loacal_item) {
+                let favorite_map = new Map(loacal_item.map((obj) => [obj.item_id, obj]))
+
+                document.querySelectorAll('.item_id').forEach(function (item) {
+                    if (favorite_map.has(item.innerHTML)) {
+                        // console.log(item)
+                        $(item).next('.cash').find('.fa-heart').toggleClass("fa-regular fa-solid");
+
+                    }
+
+
+                })
+
+
+
+                // if (item_id == $('.item_id').text()) {
+
+                //     $('.item_id').removeClass('fa-regular');
+
+                //     $('.item_id').addClass('fa-solid');
+                //     // $(this).toggleClass("fa-regular fa-solid"); //自動偵測是否存在這個class
+                // }
+            }
+        })
+
+
+
+
     </script>
 
 </body>

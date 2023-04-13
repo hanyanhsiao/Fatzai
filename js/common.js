@@ -3,6 +3,7 @@
 
 $(document).ready(function () {
     $(".header").load("common.html .header>.nav", function () {
+        //手機版漢堡選單點擊
         $('#mobile-menu').click(function () {
             $(this).toggleClass('active');
             $('#common_mask').toggle()
@@ -10,21 +11,35 @@ $(document).ready(function () {
                 $('.nav_list').slideDown();
             } else {
                 $('.nav_list').slideUp();
-
             }
         })
-        let items = JSON.parse(localStorage.getItem("car"));
-        console.log(items.length);
-        document.querySelector('.nav_list .cart_num').innerHTML = items.length;
-        if (items.length == 0) {
-            $('.nav_list .cart_num').removeClass('active');
-        }
+        //購物車數字載入
+        document.addEventListener('click', function () {
+            //購物車數字載入
+            let items = JSON.parse(localStorage.getItem("car"));
+            const cart = document.querySelector('.nav_list .cart_num');
+            if (items) {
+                if (items.length == 0) {
+                    cart.classList.remove('num_active')
+                } else {
+                    cart.classList.add('num_active');
+                    cart.innerHTML = items.length;
+                }
+            } else {
+                cart.classList.remove('num_active')
 
+            }
+
+
+        })
     });
-    $(".footer").load("common.html .footer>.footer1");
+
+    //點擊黑色遮罩也能收合
     $('#common_mask').click(function () {
         $('#mobile-menu').click()
     });
+
+    $(".footer").load("common.html .footer>.footer1");
 });
 
 //----------------------載入購物車的商品圖片-----------------------------
@@ -254,6 +269,24 @@ function addFavorite(itemObj) {
     localStorage.setItem("favorite", JSON.stringify(items));
     //將 JavaScript 值轉換為 JSON 字符串，物件變字串存入
 }
+
+//小購物車數字改變
+// document.addEventListener('click', function () {
+//     //購物車數字載入
+//     let items = JSON.parse(localStorage.getItem("car"));
+//     const cart = document.querySelector('.nav_list .cart_num');
+//     if (items) {
+//         if (items.length == 0) {
+//             cart.classList.remove('num_active')
+//         } else {
+//             cart.classList.add('num_active');
+//             cart.innerHTML = items.length;
+//         }
+//     }
+
+
+// })
+
 
 
 

@@ -246,6 +246,8 @@ section {}
     margin-bottom: 20px;
     opacity: 1;
     transition: all 1s;
+    box-shadow: 2px 2px 5px #e2e2e2;
+
 
 }
 
