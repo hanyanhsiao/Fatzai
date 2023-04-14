@@ -32,6 +32,20 @@ $(document).ready(function () {
 
 
         })
+        //購物車數字載入
+        let items = JSON.parse(localStorage.getItem("car"));
+        const cart = document.querySelector('.nav_list .cart_num');
+        if (items) {
+            if (items.length == 0) {
+                cart.classList.remove('num_active')
+            } else {
+                cart.classList.add('num_active');
+                cart.innerHTML = items.length;
+            }
+        } else {
+            cart.classList.remove('num_active')
+
+        }
     });
 
     //點擊黑色遮罩也能收合
