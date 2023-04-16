@@ -73,7 +73,7 @@ section.main {
 }
 
 .square {
-  margin: 100px 150px 100px 0;
+  margin: 100px 200px 100px 0;
   width: 400px;
   /* height: 400px; */
   background-color: var(--primary-color);
@@ -95,7 +95,7 @@ section.main {
   width: 280px;
   position: absolute;
   top: 120px;
-  left: 300px;
+  left: 250px;
 }
 
 .about_img img {
