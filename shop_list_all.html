@@ -537,9 +537,9 @@
                 <!-- 切換頁數區塊 -->
                 <ul class="pagination">
                     <span class="previous_page">«</span>
-                    <li class="pagetabs" onclick="changePage(event, '1')" id="defaultOpenPage">1</li>
-                    <li class="pagetabs" onclick="changePage(event, '2')">2</li>
-                    <li class="pagetabs" onclick="changePage(event, '3')">3</li>
+                    <li class="pagetabs" onclick="changePage('1')" id="defaultOpenPage">1</li>
+                    <li class="pagetabs" onclick="changePage('2')">2</li>
+                    <li class="pagetabs" onclick="changePage('3')">3</li>
                     <!-- <li class="pagetabs" onclick="changePage(event, '4')">4</li>
                     <li class="pagetabs" onclick="changePage(event, '5')">5</li> -->
                     <span class="next_page">»</span>
@@ -1008,7 +1008,7 @@
                     let target_active_page = $(".pagination>.active");
                     target_active_page.removeClass("active");
                     target_active_page.prev().addClass("active");
-                    console.log("AAA");
+                    changePage(target_active_page.prev().html());
                 }
             })
 
@@ -1019,14 +1019,14 @@
                     let target_active_page = $(".pagination>.active");
                     target_active_page.removeClass("active");
                     target_active_page.next().addClass("active");
-                    console.log("AACCCA");
+                    changePage(target_active_page.next().html());
                 }
             })
 
         })
 
         //全部商品下方切換頁數內容
-        function changePage(evt, page) {
+        function changePage(page) {
             var i, pagecontent, pagetabs;
             pagecontent = document.getElementsByClassName("pagecontent");
             // console.log(pagecontent);
