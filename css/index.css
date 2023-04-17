@@ -7,20 +7,17 @@
 .banner {
   margin: 0 auto;
   position: relative;
-
+  /* outline: 2px solid rgb(255, 36, 36); */
 }
 
 .banner_img {
   width: 100%;
   margin: 0 auto;
   display: flex;
-
-  /* outline: 2px solid rgb(255, 36, 36); */
 }
 
 .banner_img>img {
   width: 100%;
-
 }
 
 .banner>img {
@@ -30,8 +27,29 @@
   position: absolute;
   top: 0;
   left: 0;
+}
 
+.banner_title {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 25%;
+  /* outline: 1px solid rgb(213, 26, 26); */
+}
 
+.banner_title>h1 {
+  font-family: 'Noto Serif TC', serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: .3rem;
+  /* outline: 1px solid rgb(213, 26, 26); */
+}
+
+.banner_title>h1:last-child {
+  border-top: 2px solid white;
+  line-height: 2;
 }
 
 section.main {
@@ -49,7 +67,7 @@ section.main {
   background-repeat: no-repeat;
   background-position: top center;
   padding-bottom: 30px;
-
+  /* font-weight: 300; */
   text-align: center;
 }
 

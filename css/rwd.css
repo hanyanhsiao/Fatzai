@@ -8,12 +8,10 @@
 
     main {
         font-weight: 300;
-
     }
 
     .wrapper {
         width: auto;
-
     }
 
     .header {
@@ -24,7 +22,6 @@
         /* border: 1px solid red; */
         padding: 0 20px;
         font-weight: 300;
-
     }
 
     .nav_right {
@@ -116,15 +113,43 @@
         display: none;
     }
 
+    .nav_list>li>a>.cart_num {
+        display: none;
+
+    }
+
 
     /*  手機才出現的icon */
     .mobile_icon {
         display: flex;
         margin-left: 5px;
         z-index: 1;
+        position: relative;
+        display: block;
         /* border: 2px solid rgb(0, 21, 255); */
+    }
+
+    .cart_num {
+        border: 1px solid var(--secondary-color);
+        border-radius: 50px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        text-align: center;
+        line-height: 18px;
+        width: 20px;
+        height: 20px;
+        font-size: .8rem;
+        opacity: 0;
+    }
+
+    .cart_num.num_active {
+        opacity: 1;
+        color: white;
 
     }
+
 
 
 
@@ -175,6 +200,29 @@
     }
 
     /* ====================首頁======================= */
+    /*--------------banner----------------*/
+
+    .banner_title {
+        position: absolute;
+        top: 22%;
+        left: 10%;
+        width: 35%;
+        /* outline: 1px solid rgb(213, 26, 26); */
+    }
+
+    .banner_title>h1 {
+        font-size: 1rem;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        /* outline: 1px solid rgb(213, 26, 26); */
+    }
+
+    .banner_title>h1:last-child {
+        border-top: 1px solid white;
+        line-height: 2;
+        margin-top: 2px;
+    }
+
     /*--------------關於肥宅----------------*/
     main {
         position: relative;

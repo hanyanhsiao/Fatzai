@@ -213,7 +213,7 @@
        font-size: 1.2rem;
        margin-bottom: 20px;
        color: var(--secondary-color);
-       font-weight: 300;
+       font-weight: 400;
    }
 
    .item_introduce ul,
@@ -262,7 +262,7 @@
 
    .item_size button {
        border: 1px solid var(--secondary-color);
-       border-radius: 2px;
+       border-radius: 5px;
        padding: 5px;
        width: 80px;
        text-align: center;
@@ -343,7 +343,7 @@
        display: block;
        line-height: 2;
        font-size: 1.2rem;
-       border-radius: 2px;
+       border-radius: 5px;
    }
 
    .btn1 {

@@ -276,7 +276,7 @@
 }
 
 .more_items li h3.item_id {
-    font-size: .8rem;
+    /* font-size: .8rem; */
     color: var(--secondary-color);
     padding: 5px 0;
 

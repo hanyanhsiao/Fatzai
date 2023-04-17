@@ -17,35 +17,42 @@ $(document).ready(function () {
         document.addEventListener('click', function () {
             //購物車數字載入
             let items = JSON.parse(localStorage.getItem("car"));
-            const cart = document.querySelector('.nav_list .cart_num');
-            if (items) {
-                if (items.length == 0) {
-                    cart.classList.remove('num_active')
-                } else {
-                    cart.classList.add('num_active');
-                    cart.innerHTML = items.length;
-                }
-            } else {
-                cart.classList.remove('num_active')
+            const carts = document.querySelectorAll('.cart_num');
+            carts.forEach(
+                function (e) {
+                    if (items) {
+                        if (items.length == 0) {
+                            e.classList.remove('num_active')
+                        } else {
+                            e.classList.add('num_active');
+                            e.innerHTML = items.length;
+                        }
+                    } else {
+                        e.classList.remove('num_active')
+                    }
+                });
 
-            }
 
 
         })
         //購物車數字載入
         let items = JSON.parse(localStorage.getItem("car"));
-        const cart = document.querySelector('.nav_list .cart_num');
-        if (items) {
-            if (items.length == 0) {
-                cart.classList.remove('num_active')
-            } else {
-                cart.classList.add('num_active');
-                cart.innerHTML = items.length;
-            }
-        } else {
-            cart.classList.remove('num_active')
+        const carts = document.querySelectorAll('.cart_num');
+        carts.forEach(
+            function (e) {
+                if (items) {
+                    if (items.length == 0) {
+                        e.classList.remove('num_active')
+                    } else {
+                        e.classList.add('num_active');
+                        e.innerHTML = items.length;
+                    }
+                } else {
+                    e.classList.remove('num_active')
+                }
+            });
 
-        }
+
     });
 
     //點擊黑色遮罩也能收合
@@ -55,6 +62,9 @@ $(document).ready(function () {
 
     $(".footer").load("common.html .footer>.footer1");
 });
+
+
+
 
 //----------------------載入購物車的商品圖片-----------------------------
 function get_img(item_id) {
@@ -66,7 +76,6 @@ function get_img(item_id) {
             return './image/items/tart (6).jpg';
         case '開心果優格慕斯':
             return './image/items/mousse (1).jpg';
-
         case '巧克力溜溜球蛋糕':
             return './image/items/mousse (5).jpg';
         case '香草蛋糕捲':
@@ -75,18 +84,11 @@ function get_img(item_id) {
             return './image/items/mousse (11).jpg';
         case '黑醋栗椰子慕斯':
             return './image/items/mousse (7).jpg';
-        case '抹茶乳酪塔':
-            return './image/items/tart (4).jpg';
-        case '開心果塔':
-            return './image/items/tart (5).jpg"';
         case '綜合美式軟餅乾':
             return './image/items/cookies (0).jpg';
         case '開心果覆盆子慕斯':
             return './image/items/mousse (8).png';
-        case '開心果泡芙':
-            return './image/items/choux (3).png';
-        case '玫瑰泡芙':
-            return './image/items/choux (8).png';
+
         //季節限定
         case '草莓塔':
             return './image/items/tart (24).jpg';
@@ -99,27 +101,39 @@ function get_img(item_id) {
         case '草莓夏洛特':
             return './image/items/mousse (13).jpg';
         //杯子蛋糕
-
         case '薄荷巧克力杯子蛋糕':
             return './image/items/cup cake (1).jpg';
         case 'Oreo杯子蛋糕':
             return './image/items/cup cake (6).jpg';
         case '焦糖煎餅杯子蛋糕':
             return './image/items/cup cake (7).jpg';
+        case '紅絲絨杯子蛋糕':
+            return './image/items/cup cake (8).jpg';
+        case '特濃巧克力杯子蛋糕':
+            return './image/items/cup cake (11).jpg';
+        case '胡蘿蔔杯子蛋糕':
+            return './image/items/cup cake (10).jpg';
+        case '布朗尼杯子蛋糕':
+            return './image/items/cup cake (12).jpg';
+        //小塔系列
         case '抹茶乳酪塔':
             return './image/items/tart (4).jpg"';
-
+        case '開心果塔':
+            return './image/items/tart (5).jpg"';
+        //泡芙系列
         case '香濃芝麻泡芙':
             return './image/items/choux (1).jpg';
-
+        case '開心果泡芙':
+            return './image/items/choux (3).png';
+        case '玫瑰泡芙':
+            return './image/items/choux (8).png';
+        case '香草卡士達泡芙':
+            return './image/items/choux (9).jpg';
         // 加購
         case '(任選兩支)':
             return './image/material/candles.jpg';
         case '(一組五人份)':
             return './image/material/plate.jpg';
-
-
-
         default:
             return "";
     }
