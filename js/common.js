@@ -57,7 +57,7 @@ $(document).ready(function () {
         var links = document.querySelectorAll(".nav_list a");
         links.forEach(function (link) {
             var href = link.getAttribute("href").split('/');
-            if (href[1] === currentUrl[3]) {
+            if (href[1] === currentUrl[4]) {
                 // link.style.color = "#CCC";
                 link.style.fontWeight = "500";
             }
