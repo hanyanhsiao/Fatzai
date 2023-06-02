@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/rwd.css">
-    <!-- 引入字體-->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet"> -->
     <!-- 引入AOS滑入套件 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--引入font-awesome icon -->
@@ -27,8 +22,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--引入font-lord icon -->
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-
-
 </head>
 
 <body>
@@ -46,35 +39,35 @@
                     <img src="./image/banner/banner4.png" alt="">
                     <img src="./image/banner/banner1.png" alt="">
                 </div>
-                <img src="./image/banner/banner0.png" alt="">
+                <div class="banner_left">
+                    <img src="./image/banner/banner0.png" alt="">
+                </div>
                 <div class="banner_title" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="500">
                     <h1>FATZAI</h1>
                     <h1>Pâtisserie</h1>
                     <h1>法 式 甜 點 專 賣</h1>
                 </div>
+
             </section>
 
             <!-- 主要區域 -->
             <section class="main">
                 <!-- 關於肥宅 -->
-
                 <div class="aboutMe">
                     <div class="content">
-                        <div class="about_img">
-                            <img src="./image/items/macaron (0).jpg" alt="">
-                        </div>
                         <div class="square">
                             <p data-aos="fade-up" data-aos-duration="1000">歡迎來到<strong>Fatzai Pâtisserie !</strong><br>
                                 我們是一家專業製作法式甜點的店鋪，所有甜點均由經驗豐富的法式甜點師傅親手製作。我們以最優質的食材和獨特的製作技巧，打造出味道獨特、外形精美的甜點。在這裡，您可以品嚐到各種經典的法式甜點，如馬卡龍、泡芙、小塔等，還有各種創意糕點等您來發掘。無論是單獨享用或與親友共享，我們獨特的甜點絕對會給您留下難忘的味覺體驗。
                             </p>
+                            <div class="about_img">
+                                <img src="./image/items/macaron (0).jpg" alt="">
+                            </div>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- 最新消息 -->
-
                 <div class="news">
                     <h1 class="title" data-aos="fade-up" data-aos-duration="1000">最新消息</h1>
                     <ul data-aos="fade-up" data-aos-duration="1000">
@@ -125,9 +118,6 @@
                     </ul>
                 </div>
 
-                <!-- 分隔線 -->
-                <!-- <hr class="hr"> -->
-
                 <!-- 熱門商品 -->
                 <div class="hot_items">
                     <h1 class="title">熱門商品</h1>
@@ -162,9 +152,7 @@
                                 <div class="text_block">
                                     <h3>Pistache Mousse</h3>
                                     <p>$250</p>
-
                                 </div>
-
                             </a>
                         </div>
                         <div class="it">
@@ -175,9 +163,7 @@
                                 <div class="text_block">
                                     <h3>Chocolate Yo-Yo Cake</h3>
                                     <p>$199</p>
-
                                 </div>
-
                             </a>
                         </div>
                         <div class="it">
@@ -204,8 +190,6 @@
 
                     </div>
                 </div>
-
-
 
                 <!-- 常見問題 -->
                 <div class=" faq">
@@ -281,9 +265,6 @@
 
                 </div>
 
-                <!-- 分隔線 -->
-                <!-- <hr class="hr"> -->
-
                 <!--門市資訊 -->
                 <div class="information">
                     <h1 class="title">門市資訊</h1>
@@ -308,18 +289,15 @@
         </main>
     </div>
 
-
-
-
     <footer class="footer">
     </footer>
 
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script src="./js/init_carousel.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
 
         $(document).ready(function () {
@@ -340,13 +318,10 @@
                 } else {
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
-
             });
         }
 
-
     </script>
-
 </body>
 
 </html>

@@ -52,7 +52,16 @@ $(document).ready(function () {
                 }
             });
 
-
+        // 點擊當頁加上顏色
+        var currentUrl = window.location.href.split('/');
+        var links = document.querySelectorAll(".nav_list a");
+        links.forEach(function (link) {
+            var href = link.getAttribute("href").split('/');
+            if (href[1] === currentUrl[3]) {
+                // link.style.color = "#CCC";
+                link.style.fontWeight = "500";
+            }
+        });
     });
 
     //點擊黑色遮罩也能收合
@@ -62,8 +71,6 @@ $(document).ready(function () {
 
     $(".footer").load("common.html .footer>.footer1");
 });
-
-
 
 
 //----------------------載入購物車的商品圖片-----------------------------
@@ -298,22 +305,7 @@ function addFavorite(itemObj) {
     //將 JavaScript 值轉換為 JSON 字符串，物件變字串存入
 }
 
-//小購物車數字改變
-// document.addEventListener('click', function () {
-//     //購物車數字載入
-//     let items = JSON.parse(localStorage.getItem("car"));
-//     const cart = document.querySelector('.nav_list .cart_num');
-//     if (items) {
-//         if (items.length == 0) {
-//             cart.classList.remove('num_active')
-//         } else {
-//             cart.classList.add('num_active');
-//             cart.innerHTML = items.length;
-//         }
-//     }
 
-
-// })
 
 
 

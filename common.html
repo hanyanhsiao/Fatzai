@@ -58,7 +58,7 @@
                     <li><a href="./news.html">最新消息</a></li>
                     <li><a href="./shop_list_all.html">產品列表</a></li>
                     <li><a href="./member.html">會員專區</a></li>
-                    <li><a href="car.html">購物車
+                    <li><a href="./car.html">購物車
                             <lord-icon class="car_icon" src="https://cdn.lordicon.com/slkvcfos.json" trigger="loop"
                                 delay="1000" colors="primary:#545454,secondary:#545454" style="width:30px;height:30px">
                             </lord-icon>
@@ -66,20 +66,8 @@
                         </a>
                     </li>
                 </ul>
-                <!-- 下拉選單 -->
-                <!-- <ul class="item_list">
-                    <li>全部商品</li>
-                    <li>季節限定商品</li>
-                    <li>杯子蛋糕系列</li>
-                    <li>泡芙系列</li>
-                    <li>小塔系列</li>
-
-                </ul> -->
-
             </div>
-
         </nav>
-
     </header>
 
     <!--------------footer-------------------->
@@ -90,7 +78,7 @@
                     <p><a href="./about.html">關於我們 About Us </a></p>
                     <p><a href="./news.html">最新消息 News</a></p>
                     <p><a href="./shop_list_all.html">產品列表 Products</a></p>
-                    <p><a href="">會員專區 Member Area </a></p>
+                    <p><a href="./member.html">會員專區 Member Area </a></p>
                 </div>
 
                 <div class="footer_center">
@@ -122,11 +110,13 @@
         </div>
     </footer>
 
-    <script class="script">
+    <script>
+        // 購物車圖示
         if (localStorage.getItem("car") != null) {
             console.log("AAA");
             $('.cart_num').addClass('active');
         }
+
 
     </script>
 </body>

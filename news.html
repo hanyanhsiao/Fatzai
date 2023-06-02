@@ -13,10 +13,11 @@
   <link rel="stylesheet" href="./css/rwd.css">
   <!-- 引入AOS滑入套件 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--引入font-awesome icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
   <!--引入font-awesome icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -55,6 +56,7 @@
           <button><a href="./shop_list_all.html?product=cupcake_tab">立即購買</a></button>
         </div>
       </div>
+
       <!-- 最新消息區塊_2 -->
       <div class="new">
         <div class="number">2</div>
@@ -86,13 +88,16 @@
 
 
     </div>
+
     <!-- 分隔線 -->
     <hr class="hr">
+
     <!-- 日曆 -->
     <div class="calendar_block">
       <h1>本 月 行 事 曆</h1>
       <div id="calendar"></div>
     </div>
+
     <!--手機才有的遮罩-->
     <div id="common_mask"></div>
 
@@ -104,7 +109,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-
   <script src="./js/common.js"></script>
 
   <script>
@@ -125,25 +129,25 @@
         fixedWeekCount: false,
         events: [
           {
+            title: '因大訂單，公休兩日',
+            start: '2023-06-15',
+            end: '2023-06-17',
+            backgroundColor: '#606fc0',
+            borderColor: '#606fc0',
+          },
+          {
             title: '華山市集',
-            start: '2023-04-03',
-            end: '2023-04-05',
+            start: '2023-06-24',
+            end: '2023-06-26',
             backgroundColor: '#DC9F58',
             borderColor: '#DC9F58',
           },
           {
             title: '員工旅遊，公休三日',
-            start: '2023-04-20',
-            end: '2023-04-23',
+            start: '2023-07-09',
+            end: '2023-07-12',
             backgroundColor: 'rgb(255, 146, 155)',
             borderColor: 'rgb(255, 146, 155)',
-          },
-          {
-            title: '因大訂單，公休兩日',
-            start: '2023-05-26',
-            end: '2023-05-28',
-            backgroundColor: '#606fc0',
-            borderColor: '#606fc0',
           },
           {
             // eventDidMount: function (event, element) {
