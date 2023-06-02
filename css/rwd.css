@@ -5,6 +5,10 @@
         /* border: 1px solid black; */
     }
 
+    .footer_center {
+        margin: 10px 0;
+    }
+
     .banner_title {
         position: absolute;
         top: 30%;
@@ -1222,7 +1226,9 @@
         font-size: .9rem;
     } */
 
-
+    .content {
+        margin: 0;
+    }
 
     /* ---------------------訂單資訊---------------------- */
     .order_inf {

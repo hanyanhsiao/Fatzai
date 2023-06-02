@@ -225,6 +225,10 @@
     border: 0;
 }
 
+.num-count:hover {
+    background-color: var(--secondary-color);
+}
+
 #num-decrease {
     border-radius: 2px 0 0 2px;
     border-right: 1px solid #CCC;
