@@ -19,7 +19,7 @@ html {
   --page-width: 1100px;
   --primary-color: #FFEAD2;
   --secondary-color: #DC9F58;
-
+  --third-color: #feeee7;
 }
 
 button,
@@ -31,5 +31,5 @@ a {
   color: black;
   border: 0;
   cursor: pointer;
-  font-weight: ;
+  /* font-weight: ; */
 }

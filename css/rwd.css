@@ -570,20 +570,19 @@
     }
 
     section .right {
-
         position: absolute;
         right: 200px;
-        top: -90px;
-        width: 300px;
-        height: 300px;
+        top: 50px;
+        width: 250px;
+        height: 250px;
 
     }
 
     section .right p {
         /* border: 2px solid rgb(255, 89, 89); */
         width: 160px;
-        margin-left: 50px;
-        margin-top: 70px;
+        /* margin-left: 50px; */
+        /* margin-top: 70px; */
         line-height: 1.8;
 
     }
@@ -1805,18 +1804,19 @@
     section .right {
 
         position: absolute;
-        right: 200px;
-        top: -90px;
-        width: 300px;
-        height: 300px;
+        right: 0px;
+        top: 20px;
+        left: 20px;
+        width: 250px;
+        height: 250px;
 
     }
 
     section .right p {
         /* border: 2px solid rgb(255, 89, 89); */
         width: 160px;
-        margin-left: 50px;
-        margin-top: 70px;
+        /* margin-left: 50px; */
+        /* margin-top: 70px; */
         line-height: 1.8;
 
     }

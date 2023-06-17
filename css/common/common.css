@@ -2,11 +2,11 @@
 
 .header {
     height: 60px;
-    background-color: #ffead2e6;
+    background-color: var(--third-color);
     position: sticky;
     top: 0px;
     z-index: 10;
-    /* border: 3px solid red; */
+    border-bottom: 2px solid #ffc5ac;
 }
 
 .header .nav {
@@ -50,7 +50,8 @@
 
 .nav_list>li>a:hover {
     color: var(--secondary-color);
-    border-bottom: 3px solid var(--secondary-color);
+    font-weight: 400;
+    /* border-bottom: 3px solid var(--secondary-color); */
 }
 
 /* 購物車 */
@@ -85,7 +86,7 @@
 
 /* =============================footer=========================== */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
 }
 
 .footer_top {
