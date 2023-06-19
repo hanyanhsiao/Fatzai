@@ -64,7 +64,7 @@
     }
 
     .header {
-        background-color: var(--primary-color);
+        background-color: var(--third-color);
     }
 
     .header .nav {
@@ -410,7 +410,7 @@
         margin-bottom: 10px;
         position: relative;
         padding: 10px;
-        background-color: var(--primary-color);
+        background-color: var(--third-color);
         border: 0 solid #ffffff;
 
     }
