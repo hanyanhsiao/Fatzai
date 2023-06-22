@@ -96,9 +96,9 @@
     }
 
     #mobile-menu span {
-        background-color: var(--secondary-color);
+        background-color: var(--forth-color);
         display: block;
-        height: 1px;
+        height: 2px;
         width: 30px;
         position: absolute;
         top: 0;
@@ -124,7 +124,7 @@
     #mobile-menu.active .middle,
     #aside-menu.active .middle {
         opacity: 0;
-        background-color: var(--secondary-color);
+        /* background-color: var(--secondary-color); */
     }
 
     #mobile-menu.active .bottom,
@@ -134,7 +134,7 @@
 
 
     .nav_list {
-        background-color: var(--primary-color);
+        background-color: var(--third-color);
         position: absolute;
         left: 0;
         top: 60px;
@@ -153,8 +153,8 @@
     }
 
     .nav_list>li>a:hover {
-        color: var(--secondary-color);
-        border-bottom: 3px solid var(--secondary-color);
+        color: var(--forth-color);
+        border-bottom: 3px solid var(--forth-color);
     }
 
     .nav_list .car_icon {
@@ -175,6 +175,7 @@
         z-index: 1;
         position: relative;
         display: block;
+        color: var(--forth-color);
         /* border: 2px solid rgb(0, 21, 255); */
     }
 
@@ -410,7 +411,6 @@
         margin-bottom: 10px;
         position: relative;
         padding: 10px;
-        background-color: var(--third-color);
         border: 0 solid #ffffff;
 
     }
@@ -1282,198 +1282,6 @@
 
 @media screen and (max-width: 414px) {
     /* ===============共用================= */
-
-    /* ----------header------------ */
-    html {
-        font-size: 14px;
-    }
-
-    main {
-        font-weight: 300;
-    }
-
-    .wrapper {
-        width: auto;
-    }
-
-    .header {
-        background-color: var(--primary-color);
-    }
-
-    .header .nav {
-        /* border: 1px solid red; */
-        padding: 0 20px;
-        font-weight: 300;
-    }
-
-    .nav_right {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-
-
-    /* ----漢堡選單----- */
-    #mobile-menu {
-        /* border: 1px solid red; */
-        text-align: center;
-        width: 40px;
-        height: 40px;
-        margin-top: 20px;
-        margin-left: 5px;
-        padding-top: 10px;
-
-        position: relative;
-        cursor: pointer;
-
-    }
-
-    #mobile-menu span {
-        background-color: var(--secondary-color);
-        display: block;
-        height: 1px;
-        width: 30px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: all .35s ease;
-    }
-
-    #mobile-menu span:nth-of-type(2) {
-        top: 10px
-    }
-
-    #mobile-menu span:nth-of-type(3) {
-        top: 20px;
-    }
-
-    /* ----漢堡選單變叉叉----- */
-
-    #mobile-menu.active .top,
-    #aside-menu.active .top {
-        transform: translateY(10px) translateX(0) rotate(45deg);
-    }
-
-    #mobile-menu.active .middle,
-    #aside-menu.active .middle {
-        opacity: 0;
-        background-color: var(--secondary-color);
-    }
-
-    #mobile-menu.active .bottom,
-    #aside-menu.active .bottom {
-        transform: translateY(-10px) translateX(0) rotate(-45deg);
-    }
-
-
-    .nav_list {
-        background-color: var(--primary-color);
-        position: absolute;
-        left: 0;
-        top: 60px;
-        flex-direction: column;
-        width: 100%;
-        /* 或是100vw */
-        /* 選我!!!!!!!!!!!!!!!!!!!!!!!!! */
-        display: none;
-    }
-
-
-    .nav_list>li>a {
-        border-bottom: 1px solid #fff;
-        width: 100%;
-
-    }
-
-    .nav_list>li>a:hover {
-        color: var(--secondary-color);
-        border-bottom: 3px solid var(--secondary-color);
-    }
-
-    .nav_list .car_icon {
-        border: 3px solid red;
-        display: none;
-    }
-
-    .nav_list>li>a>.cart_num {
-        display: none;
-
-    }
-
-
-    /*  手機才出現的icon */
-    .mobile_icon {
-        display: flex;
-        margin-left: 5px;
-        z-index: 1;
-        position: relative;
-        display: block;
-        /* border: 2px solid rgb(0, 21, 255); */
-    }
-
-    .cart_num {
-        border: 1px solid var(--secondary-color);
-        border-radius: 50px;
-        background-color: var(--secondary-color);
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-        text-align: center;
-        line-height: 18px;
-        width: 20px;
-        height: 20px;
-        font-size: .8rem;
-        opacity: 0;
-    }
-
-    .cart_num.num_active {
-        opacity: 1;
-        color: white;
-
-    }
-
-
-
-
-    /* -------------footer------------- */
-    .footer_top {
-        max-width: auto;
-        padding: 0 20px;
-        /* border: 2px solid rgb(0, 21, 255); */
-    }
-
-    .footer_left {
-        display: none;
-    }
-
-    .footer_logo {
-        display: none;
-    }
-
-    .footer_center {
-        margin: 0;
-    }
-
-    .footer_icons {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    .footer_icons>a {
-        font-size: 2rem;
-    }
-
-    .footer_right {
-        flex-grow: 3;
-
-    }
-
-    .footer_right>p {
-        line-height: 35px;
-    }
-
-
 
     /* -------------分隔線------------- */
 

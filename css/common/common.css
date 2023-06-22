@@ -6,7 +6,7 @@
     position: sticky;
     top: 0px;
     z-index: 10;
-    border-bottom: 2px solid #ffc5ac;
+    border-bottom: 2px solid var(--forth-color);
 }
 
 .header .nav {
@@ -49,8 +49,8 @@
 
 
 .nav_list>li>a:hover {
-    color: var(--secondary-color);
-    font-weight: 400;
+    color: var(--forth-color);
+    /* font-weight: 400; */
     /* border-bottom: 3px solid var(--secondary-color); */
 }
 
@@ -115,7 +115,7 @@ footer {
 }
 
 .footer_left a:hover {
-    color: var(--secondary-color);
+    color: var(--forth-color);
 }
 
 
@@ -168,7 +168,7 @@ footer {
 }
 
 .footer_icons>a:hover {
-    color: var(--secondary-color);
+    color: var(--forth-color);
 }
 
 /* ------------------footer_right-------------------- */
